@@ -113,9 +113,11 @@ service whose product is other people's activity.
 
 Nothing this repository publishes is grouped by type. The file exists for the
 study output, which is regenerated locally and not committed. Treat any number
-derived from it as resting on the paragraph above. That file is how a reader
-without the 208 MB checks the numbers, so a pull request that re-records the
-corpus should refresh it in the same commit.
+derived from it as resting on the paragraph above.
+
+`data/corpus_manifest.csv` is the other file a re-recording touches, and it is
+the one a reader without the 208 MB uses to check the numbers, so a pull request
+that re-records the corpus should refresh it in the same commit.
 
 ```bash
 pytest -m slow

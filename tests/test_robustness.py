@@ -35,7 +35,16 @@ FIXTURES = ROOT / "tests" / "fixtures" / "corpus"
 CORPUS = ROOT / "data" / "corpus_500.txt"
 MINIMUM_COMPLETION = 95.0
 
-RECORDED = available(FIXTURES)
+
+def _corpus() -> list[str]:
+    lines = CORPUS.read_text(encoding="utf-8").splitlines()
+    return [line.strip() for line in lines if line.strip() and not line.startswith("#")]
+
+
+# Only the corpus counts. The fixtures directory also holds recordings for
+# domains an earlier version of the corpus carried, and measuring completion
+# against whatever is on disk would quietly change the denominator.
+RECORDED = [d for d in _corpus() if d in set(available(FIXTURES))]
 # Replaying 500 sites takes minutes, so it is opt in even when the
 # fixtures are on disk. CLAUDE.md asks for a suite that runs in seconds, and a
 # slow default is a suite people stop running.

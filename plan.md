@@ -47,13 +47,13 @@ Goal: sample 5 pages from the sitemap and score Readability.
       nothing to report at all
 - [x] Manual run: example.com (Access 90 A, Readability 22 F), observador.pt
       (75.33 B / 75.73 B), sapo.pt (48.67 D / 83.33 B), reddit.com (10 F /
-      4.5 F), eco.sapo.pt (100 A / 79.63 B), excalidraw.com (100 A / 30 F, the
+      4.5 F), eco.sapo.pt (100 A / 79.63 B), excalidraw.com (100 A / 32 F, the
       single page application)
 - [x] 96 tests, offline, under a second
 
 Done when: Readability is correct on the same 5 sites plus one known
 JavaScript-heavy single page application. Met. excalidraw.com scoring 100 on
-Access and 30 on Readability is the case that shows why the two scores are
+Access and 32 on Readability is the case that shows why the two scores are
 never averaged.
 
 ## Phase 3, output and fixes. DONE
@@ -162,8 +162,8 @@ Hardened 2026-08-30, so the evidence survives a stranger checking it.
       `robots.txt` as it was read. Built by `scripts/build_manifest.py`, checked
       against the live web by `scripts/verify_manifest.py`. All 25 in the
       reproducible sample still matched on the day it was written
-- [x] The 92 aborts split by what they mean, 65 deliberate refusals, 20
-      unreachable from here, 7 gone. One number read as one thing and the
+- [x] The 92 aborts split by what they mean, 64 deliberate refusals, 20
+      unreachable from here, 8 gone. One number read as one thing and the
       unreachable twenty may answer fine for someone else
 - [x] `pytest -m slow` run to completion for the first time since the corpus
       doubled: 3 tests, all 500 replayed, and run again after every edit here
@@ -202,10 +202,9 @@ not in any file.
 
 Four things were wrong and are fixed. `docs/VALIDATION.md` attributed five of the
 seven 429s to Vercel; it is four Vercel, two istio-envoy, one Cloudflare. The
-suite was documented at twelve seconds and measures fifteen at 161 tests. The
+suite was documented at twelve seconds and measures fifteen. The
 README called all 92 aborts CDN refusals. And `data/corpus_500.txt` still
-partitioned the corpus by arithmetic, five category counts summing to half of it,
-which is the withheld comparison stated without a sentence saying so.
+carried the withheld comparison in its structure, with no sentence saying so.
 ## Open items
 
 - **The user fetch bucket counts blocks that do not work.** Three of its five

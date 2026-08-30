@@ -102,6 +102,12 @@ def detect_platform(site) -> str:
     return "custom or unidentified"
 
 
+def read_corpus(path: Path) -> list[str]:
+    """The domains, in file order, ignoring comments."""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    return [line.strip() for line in lines if line.strip() and not line.startswith("#")]
+
+
 def read_categories(path: Path) -> dict[str, str]:
     """Domain to site type, from data/corpus_categories.csv.
 
@@ -302,10 +308,17 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     categories = read_categories(CATEGORIES)
+    corpus = read_corpus(CORPUS)
+    uncategorised = [d for d in corpus if d not in categories]
+    if uncategorised:
+        raise SystemExit(
+            f"{len(uncategorised)} corpus domains have no row in {CATEGORIES.name}: "
+            f"{uncategorised[:5]}"
+        )
     on_disk = set(available(FIXTURES))
     # The corpus decides what is in the study, not whatever is left on disk from
-    # an older version of it.
-    recorded = [d for d in categories if d in on_disk]
+    # an older version of it, and not the category table either.
+    recorded = [d for d in corpus if d in on_disk]
     if not recorded:
         print("no fixtures for the current corpus. run scripts/refresh_fixtures.py first.")
         return 1
