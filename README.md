@@ -110,7 +110,7 @@ A site is one deploy away from losing its AI visibility, and nobody notices for
 months. Add this to any workflow and a bad `robots.txt` fails the build:
 
 ```yaml
-- uses: Vascobranco2509/geo-check@main
+- uses: Vascobranco2509/geo-check@v0
   with:
     domain: your-domain.com
     fail-under-access: 60
