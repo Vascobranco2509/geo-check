@@ -1,0 +1,60 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: |
+          ruff check src tests scripts
+          ruff format --check src tests scripts
+
+      # The suite is offline and replays recorded responses, including the
+      # golden set of thirty hard sites. It never touches the network, so CI
+      # cannot be flaky because someone else's robots.txt changed.
+      - name: Test
+        run: pytest -q
+
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Proves the console script, the packaged agent list and the argument
+      # parser all survive a real install. Deliberately does not audit a live
+      # site: the suite's whole claim is that it never touches the network, and
+      # a CI job that does would be flaky for reasons no contributor caused.
+      - name: Build the wheel and install it clean
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build --wheel
+          python -m venv /tmp/clean
+          /tmp/clean/bin/python -m pip install dist/*.whl
+          /tmp/clean/bin/geo-check --help
+          /tmp/clean/bin/python -c "from geo_check.robots import load_agents; assert len(load_agents()) > 20"

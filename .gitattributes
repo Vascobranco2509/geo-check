@@ -1,0 +1,9 @@
+# Line endings are stored as LF in the repository, whatever platform the
+# contributor works on. Without this, a Windows checkout commits CRLF and every
+# later diff is full of whitespace noise.
+* text=auto eol=lf
+
+# Fixtures are recorded HTTP responses and must stay byte exact. A robots.txt
+# saved with CRLF has to reach the parser with CRLF, because that is what the
+# server sent. Normalising them would hide the very bugs they exist to catch.
+tests/fixtures/** -text

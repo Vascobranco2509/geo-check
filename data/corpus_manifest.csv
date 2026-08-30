@@ -1,0 +1,501 @@
+domain,fetched_at,outcome,robots_url,robots_status,robots_sha256,robots_bytes
+hubspot.com,2026-08-30T16:18:35+00:00,scored,https://www.hubspot.com/robots.txt,200,f5482ce94ad0d258fc6bb334e045beaaa07bf72ddea35e70120769664b0be366,12572
+noaa.gov,2026-08-30T16:21:11+00:00,aborted: homepage returned HTTP 403,,,,
+away.com,2026-08-30T16:16:21+00:00,aborted: homepage returned HTTP 429,,,,
+contacto.lu,2026-08-30T10:01:10+00:00,aborted: homepage returned HTTP 403,,,,
+sportzone.pt,2026-08-30T09:59:55+00:00,aborted: homepage returned HTTP 403,,,,
+standvirtual.com,2026-08-30T10:00:42+00:00,scored,https://www.standvirtual.com/robots.txt,200,fd7c778ce2e5ab0f8fc97d925dba6c002654d3608783cd8754bc8da79522f71b,1054
+subvisual.com,2026-08-30T10:03:36+00:00,scored,https://subvisual.com/robots.txt,200,c3e62cdb9175df8b2c9c5fa9ba6560b53525b2da0472363e10ded017798e6352,557
+xhockware.com,2026-08-30T10:03:43+00:00,aborted: homepage unreachable: network: ConnectError,,,,
+slack.com,2026-08-30T16:22:14+00:00,scored,https://slack.com/robots.txt,200,5cf267512c33523c02640ab26da932e2f6ccd78d88ff17cd8a540630d03104c6,520
+glossier.com,2026-08-30T16:18:11+00:00,scored,https://www.glossier.com/robots.txt,200,67b4c9096d11f8314174dadee8b921e01219edf056f3d51d1fa9c7340aa27002,3632
+amalsoap.com,2026-08-30T15:15:26+00:00,scored,https://amalsoap.com/robots.txt,200,573cb9e363b64fc50e61bbcb65fba698090eed140f648027bf7f11fa90d064eb,3616
+doordash.com,2026-08-30T16:17:19+00:00,aborted: homepage returned HTTP 403,,,,
+rust-lang.org,2026-08-30T16:21:46+00:00,scored,https://rust-lang.org/robots.txt,404,,
+zwame.pt,2026-08-30T10:04:32+00:00,scored,https://forum.zwame.pt/robots.txt,200,34584f88c47ddf88938374a56acf9a5ce2135c06e362f94a5c08adfab7cab4ab,2544
+meetup.com,2026-08-30T16:19:37+00:00,scored,https://www.meetup.com/robots.txt,200,4bde94056acee32601824de4a03b71860f6ba94bfab4a9c363afba2ca26201b2,3770
+cloudflare.com,2026-08-30T10:04:41+00:00,scored,https://www.cloudflare.com/robots.txt,200,c6e360cc6e931ea35c33ae917ff9e2194eb55f79f68e949ec54bcd4533324d98,1099
+sensei.tech,2026-08-30T10:03:33+00:00,scored,https://www.sensei.tech/robots.txt,200,a043fa81037fb130b6255456f8ba5bbb87e1c2757179344915d5c2e5391f66f1,98
+abcnews.go.com,2026-08-30T16:15:02+00:00,scored,https://abcnews.com/robots.txt,200,098610c1754300696286f51092610e63aa28a9e4f5fca7d6398822a8364230ad,1702
+aeiou.pt,2026-08-30T10:01:34+00:00,scored,https://www.aeiou.pt/robots.txt,200,59887db297f094c47362d146f771eb9e66a9b8521419034b8063fc39988b67eb,1949
+siete.com,2026-08-30T16:22:15+00:00,scored,https://siete.com/robots.txt,200,f3712a9647efd35c216273dbf0e2cd50895ce3b032bf893f66f0e3240344124e,239
+owala.com,2026-08-30T16:21:30+00:00,scored,https://www.owala.com/robots.txt,404,,
+wish.com,2026-08-30T16:23:21+00:00,scored,https://www.wish.com/robots.txt,200,1485dd15bf8187f48a4afed18920d986e3ac1a2c541ab41e1a77dde9f1288335,565
+probely.com,2026-08-30T10:03:32+00:00,scored,https://probely.com/robots.txt,200,ecbdf09437feae90585c93f1a0092b97ecc944e89745ce66e2e82c3575bac01b,247
+backcountry.com,2026-08-30T16:15:26+00:00,scored,https://static.backcountry.com/robots.txt,403,,
+elastic.co,2026-08-30T16:17:30+00:00,scored,https://www.elastic.co/robots.txt,200,cb7eebe0605b8000e26a792ee1425c1eaae408b2757cfbdad17a6a7ba2010882,37560
+green2you.pt,2026-08-30T15:28:24+00:00,scored,https://green2you.pt/robots.txt,200,4848abcf2eea7a63c3742199469e829a852f6a1ba4b4264a30f30ff0780968e5,6316
+queridandorinha.pt,2026-08-30T15:43:14+00:00,scored,https://www.queridandorinha.pt/robots.txt,200,bd46feea3f42fcbfabbd60398afff94e9465d3bafb630a4157d90b1d5d4f9485,3658
+decathlon.pt,2026-08-30T09:56:54+00:00,aborted: homepage returned HTTP 403,,,,
+nih.gov,2026-08-30T16:20:39+00:00,aborted: homepage returned HTTP 403,,,,
+kinsta.com,2026-08-30T16:18:57+00:00,scored,https://kinsta.com/robots.txt,200,6b75e600fc59edf207075af09482f56737c7997bd2daa8c2a02e46851e6dedaf,523
+bellagoma.pt,2026-08-30T15:15:28+00:00,scored,https://bellagoma.pt/robots.txt,200,37c9d3bbdbe6a4c9b428f321e58dcf591c430430d0b51821aeb6d1270302af28,5542
+amplitude.com,2026-08-30T16:15:10+00:00,scored,https://amplitude.com/robots.txt,200,4a10ab3668ee42a4641ba43b0a9b70b7b223d2052e7b297b6395dc20e3a0c61d,546
+exameinformatica.pt,2026-08-30T10:04:08+00:00,scored,https://visao.pt/robots.txt,200,0b526932e78907ac6d2f6bcc0ace59505582b17357fbc73e10821ce72a3f7c41,70
+segment.com,2026-08-30T16:22:03+00:00,scored,https://www.twilio.com/robots.txt,200,138fe6da0c1b4682286cb07cb380e7968a940e8cf5a4d6834923fbb81aa626f0,975
+parfois.com,2026-08-30T09:59:38+00:00,scored,https://www.parfois.com/robots.txt,200,dd14e9a96c6f9c2fff4849477cd14b698b2c1a81357d5c6771b12e38b1e17f96,1721
+marinelayer.com,2026-08-30T16:19:27+00:00,scored,https://www.marinelayer.com/robots.txt,200,03e34e1902da762865e3c25f23c54b7f9c8b05fb859b16601c1f8631b641bb91,3636
+fitfiu.pt,2026-08-30T15:27:33+00:00,scored,https://fitfiu.pt/robots.txt,200,7a298c280e0a875cdbbe5170e349ee85e4486597c98198e66e1f234c695f9196,3604
+decenio.com,2026-08-30T09:57:13+00:00,scored,https://www.decenio.com/robots.txt,200,2ea463dffa405bb27a0b43548914e3a5398ffc1fcb72f9305a3ad88369397127,310
+canva.com,2026-08-30T16:16:36+00:00,aborted: homepage returned HTTP 403,,,,
+spotify.com,2026-08-30T16:22:17+00:00,scored,https://open.spotify.com/robots.txt,200,f4d19243e326c223544e5691275ed35a1c72d67ef765988087b1063a33d7838b,1859
+lifecooler.com,2026-08-30T10:04:12+00:00,aborted: homepage unreachable: network: ConnectError,,,,
+esquerda.net,2026-08-30T10:04:00+00:00,scored,https://www.esquerda.net/robots.txt,200,773fb8d35bb9a39d35335ee6db8dc5c912d2aacbfb823152d9c61cd647dd902d,2027
+overstock.com,2026-08-30T16:21:08+00:00,aborted: homepage returned HTTP 403,,,,
+zaask.pt,2026-08-30T10:03:46+00:00,scored,https://www.zaask.pt/robots.txt,200,9fee8ad639d7b76f4ab6cc8119828de87c583129c9cd0b92482e137d73917c74,417
+nbcnews.com,2026-08-30T16:20:32+00:00,scored,https://www.nbcnews.com/robots.txt,200,70bf9770d32a48c5ff7cab70cbf257f8bc913b09e3a9f814afef31c516815e1c,13381
+webflow.com,2026-08-30T16:23:14+00:00,scored,https://webflow.com/robots.txt,200,b04ed9b180086889a2046dc5e952815a6b642497a787f5b54c698cd2549e5d98,279
+oldnavy.com,2026-08-30T16:20:56+00:00,scored,https://oldnavy.gap.com/robots.txt,200,d7f8935f7eed81c7ec942b69cb5e7bd0c071463a3365e5dbd05fcfe05937b967,883
+mozilla.org,2026-08-30T10:04:48+00:00,scored,https://www.mozilla.org/robots.txt,200,cf0fd2842659297b0d6fce407bed86bf424ae6666051b881dbd72e871d687fe3,66
+talkdesk.com,2026-08-30T10:03:39+00:00,scored,https://www.talkdesk.com/robots.txt,200,b908b6ec1f7047de9668c2771ea4bfc72a69b95fa5223ca0a33daa32751b20e8,1163
+mashable.com,2026-08-30T16:19:35+00:00,scored,https://mashable.com/robots.txt,200,66981fd7a70fe6146b45dea469a2cc097f10c5c862810f285030d7175f3f7e16,5314
+yeti.com,2026-08-30T16:23:38+00:00,scored,https://www.yeti.com/robots.txt,200,e31b33f9b7bb8958876a2d13b617fa88f9f8df32867967c8782023ab49aaea74,9278
+siteground.com,2026-08-30T16:22:15+00:00,scored,https://eu.siteground.com/robots.txt,200,bd03bfdad0e259f933118716dbbcd3ef831c10b61be7d4029c29786b2e5fd28f,211
+farfetch.com,2026-08-30T10:03:00+00:00,aborted: homepage returned HTTP 403,,,,
+salsajeans.com,2026-08-30T10:00:01+00:00,scored,https://www.salsajeans.com/robots.txt,200,280ed87ea146e424d61171232f46ac40b860e322554cd978804547b17d90608a,263
+quince.com,2026-08-30T16:21:34+00:00,scored,https://www.quince.com/robots.txt,200,3ed1a7594df2ed239cd01929d33b82f5b0dd2bcac8e12504abc6a8a03ea7a189,2333
+sendgrid.com,2026-08-30T16:22:03+00:00,scored,https://www.twilio.com/robots.txt,200,138fe6da0c1b4682286cb07cb380e7968a940e8cf5a4d6834923fbb81aa626f0,975
+zippy.pt,2026-08-30T10:00:49+00:00,scored,https://zippyonline.com/robots.txt,200,eefe3e5d358aafdc79cc571416dada7e372101f0489b485d22e08cd6c145fea5,5454
+coviran.pt,2026-08-30T09:57:09+00:00,scored,https://www.coviran.pt/robots.txt,200,d665d6b4a9a5af57f02611423a59b898c1d67cba47845b40d8133a3efc54371c,103
+mybabybox.pt,2026-08-30T15:29:29+00:00,scored,https://mybabybox.pt/robots.txt,200,98c60507fb5efee633775360e123481c55531aa0e81e7c1bfad9c89c5adffc36,3616
+thrivemarket.com,2026-08-30T16:22:42+00:00,scored,https://thrivemarket.com/robots.txt,200,0fcc740de01e65fb42b01a74053e459c4145b109ff5bf156a8dd5044badd7ce4,630
+jornaldeleiria.pt,2026-08-30T10:01:43+00:00,scored,https://jornaldeleiria.pt/robots.txt,200,3232201583bcb7079e3ba15fe748034512517f033fe2d541daa1242abffede4b,142
+outdoorvoices.com,2026-08-30T16:21:05+00:00,scored,https://www.outdoorvoices.com/robots.txt,200,e46ed7337031659147b35f65d3534c7493bc707c05a30c7e08268c6afcf4b22c,3644
+newrelic.com,2026-08-30T16:20:39+00:00,scored,https://newrelic.com/robots.txt,200,f6ee1db86519f30130314f77a9cea7aa1005357824b8f20b1ae21952b69f12e4,2556
+notino.pt,2026-08-30T09:59:10+00:00,aborted: homepage returned HTTP 403,,,,
+bluehost.com,2026-08-30T16:15:40+00:00,aborted: homepage returned HTTP 403,,,,
+meo.pt,2026-08-30T09:59:02+00:00,scored,https://www.meo.pt/robots.txt,200,0d013b2ae8b5493fdde201289b8e69d9eaddae0435faec56cd548deec2b81e5d,228
+nist.gov,2026-08-30T16:20:46+00:00,scored,https://www.nist.gov/robots.txt,200,0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd,2425
+abola.pt,2026-08-30T10:01:06+00:00,scored,https://www.abola.pt/robots.txt,200,bcee9105c7ac3a9634513a31427bc1bb8c429ae713c8ffe91ab90d0240999556,1458
+washingtonpost.com,2026-08-30T16:24:33+00:00,aborted: homepage unreachable: timeout,,,,
+delitodeopiniao.blogs.sapo.pt,2026-08-30T10:05:01+00:00,scored,https://delitodeopiniao.blogs.sapo.pt/robots.txt,200,c9a6474de0879c3c85b4537fc352752c1ea46015205ecfe18223ec18c1776a67,1306
+tag-and-get.com,2026-08-30T15:32:54+00:00,scored,https://tag-and-get.com/robots.txt,200,6d537fdd2a7ec34e79fb2877e1f17e212c2ffcc617d3646bb13e2a3e289026a8,5683
+prozis.com,2026-08-30T15:48:28+00:00,aborted: homepage returned HTTP 429,,,,
+hydroflask.com,2026-08-30T16:18:38+00:00,aborted: homepage returned HTTP 403,,,,
+omsom.com,2026-08-30T16:20:57+00:00,scored,https://omsom.com/robots.txt,404,,
+vallore.pt,2026-08-30T15:33:51+00:00,scored,https://vallore.pt/robots.txt,200,ad7fdba8c5c869921206dcd47a09358a33c95d12611935ffc8e3f8f94ed2b9f4,3608
+hims.com,2026-08-30T16:18:30+00:00,aborted: homepage returned HTTP 403,,,,
+matematicaonline.pt,2026-08-30T10:04:11+00:00,scored,https://matematicaonline.pt/robots.txt,404,,
+italic.com,2026-08-30T16:18:56+00:00,scored,https://www.italic.com/robots.txt,200,08dbea7e54e20b12bddac1f7f07029885c2ddca96b402ce9e1be29cac336191a,6668
+census.gov,2026-08-30T16:16:55+00:00,scored,https://www.census.gov/robots.txt,200,4840965279b9177174cf8152aba2d66eaa286ae0dc9b86bb3fd05e3f2789ae15,1162
+stripe.com,2026-08-30T10:05:28+00:00,scored,https://stripe.com/robots.txt,200,23166bdd2477d69a2fbd405ae5901154a36f5de79876de4616494458fb340002,643
+meiotesocks.com,2026-08-30T15:29:14+00:00,scored,https://meiotesocks.com/robots.txt,200,c35a766fc1d5b5f0beceb28b3001a83bbe101913332ff497c97475eb93e14572,3628
+gitlab.com,2026-08-30T16:18:03+00:00,scored,https://about.gitlab.com/robots.txt,200,37cedb1b6ae8efa025fad3a2937133eadddca2047224a927d89363009a00cf79,369
+evasoes.pt,2026-08-30T10:04:24+00:00,scored,https://www.jn.pt/robots.txt,200,168b5623759397820ac4d1036770cb0e6c18284cf02791e4967d603a79184a83,2974
+w3.org,2026-08-30T16:22:58+00:00,scored,https://www.w3.org/robots.txt,200,f3947d244239d90298c7c3323a6d83042bb4f38c821f1bdefa449e7dfd9e2976,3812
+apple.com,2026-08-30T10:04:36+00:00,scored,https://www.apple.com/robots.txt,200,3115f45c98cfa19341978dcab5dfbc0fd3e0ff4eb3ab1fe8192c3fbf7227dee7,1018
+lyft.com,2026-08-30T16:19:12+00:00,scored,https://www.lyft.com/robots.txt,200,1a5884d20a0737c5e878081592bddd8f1e086e5f0cc6ee9726986e88048110be,1046
+bluebottlecoffee.com,2026-08-30T16:15:40+00:00,scored,https://bluebottlecoffee.com/robots.txt,200,8fa3036c68bfcbd32365f6225d24333264093b7cd38d306e106b4dbdc934fd5b,1248
+4gnews.pt,2026-08-30T10:01:10+00:00,scored,https://4gnews.pt/robots.txt,200,606d12be17497811b399bf86b6119d27368267e06497e46d563c371d423305ef,186
+froiz.pt,2026-08-30T09:57:39+00:00,scored,https://www.froiz.pt/robots.txt,200,bbcac8b8ec4fb8665a41eacca07f02f2d6dff3ed0fc3eb99a13982a904c5c383,116
+kitch.io,2026-08-30T10:03:20+00:00,scored,https://1-win.in.net/robots.txt,200,1b2649bb9ebd6f08cc72b9060c75cafb43a453e1101050af26438dbbc7a5a1ee,949
+microsoft.com,2026-08-30T10:04:54+00:00,scored,https://www.microsoft.com/robots.txt,200,8d6eb902f7fb573f0430107afaae01cbe9a0a38923116065b322b6c8133b878b,8557
+outsystems.com,2026-08-30T10:03:42+00:00,scored,https://www.outsystems.com/robots.txt,200,9b1383220cb38bfeeb70550a31d360476f34fe33540e7460605bbb4951e06206,3026
+cnnportugal.iol.pt,2026-08-30T10:01:10+00:00,scored,https://cnnportugal.iol.pt/robots.txt,200,071817e55b351748624df02802a7b86683fe59a96fb1297e4e9555450d0e1e95,1116
+pumpkin.pt,2026-08-30T10:06:51+00:00,scored,https://pumpkin.pt/robots.txt,200,f465d2fe5f6e81a021c6e391ec90ec9722df071411ed8232eaa001b8965139c9,168
+irs.gov,2026-08-30T16:20:18+00:00,aborted: homepage unreachable: network: ConnectError,,,,
+stara.pt,2026-08-30T15:43:23+00:00,scored,https://stara.pt/robots.txt,200,65e8223c6157790efa9c771991fbde3149772009fce3591e8bf173ce8900e882,3600
+datadoghq.com,2026-08-30T16:17:11+00:00,scored,https://www.datadoghq.com/robots.txt,200,31eeea994b43f6d7f90690150759601a19c7a76f19827a51b18c89c6cbb1076b,525
+everlane.com,2026-08-30T16:17:39+00:00,scored,https://www.everlane.com/robots.txt,200,3e7017d9ce232ff4ae0a6eae94e7c6c33130703eaae21b0bb7557afc7257954c,3632
+underarmour.com,2026-08-30T16:22:55+00:00,scored,https://www.underarmour.com/robots.txt,200,153b2a44c3efd555084f028dcc1e41fb1666af2ab377fe2c772953ff2ab10a89,1373
+delta-cafes.pt,2026-08-30T09:57:10+00:00,scored,https://deltacafes.com/robots.txt,200,ab8c3b7bc423bf197bbf2502679ba01751c057ae9c93235c73bba90f33bf171f,121
+dott.pt,2026-08-30T09:56:58+00:00,aborted: homepage returned HTTP 403,,,,
+publico.pt,2026-08-30T10:02:01+00:00,aborted: homepage returned HTTP 403,,,,
+holon.pt,2026-08-30T09:57:40+00:00,aborted: homepage unreachable: network: ConnectError,,,,
+engenhariacivil.com,2026-08-30T10:04:01+00:00,scored,https://www.engenhariacivil.com/robots.txt,200,7be99a25791b25fad9d315f9de5b4020dc745201d1294bcd2f033a9087ad288d,76
+netlify.com,2026-08-30T10:04:52+00:00,scored,https://www.netlify.com/robots.txt,200,61ca3bca2fd57ba4e254566aeffcf398c72abafc0f276963b5754f95cc9cc43e,764
+laskasas.com,2026-08-30T09:58:28+00:00,scored,https://www.laskasas.com/robots.txt,200,2ca77ff578403b8bd8b4c6f5d7a15e4ede8b0b77e0cc10410aa4eb8cc975dc3c,226
+bizay.com,2026-08-30T10:03:04+00:00,scored,https://www.360imprimir.pt/robots.txt,200,bbe15863e13754ece88556390d89922ea986e7d59c5cacf67761c831e3b0e584,1663
+uber.com,2026-08-30T16:22:47+00:00,aborted: homepage returned HTTP 406,,,,
+staples.pt,2026-08-30T10:01:18+00:00,scored,https://www.staples.pt/robots.txt,200,5f25d9336d3afcb6ea8d047e36a843e6f98eaea41247362544511ea7d899c55e,2084
+vinha.pt,2026-08-30T10:00:44+00:00,scored,https://www.vinha.pt/robots.txt,200,2b04928679fdad9e37152fc7ec779928aa9148ff8487dc5619006bfb5de70017,197
+barkyn.com,2026-08-30T10:02:50+00:00,scored,https://barkyn.com/robots.txt,200,0a4935501662e9a5bda2e2274b0d968347d6899f18531305a3bd289646e219f0,3608
+acorianooriental.pt,2026-08-30T10:01:21+00:00,scored,https://www.acorianooriental.pt/robots.txt,200,8a5e4d8a04b0958b2ecf068624a8fc866414896d75f6c6a1e92d4ca01a4d84c4,488
+leyaonline.com,2026-08-30T09:58:32+00:00,scored,https://leyaonline.com/robots.txt,200,f0a5b2e3f3c608849e2e35565c707a4fac55b801708b4f3072f6fbef4f4bc005,290
+ruggable.com,2026-08-30T16:21:52+00:00,scored,https://ruggable.com/robots.txt,200,744cb999842e52126ffb00ae19afa04893eb81671e8a304ca75e5589756d3de1,3206
+executivedigest.sapo.pt,2026-08-30T10:01:52+00:00,scored,https://executivedigest.sapo.pt/robots.txt,200,52e86708c726aaa65ca9116d063f7dee4d9e718452550fa59103ed7dae75de44,206
+babynest.pt,2026-08-30T15:15:32+00:00,scored,https://www.babynest.pt/robots.txt,200,dce7d8eb23a59916d8c9d8028f6ef4cc53f72a3514cbadb025058dc245be9340,5681
+tiffosi.com,2026-08-30T10:00:20+00:00,scored,https://www.tiffosi.com/robots.txt,200,45a2e966d2c415ca23070eb90aa08b7c082dece35c4f8a26cead64aafcb161ec,401
+zappos.com,2026-08-30T16:23:48+00:00,scored,https://www.zappos.com/robots.txt,200,07e08a1e8691b1004f0971f81761a2cae42b742000b79f44affceea5530ac16b,1230
+chewy.com,2026-08-30T16:16:50+00:00,scored,https://www.chewy.com/robots.txt,200,222b0261ee4d989851592e7ede082076354b032c04bce9998052ba7cce54632f,2513
+airtable.com,2026-08-30T16:15:04+00:00,scored,https://www.airtable.com/robots.txt,200,21c6a0296f146ee6ef7159ead101cca7855d1e2e24d3a19a412fa87dc62c88a9,137
+klaviyo.com,2026-08-30T16:18:59+00:00,scored,https://www.klaviyo.com/robots.txt,200,76016404bc4d6253b273d66f681383765e88ae1207e54621e1e546dc27af4669,3530
+jn.pt,2026-08-30T10:02:05+00:00,scored,https://www.jn.pt/robots.txt,200,168b5623759397820ac4d1036770cb0e6c18284cf02791e4967d603a79184a83,2974
+jscrambler.com,2026-08-30T10:03:31+00:00,scored,https://jscrambler.com/robots.txt,200,2948296c37644298c8b51e3a96b212fa7d963c567a877e6e488ffbb6f127c8b8,188
+joaoferreira.pt,2026-08-30T10:04:05+00:00,scored,https://joaoferreira.pt/robots.txt,200,cba26a619d37f7230f322d1678d077580bdf74dd3be47a8318139ff94dc1435e,62
+dudeperfect.com,2026-08-30T16:17:21+00:00,scored,https://dudeperfect.com/robots.txt,200,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0
+planetscale.com,2026-08-30T16:21:25+00:00,scored,https://planetscale.com/robots.txt,200,a11216415134902cc8fc9296a476c62ad02c4bdf58987a8ea1506626cee19cab,124
+economist.com,2026-08-30T10:04:36+00:00,aborted: homepage returned HTTP 403,,,,
+tek.sapo.pt,2026-08-30T10:02:35+00:00,scored,https://tek.sapo.pt/robots.txt,200,ee82e08b93c4bb49133da3e12c170875f67ff0c291e3e2b01d78d062d499ac52,292
+valeriusvii.com,2026-08-30T15:44:35+00:00,scored,https://valeriusvii.com/robots.txt,200,d0cbb395c250d21b704ad67b735ecff958c50147d54081ae4274f990c3ce892e,3630
+bostonglobe.com,2026-08-30T16:16:23+00:00,scored,https://www.bostonglobe.com/robots.txt,200,fb14f7cee0bc63211f8e7a55480d7d60e1baa33d69a118d8c5fdb04daa39a672,1373
+ruicorreia.pt,2026-08-30T10:04:21+00:00,scored,https://www.ruicorreia.pt/robots.txt,200,bb543bbbb42a791f2502f2fc6cc14b66742df1fb10ccb02c55051b7cd8f1ad81,491
+springfield.com,2026-08-30T10:04:30+00:00,aborted: homepage unreachable: timeout,,,,
+wook.pt,2026-08-30T10:00:22+00:00,aborted: homepage returned HTTP 403,,,,
+rows.com,2026-08-30T10:03:32+00:00,scored,https://rows.com/robots.txt,200,424fb23d2bff06d0428dc38f16cb8cd6988e7f8d271e635f6d9395bb057c5cf4,126
+cruwines.pt,2026-08-30T15:27:13+00:00,scored,https://www.cruwines.pt/robots.txt,200,4b1c31228774b735088bfe8d07af97160ec56f659558e29d12ea61f85095b1a2,4794
+correiodominho.pt,2026-08-30T10:01:12+00:00,scored,https://correiodominho.pt/robots.txt,200,98cc6c685f1f4662893525bbdb30499c30c5fb0d935e648be52817d83a584bba,33
+creat4you.com,2026-08-30T15:27:08+00:00,scored,https://creat4you.com/robots.txt,200,410ef3166830686c1c2363ce7b435a3132c32c0fa819f576491568815029f139,7673
+arstechnica.com,2026-08-30T10:04:51+00:00,scored,https://arstechnica.com/robots.txt,200,0abd612f8a892958ba16c55737464c09dc2d9490edcf9789496518e2f4651621,1912
+github.com,2026-08-30T10:04:41+00:00,scored,https://github.com/robots.txt,200,05a5baaac2db2fe11b62ae620d6e0f864ee187fb9d676a7bf55204178700296b,2274
+jornaldenegocios.pt,2026-08-30T10:02:40+00:00,scored,https://www.jornaldenegocios.pt/robots.txt,200,64e46a32325f274ce232ecb03d70eab2c7bfbc2024b7228df1d920e7ad4aeb79,578
+defined.ai,2026-08-30T10:03:08+00:00,scored,https://defined.ai/robots.txt,200,0f591cd58bb90ba496e39c2f64245eb408d6b92c940cb61e13a5190e0869cfce,87
+gutenberg.org,2026-08-30T16:18:15+00:00,scored,https://gutenberg.org/robots.txt,200,1f9a3a7eb83eff1ebbd9b11c01a440ec80e91c484fc9d1a63d8f5d00087f4973,40
+berkeley.edu,2026-08-30T16:15:32+00:00,scored,https://www.berkeley.edu/robots.txt,200,43a81a7e209a162a8532b6ab0e3d887b108fe914c366e2396673cfd21b715bd1,190
+bonobos.com,2026-08-30T16:16:12+00:00,aborted: homepage returned HTTP 404,,,,
+react.dev,2026-08-30T10:04:55+00:00,scored,https://react.dev/robots.txt,200,e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f,24
+theverge.com,2026-08-30T10:05:16+00:00,scored,https://www.theverge.com/robots.txt,200,78058c98bc9a11d587e89c475796f875f7618245333a8fd1c5186cd34c7e2a11,5658
+fabamaq.com,2026-08-30T10:03:10+00:00,scored,https://fabamaq.com/robots.txt,200,1352e11aa7891194292389bdab030cd03e96943da047ea252bdc683210713831,368
+abreu.pt,2026-08-30T09:56:45+00:00,scored,https://www.abreu.pt/robots.txt,200,f64784a3fdeb4bf162a38afbf120d75c6603632e862d922988b9ff54f2260288,68636
+codacy.com,2026-08-30T10:02:53+00:00,scored,https://www.codacy.com/robots.txt,200,5e9bb2be05f6f76348c338149adb544119e127157ebc2c25d7380bfb2f0937ed,43
+shopify.com,2026-08-30T10:05:10+00:00,scored,https://www.shopify.com/robots.txt,200,113fa430037e290ccea26f753a2f2ec40e92d2e8b17043843cb8819e30585edd,3605
+madewell.com,2026-08-30T16:19:20+00:00,scored,https://www.madewell.com/robots.txt,200,04d51955f9ba2cdfa6d0fddeb2278fc2be31b2a3cc90491721c32d1b52ff6c6b,2763
+azure.microsoft.com,2026-08-30T16:15:30+00:00,scored,https://azure.microsoft.com/robots.txt,200,a47c168a428547e69187d135280e10cac264dc445781fc2e9508193e4536febc,2596
+linear.app,2026-08-30T10:04:48+00:00,scored,https://linear.app/robots.txt,200,c5ff067087fda9581c88f7c9729b05eb8cc2502c41cdfe5ebbf498c667d38857,107
+diariodeaveiro.pt,2026-08-30T10:01:44+00:00,scored,https://www.diarioaveiro.pt/robots.txt,200,11ec8e70e07fb321f7f29258cc4c1c82732a3d4b4097a0d4cef01e54044ca2b9,433
+eco.sapo.pt,2026-08-30T10:01:44+00:00,scored,https://eco.sapo.pt/robots.txt,200,ad5a743e8d8eef6cd2685b5e98e097a316b9efa3ced3dab9ddcea8a7243055fc,321
+vinted.pt,2026-08-30T10:01:04+00:00,scored,https://www.vinted.pt/robots.txt,200,5dfdf38792bd153514c656cf48117cc2519438687bb014f54ea59685e27f05ed,3281
+globaldata.pt,2026-08-30T09:58:06+00:00,scored,https://www.globaldata.pt/robots.txt,200,853ba09257f5680a69fb65a70cbbb66b54c96a230cea14d438a67cd1129cdde6,1241
+theguardian.com,2026-08-30T10:05:14+00:00,scored,https://www.theguardian.com/robots.txt,200,3387cd8d393a0c257e687ce63fcf30558ada1eb1fc167bfc51cb216e29005db2,2873
+portoeditora.pt,2026-08-30T09:59:38+00:00,scored,https://www.portoeditora.pt/robots.txt,200,82fbffad58edbaaf42c9d1b8611f785ba408c8ca08ceea267720ec15ee3bd44f,72
+substack.com,2026-08-30T10:05:27+00:00,scored,https://substack.com/robots.txt,200,e468186aecca926921a597e3b593f101d82741e04874f7f723007d47adb3b1e8,585
+sandeman.com,2026-08-30T09:59:53+00:00,scored,https://www.sandeman.com/robots.txt,200,181eaaa4c98b749a3a7067e241ff0fb0ec08ff38bff170d777d34a283bd2096e,73
+medium.com,2026-08-30T10:04:42+00:00,aborted: homepage returned HTTP 403,,,,
+lifestyle.sapo.pt,2026-08-30T10:01:50+00:00,scored,https://sapo.pt/robots.txt,200,2efae8da84c999734a63b79149ee3af068fd8a9bb415ae202231011c81e714d3,2118
+aws.amazon.com,2026-08-30T16:15:21+00:00,scored,https://aws.amazon.com/robots.txt,200,c1f42540a70f0dcd98d98565c46f486ed49a464f077ef1f1362c5470b638ae98,13822
+carisma-store.com,2026-08-30T15:15:31+00:00,scored,https://www.carisma-store.com/robots.txt,200,fb76cbc4d2b03fae84a23a6e35aea04b996293b86563b5e5e19f5273439f5d8f,7224
+phonehouse.pt,2026-08-30T09:59:24+00:00,scored,https://phonehouse.pt/robots.txt,200,604d73540f24e055d690211709bb78a5f06440423b38ae1efe9b747025a17b9f,116
+marshmallow-concept.com,2026-08-30T15:29:10+00:00,scored,https://marshmallow-concept.com/robots.txt,200,ef965c6f688a37969e0791884e702de329d0a4187bfec2d81b39824fcd015ced,3660
+engadget.com,2026-08-30T16:17:32+00:00,scored,https://www.engadget.com/robots.txt,200,af2a32ac7658d5ab0d2aaa1e6e34409e27c30fa6c696cb1f1890d087ac443c26,207
+magicspoon.com,2026-08-30T16:19:16+00:00,scored,https://magicspoon.com/robots.txt,200,c31ee1811a3ea4ded85dea48ec9519e957b507fccfcb68a389541ffd74477385,3622
+thatalabel.com,2026-08-30T15:32:57+00:00,scored,https://thatalabel.com/robots.txt,200,44ed6d923889693b1576b5fe7809fa6fb5966b4992fac1ef78d7a4fb7a9d62d9,3624
+bbc.com,2026-08-30T10:04:44+00:00,scored,https://www.bbc.com/robots.txt,200,34a6212c178b5845816e4e5b00245d758290ee8109b4507fda890b393ce0b52e,6130
+fcporto.pt,2026-08-30T09:57:16+00:00,scored,https://www.fcporto.pt/robots.txt,200,d8697b9b39e53c3db1483d19f072d2e55adbc96fcecc4367270d3f9d0b0173df,181232
+economiafinancas.com,2026-08-30T10:03:51+00:00,scored,https://economiafinancas.com/robots.txt,200,8181439201f26704ba49c1c91c8614f40eafc06cb862e1eddbcae2c4afe65573,2014
+theinformation.com,2026-08-30T16:22:35+00:00,aborted: homepage returned HTTP 403,,,,
+vidadecao.pt,2026-08-30T10:04:25+00:00,scored,https://vidadecao.pt/robots.txt,200,572b4e8ba46fa3c1b16fb4926e598cfa3f19484888f09a67e97af2b4b574c861,1046
+mo-online.com,2026-08-30T09:59:06+00:00,scored,https://mo-online.com/robots.txt,200,4b845b8b0a818e4fd4c89616c28ad11ea0329b1d6e2d38c5769677cd40281fb3,547
+dn.pt,2026-08-30T10:01:38+00:00,scored,https://www.dn.pt/robots.txt,200,a9bf4067aa77dfb250d80f168b19d458d962664fdd92f626a9171872b82423f6,105
+render.com,2026-08-30T16:21:44+00:00,scored,https://render.com/robots.txt,200,b5fe9c24719a4843d2959e889b4beeaee50f3bacafb135d1646336ecffc8bf71,939
+bombas.com,2026-08-30T16:16:42+00:00,aborted: homepage returned HTTP 429,,,,
+shifter.pt,2026-08-30T10:02:47+00:00,scored,https://shifter.pt/robots.txt,200,fa8835a1c734375ada03453f8dc15fed6906adaa98b661e10b49832052869195,517
+maxmat.pt,2026-08-30T09:59:42+00:00,scored,https://www.maxmat.pt/robots.txt,200,3c31be4904fd85de9a999b0b4973c35281dfd02debd7cbc1ea6c2a1c1ac94e44,325
+visao.pt,2026-08-30T10:03:43+00:00,scored,https://visao.pt/robots.txt,200,0b526932e78907ac6d2f6bcc0ace59505582b17357fbc73e10821ce72a3f7c41,70
+lojadadiana.pt,2026-08-30T15:29:01+00:00,scored,https://lojadadiana.pt/robots.txt,200,dd21c91a11602bcf51e08c2ebc1058c2a150bb92608556cf3930ff1cf65bd6b8,3624
+magnetikco.com,2026-08-30T15:29:04+00:00,scored,https://magnetikco.com/robots.txt,200,61fd909dfc8cd54f72cf40185df596200884cb0ff38b7f7cfdb5cb7bd4057924,3624
+databricks.com,2026-08-30T16:17:04+00:00,scored,https://www.databricks.com/robots.txt,200,3ba1d70735cb99a341a98d70613dcebfa8284b48f6e0c061960bbe310149248f,129
+cinco-quartos-de-laranja.blogspot.com,2026-08-30T10:03:44+00:00,aborted: homepage returned HTTP 404,,,,
+partakefoods.com,2026-08-30T16:21:17+00:00,scored,https://partakefoods.com/robots.txt,200,5235f7ed7b0e2e3554b5baa26addf7d4ddf3aed2a4585fa857c76789845f0faf,3630
+airbnb.com,2026-08-30T10:04:32+00:00,scored,https://www.airbnb.com/robots.txt,200,eee43f42bb76d3f0466014b8598e1cf60fa87944298a507ad31840390474f355,24175
+kohls.com,2026-08-30T16:18:58+00:00,aborted: homepage returned HTTP 403,,,,
+imperfectfoods.com,2026-08-30T16:18:43+00:00,scored,https://www.imperfectfoods.com/robots.txt,200,98b62d26fce720fa109e6f87de6d7d85332eb9b08293eeabebe05cdf63f6b660,419
+wix.com,2026-08-30T16:23:27+00:00,scored,https://www.wix.com/robots.txt,200,fef1f6ed42a555f0eb1efa45b48d3d00c98d8eb0452bb6d2a1487d6ba8771d6a,2797
+bohastore.pt,2026-08-30T15:15:31+00:00,scored,https://www.bohastore.pt/robots.txt,200,2ce81f650bfd2d03815007f25137df5bdc59cd700539c905742d2390a968e7eb,3632
+electrodepot.pt,2026-08-30T09:57:35+00:00,scored,https://www.brandshelter.com/robots.txt,200,735c882acd8bc47d000d5fb142bc91ce4ef26c53e4dfad716a114f2bd52649a2,130
+rasembalagens.com,2026-08-30T15:43:18+00:00,scored,https://rasembalagens.com/robots.txt,200,4e9e4ba3b80e1ff2aa5745a2f4ee81d9233e5ffeb9e3b1c5ce2053d2b6689522,7295
+bertrand.pt,2026-08-30T09:56:43+00:00,aborted: homepage returned HTTP 403,,,,
+skynews.com,2026-08-30T16:22:09+00:00,aborted: homepage returned HTTP 403,,,,
+timeout.pt,2026-08-30T10:04:29+00:00,scored,https://www.timeout.pt/robots.txt,200,88bfd026bc26b74ed508bcc700d56b5f7d2e096c80bab67d35f8e36074d79c11,18354
+criticalsoftware.com,2026-08-30T10:02:57+00:00,scored,https://criticalsoftware.com/robots.txt,200,e7c3fa4861d89c647a38677dbd8b0ee9373fd1c50158722719c847c707ead2b9,93
+venturebeat.com,2026-08-30T16:23:53+00:00,aborted: homepage returned HTTP 429,,,,
+etsy.com,2026-08-30T10:04:36+00:00,aborted: homepage returned HTTP 403,,,,
+zdnet.com,2026-08-30T16:23:44+00:00,scored,https://www.zdnet.com/robots.txt,200,7dff0b80daea512a30349c3bfa44ac982b2e2c04fac5f8061eeacb652861a650,5426
+snowflake.com,2026-08-30T16:22:17+00:00,scored,https://www.snowflake.com/robots.txt,200,be32bef083daa32298486d1d2b03cc24baeb4811392fa32e785db29b04947423,2805
+usatoday.com,2026-08-30T16:22:56+00:00,scored,https://eu.usatoday.com/robots.txt,200,9bf8ba4edf177c3d6d293262c25e2149df11a62620e7a66e1938801526dd301c,14456
+lululemon.com,2026-08-30T16:20:37+00:00,aborted: homepage unreachable: timeout,,,,
+huckberry.com,2026-08-30T16:18:35+00:00,aborted: homepage returned HTTP 403,,,,
+feedzai.com,2026-08-30T10:03:06+00:00,scored,https://www.feedzai.com/robots.txt,200,bcd91553ac883f960e6450e4a3b34228c0ea99b12abc4b85d7bc1b36ab3c0395,672
+hbr.org,2026-08-30T10:04:43+00:00,scored,https://hbr.org/robots.txt,200,793e323f3d6c3a728741a62304f4a4e808c6c146aa57a22de3d3c044ba073b27,1016
+docusign.com,2026-08-30T16:17:15+00:00,scored,https://www.docusign.com/robots.txt,200,eccf99d09e4e51ac398d2829a52a70764a0ca61fbacb409843a078f96cfd7015,1895
+utrust.com,2026-08-30T10:03:40+00:00,scored,https://www.xmoney.com/robots.txt,200,dd90159727e0f975c35abe8ed81537f191ba0f1031366bd9d31911b23534ecdb,428
+akamai.com,2026-08-30T16:15:04+00:00,aborted: homepage returned HTTP 403,,,,
+garrafeirabaco.pt,2026-08-30T15:27:40+00:00,scored,https://garrafeirabaco.pt/robots.txt,200,108413d511ad6a46b86390ceb13e850c600234fdd2de99e2426e361dbbbcb5be,3636
+mailchimp.com,2026-08-30T16:19:40+00:00,scored,https://mailchimp.com/robots.txt,200,e05b7ad0de825556f53a9fdbac0d36e1fb88bd38d4fef23f76bd0cd51dbc4810,101
+dinheirovivo.pt,2026-08-30T10:01:31+00:00,scored,https://dinheirovivo.dn.pt/robots.txt,200,a9bf4067aa77dfb250d80f168b19d458d962664fdd92f626a9171872b82423f6,105
+costco.com,2026-08-30T16:18:31+00:00,aborted: homepage unreachable: timeout,,,,
+leak.pt,2026-08-30T10:02:01+00:00,scored,https://www.leak.pt/robots.txt,200,74f4c4a5c6ba4c49cf33bd6472274c765a5db690eb6e0f33561f72240981eb0e,296
+cutxicutxi.com,2026-08-30T15:28:18+00:00,scored,https://cutxicutxi.com/robots.txt,200,4158322bb22933788eef786d3e3f3fb1df34b69f29a7e12d045cf78751fccb2c,7203
+salesforce.com,2026-08-30T16:22:02+00:00,scored,https://www.salesforce.com/robots.txt,200,905d8800d5cc13bac380697922770b4c201bd32e570b858ff481cab029bbe20d,14256
+allbirds.com,2026-08-30T16:15:09+00:00,scored,https://www.allbirds.com/robots.txt,200,c9733b5b6b448f7056fe3a3d8140cee3784e8b9ef075a9c5002f41b73c9d9bca,5495
+ovarmedia.blogs.sapo.pt,2026-08-30T10:04:12+00:00,aborted: homepage returned HTTP 404,,,,
+landing.jobs,2026-08-30T10:03:19+00:00,scored,https://landing.jobs/robots.txt,200,f2fe080bc66022909b440f2d6a5a48143ba9a22e5ef7da0136bb2dd6aec63321,251
+bind.pt,2026-08-30T10:02:49+00:00,scored,https://bind.pt/robots.txt,200,76f67d75dc25e0855e18ae1fba5fa9e0c0cbe2444b8316da1c0a601db4acb62e,1551
+meusuper.pt,2026-08-30T09:59:12+00:00,scored,https://www.continente.pt/robots.txt,200,0a068705b5dce418ce015b4dfecbc6a7eb85a0b72e9daf61859d0f0f2d443a47,2609
+receitasemamores.blogspot.com,2026-08-30T10:04:13+00:00,aborted: homepage returned HTTP 404,,,,
+canemar.pt,2026-08-30T15:15:26+00:00,scored,https://canemar.pt/robots.txt,200,6a074c4b8f443ac042c7f0a1c62cd198a9917cd268258acde7347b6446e7f6d0,3608
+ft.com,2026-08-30T10:04:40+00:00,aborted: homepage returned HTTP 403,,,,
+logitravel.pt,2026-08-30T09:57:58+00:00,aborted: homepage returned HTTP 403,,,,
+rtp.pt,2026-08-30T10:02:20+00:00,scored,https://www.rtp.pt/robots.txt,200,f284437a90acbaa268a99cce6c68fe2b2cb7905e29ecedc75cb697e67aa12313,364
+nike.com,2026-08-30T16:20:46+00:00,scored,https://www.nike.com/robots.txt,200,54ba534bff9e8b4cf89f30c9432c8aa4b8e2b652cb1a9170b25ac8d8ad356ee6,3503
+burrow.com,2026-08-30T16:16:36+00:00,scored,https://burrow.com/robots.txt,200,b8a695b213594299fb58a62b096e9227a71880c724d5ad67dc16535980893a34,3470
+portaldasfinancas.gov.pt,2026-08-30T10:04:14+00:00,aborted: homepage unreachable: network: ConnectError,,,,
+clausporto.com,2026-08-30T09:56:49+00:00,scored,https://www.clausporto.com/robots.txt,200,bebb8ff60e306cdb4b4a9244d47a989cd7e3ce26b234309c39ca0ae4d6ea934f,5712
+linkedin.com,2026-08-30T16:18:59+00:00,scored,https://linkedin.com/robots.txt,200,682c9272a91a044789d5fc21a11743211b1644c2b07994d70636794bb9fbe55c,21245
+btech.pt,2026-08-30T10:01:20+00:00,scored,https://btech.pt/robots.txt,200,361ff7973af9e462705d417ceb1faf999eda8ee744e4ddbee04162ed31a3aee6,109
+homedepot.com,2026-08-30T16:18:32+00:00,aborted: homepage returned HTTP 403,,,,
+coursera.org,2026-08-30T16:17:07+00:00,scored,https://www.coursera.org/robots.txt,200,8efbf915a81aaee3c3cf153ce1b7522ea31b7b21c27954e89734845998e45fca,1291
+politico.com,2026-08-30T16:21:28+00:00,aborted: homepage returned HTTP 403,,,,
+olx.pt,2026-08-30T09:59:15+00:00,aborted: homepage returned HTTP 403,,,,
+bricomarche.pt,2026-08-30T09:57:36+00:00,scored,https://www.bricomarche.pt/robots.txt,200,e1d2fa298710cb67dae4c04c2ec93811e76e86d6eb1c4795052b47045ab54e16,329
+garrafeiranacional.com,2026-08-30T09:57:44+00:00,scored,https://www.garrafeiranacional.com/robots.txt,200,4bcc86febab3e1da3e7f088bdbb8d66b9c65d3547aba39b8ac8adde74e05a1eb,2811
+asana.com,2026-08-30T16:15:20+00:00,scored,https://asana.com/robots.txt,200,1b69de0d3887cd5568f7df92f245087d9e815547f68241146797e0a2562b1649,547
+haemiskin.pt,2026-08-30T15:42:02+00:00,scored,https://www.haemiskin.pt/robots.txt,200,012da1dd7e5cea969cfbf459b0ff13d2e691520c9e155bae1812e8a98261259c,7292
+newegg.com,2026-08-30T16:22:07+00:00,aborted: homepage unreachable: timeout,,,,
+latimes.com,2026-08-30T16:19:03+00:00,scored,https://www.latimes.com/robots.txt,200,6dc754f82f55902704f5e1cdd1f406e0f91246ce2238c92e9634f3335f57aab7,1768
+grahams-port.com,2026-08-30T09:57:44+00:00,scored,https://www.grahams-port.com/robots.txt,200,8fa3036c68bfcbd32365f6225d24333264093b7cd38d306e106b4dbdc934fd5b,1248
+athleticgreens.com,2026-08-30T16:16:10+00:00,aborted: homepage returned HTTP 429,,,,
+mediamarkt.pt,2026-08-30T09:59:01+00:00,scored,https://darty.pt/robots.txt,200,c2a4c07efb191e859308d849797aaf850955331c8f24ebeb835252ff75125cd6,3600
+uniplaces.com,2026-08-30T10:00:18+00:00,scored,https://www.uniplaces.com/robots.txt,200,e5727d245103ac9a9b7b1397b57b59de488111f52b519b52ddee87606560e05e,715
+veniam.com,2026-08-30T10:03:42+00:00,scored,https://veniam.com/robots.txt,500,,
+lanidor.com,2026-08-30T09:58:09+00:00,scored,https://www.lanidor.com/robots.txt,200,5513321ca62a11dd744f0526888f9eeb58bcca3249201ea838f82840b8a07dbe,3213
+gastronomias.com,2026-08-30T10:04:14+00:00,scored,https://gastronomias.com/robots.txt,200,e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f,24
+comur.com,2026-08-30T09:56:52+00:00,scored,https://portuguesesardine.com/robots.txt,200,0d7513ee22a348089abe9b3041454897bbcd7400e561a6757416a60068539d49,3652
+brightland.co,2026-08-30T16:16:28+00:00,scored,https://brightland.co/robots.txt,200,ba4c9f42038baf549e6340e7cedcf45035fdff8c0aa20519c6a0cd6305093fe1,3618
+corta-fitas.blogspot.com,2026-08-30T10:03:53+00:00,scored,https://corta-fitas.blogspot.com/robots.txt,200,107d114a7def6eb5e87e657b9ccfb97186b8b7c0d3a6699bccffffa56fdaeea8,166
+jarilo.eu,2026-08-30T15:28:54+00:00,scored,https://jarilo.eu/robots.txt,200,a5088f7d6e153ccfce373d48d51a980138a12d80827e32b281169611fda549e6,3604
+vox.com,2026-08-30T16:22:56+00:00,scored,https://www.vox.com/robots.txt,200,d510b34234f933196da5cb5220669b9cbd7d44df7984e089fe12d94b1f41f4ac,7548
+druni.pt,2026-08-30T09:59:42+00:00,scored,https://www.druni.pt/robots.txt,200,9fcf50bc96ef41534dfe66d66ed0931a4c3721caf1c02b6c8b54c1cb6429fe23,2241
+geocakes.com,2026-08-30T15:27:46+00:00,scored,https://geocakes.com/robots.txt,200,ebc5eed9b18bb022fa95001f4348f94d3d114257c06f433c5940efca0dbcffe0,3616
+ulta.com,2026-08-30T16:22:55+00:00,scored,https://www.ulta.com/robots.txt,200,f011e9b094b9e753902d490f154d9a7fe242ce3fb67de5aab0aeb0aaff3ede98,1811
+defector.com,2026-08-30T16:17:25+00:00,scored,https://defector.com/robots.txt,200,425625ac220644a27609166e1a51ab3a5bb848dafa48a9c85c8d22e5c3ae8036,243
+fortune.com,2026-08-30T16:18:00+00:00,scored,https://fortune.com/robots.txt,200,d6633bb4399f6e46ce807fbb5fce1d0a233fdcb79769bf38a50349159af2e3b0,1774
+expedia.com,2026-08-30T16:18:34+00:00,aborted: homepage returned HTTP 429,,,,
+quip.com,2026-08-30T16:21:35+00:00,scored,https://quip.com/robots.txt,200,64737e428323f75e6aa2623b8a36e538dd2db93839ec66441b7208206cad7373,97
+wetheknot.com,2026-08-30T10:00:30+00:00,scored,https://www.wetheknot.com/robots.txt,200,b38db67c78a22ced39c388dd0bed868a7154567404659b000f42411529296e15,46
+forbes.com,2026-08-30T16:17:54+00:00,scored,https://www.forbes.com/robots.txt,200,945fd312a8432c57904023f4120f0a532c63b865a91d1004cdb8f0e2ef880d0c,10719
+mejuri.com,2026-08-30T16:20:22+00:00,scored,https://mejuri.com/robots.txt,200,7481ef089e1e4e289baae0a81e0d739f5f5b291c0e546f78269f965b97438f45,3315
+aventar.eu,2026-08-30T10:03:48+00:00,scored,https://aventar.eu/robots.txt,200,4843c5c1cd470c2102d19146d47706a802d19982f601af0ceaebeebdcd82a055,152
+geostar.pt,2026-08-30T09:57:53+00:00,scored,https://www.netviagens.pt/robots.txt,200,78d2385495c27a965d47f4df6c94f56d6343c2e47937ee0497de9102ccace4c0,366
+opentable.com,2026-08-30T16:20:58+00:00,aborted: homepage returned HTTP 403,,,,
+publituris.pt,2026-08-30T10:02:19+00:00,scored,https://publituris.pt/robots.txt,200,fcb39095266ed31b6031f5e538fbf2b5eb0ee823d8aa431215e91e1f2bed9ae2,2401
+ifthenpay.com,2026-08-30T10:03:11+00:00,scored,https://ifthenpay.com/robots.txt,200,a386f43523cbc4eee1816671f361547fac8758195b65b00c554b1f43fc941d10,783
+cozinhadaduquesa.blogspot.com,2026-08-30T10:03:47+00:00,aborted: homepage returned HTTP 404,,,,
+esporao.com,2026-08-30T09:57:34+00:00,scored,https://esporao.com/robots.txt,200,6e4c7b1e897138b577f797cedefeca17296b75c9b3f5d636cf70ec2b4d792fde,125
+emailbidding.com,2026-08-30T10:04:30+00:00,aborted: homepage unreachable: timeout,,,,
+ikea.com,2026-08-30T16:18:44+00:00,scored,https://www.ikea.com/robots.txt,200,53df86f20aea5f91125e8ed0d4ae2c69aaf94fd671a276b41354a5a62b4a9338,4054
+solostove.com,2026-08-30T16:22:26+00:00,scored,https://www.solostove.com/robots.txt,200,46e5bd0a33552b4efdea5e8ca753e2da423669c592f014f278f19fd324184d9c,84
+flytap.com,2026-08-30T09:58:07+00:00,scored,https://www.flytap.com/robots.txt,200,0ca443655d4f5a63a5502aa666c06396975cecc964cd5df5046f2782ec3836e9,648
+lidl.pt,2026-08-30T09:58:29+00:00,scored,https://www.lidl.pt/robots.txt,200,2825cef3bc15a546828bfe50d8b7e8cb9f4d77eb0c6e04a88c61c755bccd21d8,259
+zendesk.com,2026-08-30T16:23:50+00:00,scored,https://www.zendesk.com/robots.txt,200,febf032bdcc18f83dbd17c75b2903f569c43c3f21f364616b2cda97714c36166,1028
+notion.so,2026-08-30T10:05:07+00:00,scored,https://www.notion.com/robots.txt,200,f15328fade9b3842e57475ee74ee6888a39942ecf0267b10f1d2316a9441dc35,1178
+skinlife.pt,2026-08-30T10:00:34+00:00,scored,https://skinlife.pt/robots.txt,200,16b3df43c297fd6979dae676fab106381e27a9403efccd86c8782bc680e144b8,6073
+404media.co,2026-08-30T16:14:59+00:00,scored,https://www.404media.co/robots.txt,200,c29c3aa47940a5afc59754059c01bc0d35f7b8bba122349ac14e7347ad01c300,213
+nortravel.pt,2026-08-30T09:59:06+00:00,scored,https://www.nortravel.pt/robots.txt,200,7acb75067a2b0d04b771a677ac0df965674f1b74844d9a94919c9fd4e4df3188,41
+alojadacerveja.com,2026-08-30T15:15:30+00:00,scored,https://alojadacerveja.com/robots.txt,200,5b852eff0ba5e99d76fcb0572ba3e12472f0c7392cb24080d804435d8f8fc872,3640
+fnac.pt,2026-08-30T09:57:16+00:00,aborted: homepage returned HTTP 403,,,,
+yelp.com,2026-08-30T16:23:29+00:00,aborted: homepage returned HTTP 403,,,,
+custojusto.pt,2026-08-30T09:57:13+00:00,scored,https://www.custojusto.pt/robots.txt,200,4cebf80ea51508561016748fd1b4cf63c76e6c69b7970b63a6a4f84f36d26f96,1232
+combatsports.store,2026-08-30T15:27:08+00:00,scored,https://www.combatsports.store/robots.txt,200,aa39398e9c0f823a5dae7bc5eaf3c0b9b2fe21cb84a4b34f2368830e6a41f035,3654
+niepoort-vinhos.com,2026-08-30T09:59:28+00:00,scored,https://www.niepoort.pt/robots.txt,200,3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703,23
+ietf.org,2026-08-30T16:18:39+00:00,scored,https://www.ietf.org/robots.txt,200,ab0325f3171f1f1e6e221b92ec6c86909ea782804d5cf35f1802542cd78ef377,51
+estampesuaart.com,2026-08-30T15:27:30+00:00,scored,https://estampesuaart.com/robots.txt,200,a2bac08ac3361d6f724b29ed54850c339de0b565c341a98fea4a8c65c56d72bb,7299
+meta.com,2026-08-30T16:19:51+00:00,scored,https://www.meta.com/robots.txt,200,d1cc02c8b2817d84ab456896b2c6bbe922da75a85bd341b3283d33bacd2dd6ea,3419
+liquiddeath.com,2026-08-30T16:19:05+00:00,scored,https://liquiddeath.com/robots.txt,200,e00990569d78b3fb81c9c3c0e5f8bc7cc45d017f9b6499afc90d32fc9b2bbe89,3626
+noticiasaominuto.com,2026-08-30T10:01:59+00:00,scored,https://www.noticiasaominuto.com/robots.txt,200,36182eeacb5f0039c2eb78f30fb99fca20e4e2412a96a46a6c351911f6da0e72,1755
+quora.com,2026-08-30T16:21:34+00:00,aborted: homepage returned HTTP 403,,,,
+stubhub.com,2026-08-30T16:22:23+00:00,scored,https://www.stubhub.com/robots.txt,200,706764e6607aa51de32c1f3932f8ffaf27f2fb82e53eb52edeee8f5ffa4e2443,14172
+apolonia.com,2026-08-30T09:56:54+00:00,scored,https://www.apolonia.com/robots.txt,200,30088d35eefd47e6e346b93da92b51ba634123ae063f0aadf136848429f72dd0,251943
+ojogo.pt,2026-08-30T10:02:30+00:00,scored,https://www.ojogo.pt/robots.txt,200,67b5f829bc1dcc6db51d5a14f0bd3ee59d35d95a14a85ec4f4ac1b3a151fae9c,2923
+primeit.pt,2026-08-30T10:03:26+00:00,scored,https://www.primeit.pt/robots.txt,200,90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2,67
+calendly.com,2026-08-30T16:16:35+00:00,scored,https://calendly.com/robots.txt,200,0bc39da8943d0ba14995453d49ea18216195b036f97c135bd17a52aa9410ba2d,335
+gizmodo.com,2026-08-30T16:18:09+00:00,scored,https://gizmodo.com/robots.txt,200,251218b4fa95b483aef0f105bc32d20ad28b7e012287f9a466c74a5d7a64c2ec,1223
+npr.org,2026-08-30T16:20:55+00:00,scored,https://www.npr.org/robots.txt,200,385d71521a5490c6e23f0b73936b31c6f5e537bc678669c694b39c89f6aa9287,4657
+science4you.com,2026-08-30T10:03:29+00:00,scored,https://science4you.com/robots.txt,200,84f7242b69a0d079d88d20a768e20124979f0499d2b0e5b947cc4b32bc07dff9,66
+mongodb.com,2026-08-30T16:20:28+00:00,scored,https://www.mongodb.com/robots.txt,200,79b3e7543ec8c0e56527f4cd232f1ee5f8c6872ea0c10c74820f0f64822a71f8,2859
+maisfutebol.iol.pt,2026-08-30T10:01:54+00:00,scored,https://maisfutebol.iol.pt/robots.txt,200,94059e41817b565730670b446378e8df7673a282ea68d72a127e4bbf1febc5a8,667
+dnoticias.pt,2026-08-30T10:01:37+00:00,scored,https://www.dnoticias.pt/robots.txt,200,47673440b54959160c7566ddf37cab6fdc3122c6aa5ac6989241f3448ff92460,1344
+tvi.iol.pt,2026-08-30T10:02:24+00:00,scored,https://tvi.iol.pt/robots.txt,200,b052254efd12cf35386834c1c1ec1bb48bee4912e028751a5fed42e9408eaa81,3771
+edreams.pt,2026-08-30T09:57:06+00:00,scored,https://www.edreams.pt/robots.txt,200,f523a375c215e0dbe1b3810ff63eb6dd2182f7c44ad7e9f3794cadf814deb0f7,3383
+zap.aeiou.pt,2026-08-30T10:03:39+00:00,scored,https://zap.aeiou.pt/robots.txt,200,3f2a25f106bc8952c83785696cd5fad0100fdcec6218f96731c0432b429b89cc,2119
+khanacademy.org,2026-08-30T16:18:52+00:00,scored,https://www.khanacademy.org/robots.txt,200,de8d690cc29d476a93319b1c1277c589cc93968af1ce8bd1e1f6ec201a253d7a,1129
+reddit.com,2026-08-30T10:04:55+00:00,scored,https://www.reddit.com/robots.txt,200,41aea42110242175c7b4247f222fa95ac6caee62044af686b684785832781857,538
+vuori.com,2026-08-30T16:22:59+00:00,scored,https://vuoriclothing.com/robots.txt,200,a70fd40e5609213bafcfdf713942b42fb03de78b27ca934d1ce4a8782fa20f67,2375
+dollarshaveclub.com,2026-08-30T16:17:17+00:00,scored,https://us.dollarshaveclub.com/robots.txt,200,b5ea50ba1fa159c011719f70fdec52bdbe8a6921ce32480406bb104d2be91485,3656
+makro.pt,2026-08-30T09:58:05+00:00,aborted: homepage returned HTTP 403,,,,
+gerador.eu,2026-08-30T10:04:34+00:00,scored,https://gerador.eu/robots.txt,200,1877e3f2e4e936942d9be179317f0582bebff3b72adcbac66c9026135ca74db2,90
+divergente.pt,2026-08-30T10:01:34+00:00,scored,https://divergente.pt/robots.txt,200,45189c2f6ac8f85c013c846173e82cf0c7c848d7233ebaaf79709ad14c8c7714,117
+haus.com,2026-08-30T16:18:28+00:00,scored,https://haus.com/robots.txt,200,a1018978f5c6f03ed495da37abc0b2126f332a2a0f9d720aaf7b06663ffafa7d,29070
+viajarentreviagens.pt,2026-08-30T10:04:32+00:00,scored,https://viajarentreviagens.pt/robots.txt,200,9c35abecd0bd9d7893724b8e08df946fc6fa02271674aefc61bc8d26a504fd06,244
+reconquista.pt,2026-08-30T10:02:04+00:00,scored,https://www.reconquista.pt/robots.txt,200,220861b43451fe77f69f7b8f78081ef4da6deec595c598ba113cf5332e30c6b6,210
+newyorker.com,2026-08-30T16:20:40+00:00,scored,https://www.newyorker.com/robots.txt,200,b0af4246b016089c8049d9ab5688c812cda01744896c0bf6313f3588060d6216,1958
+wells.pt,2026-08-30T10:00:38+00:00,scored,https://wells.pt/robots.txt,200,da0f6dbc3d7a3ec494f61b201b958468eb4c33aa5398ef7904872cb1a4d54ec9,728
+stackoverflow.com,2026-08-30T10:04:57+00:00,aborted: homepage returned HTTP 403,,,,
+muzzley.com,2026-08-30T10:03:18+00:00,scored,https://www.habit.io/robots.txt,200,492368af50f0d70c9672274a92cfd3d16172804917e0b3ff656ce0672d7c35c8,357
+bikeplanet.pt,2026-08-30T09:56:52+00:00,scored,https://www.bikeplanet.pt/robots.txt,200,47424e7bf9d53bd37682e7776b90bac14fd1b309790837c17ee10e52875d45c4,3636
+bhphotovideo.com,2026-08-30T16:15:32+00:00,aborted: homepage returned HTTP 403,,,,
+lusa.pt,2026-08-30T10:01:52+00:00,scored,https://www.lusa.pt/robots.txt,200,f64b22bb45805857807c34fb428399a2e11fa00def59e940a9ef5fcf69c24936,2171
+casa.pt,2026-08-30T09:57:46+00:00,scored,https://casa.pt/robots.txt,200,ec0067fb0925e79d7a0158e78266ecc507f27b30733f13fad8df5958bfad6110,596
+gouveiaspublicidade.pt,2026-08-30T15:41:59+00:00,scored,https://gouveiaspublicidade.pt/robots.txt,200,99715cde74e99985f73a246b7aa8e1377ef67781ef2bc898b0c5ef2b79b56557,3658
+contasconnosco.pt,2026-08-30T10:03:54+00:00,scored,https://contasconnosco.cofidis.pt/robots.txt,200,a92817588d4581bf85d62b0c42c24bf1925f174ed8af40f16903b20bf93d9256,2394
+adidas.com,2026-08-30T16:15:00+00:00,aborted: homepage returned HTTP 403,,,,
+mindera.com,2026-08-30T10:03:22+00:00,scored,https://mindera.com/robots.txt,200,ec683f722138c2098467f1f7e2c63f671d67247a6010fbedc6103ad5ad3c56a6,222
+nos.pt,2026-08-30T09:59:18+00:00,scored,https://www.nos.pt/robots.txt,200,ff32022134d9211b436b485e9c592a5657f303ce8f5f049ab64a76933b6d1aaa,1167
+vercel.com,2026-08-30T10:05:15+00:00,scored,https://vercel.com/robots.txt,200,222d2631a3ddc6cc4b13f932f2b0e5fbb238819c1886e1412de7f82d8422db19,629
+clickup.com,2026-08-30T16:16:58+00:00,scored,https://clickup.com/robots.txt,200,7e0b8ecd80efe4b664c0b1547dc2d25b0037bf9e93ed8095259fd7f53b610a67,1308
+loom.com,2026-08-30T16:19:04+00:00,scored,https://www.loom.com/robots.txt,200,da76be0deb74c504a8530dfdf6a1d8f441fb7db04d5fd52cbd7f39e451426ee7,377
+wired.com,2026-08-30T10:05:27+00:00,scored,https://www.wired.com/robots.txt,200,7e12f9d93a8a761a7a830a5e692bbef07f49957afed97b59ddcc60018b1a858a,1994
+toddsnyder.com,2026-08-30T16:22:45+00:00,scored,https://www.toddsnyder.com/robots.txt,200,e78d0902ae278406beb39a76be41fcd694aa11f98fec8abd15b18a28b76017d6,6141
+fumaca.pt,2026-08-30T10:01:35+00:00,aborted: homepage returned HTTP 403,,,,
+glintt.com,2026-08-30T10:03:06+00:00,scored,https://www.glinttglobal.com/robots.txt,200,48a4d2b380e8d91893e7feeaa5a85eabbe022065e5442b1219065163cd6434b0,235
+continente.pt,2026-08-30T09:57:10+00:00,scored,https://www.continente.pt/robots.txt,200,0a068705b5dce418ce015b4dfecbc6a7eb85a0b72e9daf61859d0f0f2d443a47,2609
+squarespace.com,2026-08-30T16:22:19+00:00,scored,https://www.squarespace.com/robots.txt,200,2280dba517d015842f2e97870bf9c17952ac25fec56b9685637501e839d8ca3b,2379
+tripadvisor.com,2026-08-30T16:22:41+00:00,aborted: homepage returned HTTP 403,,,,
+udemy.com,2026-08-30T16:22:48+00:00,aborted: homepage returned HTTP 403,,,,
+comunidadeculturaearte.com,2026-08-30T10:03:48+00:00,scored,https://comunidadeculturaearte.com/robots.txt,404,,
+vodafone.pt,2026-08-30T10:01:17+00:00,scored,https://www.vodafone.pt/robots.txt,200,d88c7eb7670f62c62857982ea0fc8ec89be4c2a6a797048b7651e400a365bc50,729
+switch.pt,2026-08-30T10:03:35+00:00,scored,https://www.switch.pt/robots.txt,200,4cfb29de37a4ae6aaae56bea0d11e7dd3b77740149fe65615c642437ca4cf247,93
+bestbuy.com,2026-08-30T16:17:07+00:00,aborted: homepage unreachable: timeout,,,,
+seatgeek.com,2026-08-30T16:21:55+00:00,aborted: homepage returned HTTP 403,,,,
+go.dev,2026-08-30T16:18:10+00:00,scored,https://go.dev/robots.txt,200,16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95,23
+wpengine.com,2026-08-30T16:23:35+00:00,scored,https://wpengine.com/robots.txt,200,c4f6de43ce9c103d562be0b8c20e9a81bd32291e557e9809baae06a28afb18d5,1805
+cmjornal.pt,2026-08-30T10:01:28+00:00,scored,https://www.cmjornal.pt/robots.txt,200,0a52062a74caaa08eae553c8e72400c77a61afc48730eecab3f8b4a5a839816a,666
+mit.edu,2026-08-30T16:20:01+00:00,scored,https://web.mit.edu/robots.txt,200,bad4e8ead1b0414e6d9f15a570ae195b73c69f2fd02e3e2516e2991289675a47,199
+propublica.org,2026-08-30T16:21:30+00:00,scored,https://www.propublica.org/robots.txt,200,4743b8689302f700601bf1a0deb353b3dab279c976d25afa2df2169a83534749,190
+chicagotribune.com,2026-08-30T16:16:53+00:00,aborted: homepage returned HTTP 403,,,,
+box.com,2026-08-30T16:16:23+00:00,scored,https://www.box.com/robots.txt,200,cb77a92c0a2fe2e45eb81e381bda7c843c0688e0066cd2274fb06a0644deffa9,1484
+sweetwater.com,2026-08-30T16:22:32+00:00,scored,https://www.sweetwater.com/robots.txt,200,5989b75e2b297cb91049497218228bd0307aee59958fffbb5ba2943196c747e1,2137
+cbsnews.com,2026-08-30T16:16:44+00:00,scored,https://www.cbsnews.com/robots.txt,200,3183f29f832838e64ddcdfe0fa253efe5003d650c636ba40efa6cfcfe4489570,950
+jenis.com,2026-08-30T16:18:49+00:00,scored,https://jenis.com/robots.txt,200,8ba8e8cca92c0c52bbe3e5b5a1e4ba3b8c34366f6f3647027f271c2285b4ef34,3604
+xpand-it.com,2026-08-30T10:03:46+00:00,scored,https://xpand-it.com/robots.txt,200,70b809f6542c349f4e5a6d4908a6b120166d194899c21ac83074be549604fda1,326
+nasa.gov,2026-08-30T16:20:32+00:00,scored,https://www.nasa.gov/robots.txt,200,44d72c5ad1a94bb45f25caaba917c39b39b383af3a121b59a5a7e46fbe3ccb05,69
+tugatech.com.pt,2026-08-30T10:04:22+00:00,scored,https://tugatech.com.pt/robots.txt,200,5f3cf0e753e0902334ead077a5479dc56712ae712006fca40a9bc8421a39e60c,567
+portoferreira.pt,2026-08-30T09:59:49+00:00,scored,https://portoferreira.com/robots.txt,200,3d60ee00e56206ad0b0e981bda2456c1cdd92ec0805862c53e0efbbb0835c919,5796
+aminhaterra.pt,2026-08-30T10:01:01+00:00,scored,https://aminhaterra.pt/robots.txt,200,b85acd3513c7c441555efbe089c37c57900fa64e680416d35aad07589cb4bde9,100
+unbabel.com,2026-08-30T10:03:51+00:00,scored,https://unbabel.com/robots.txt,200,6c134a05d104e033ce3406552ae0ba68b14ab39e24f95b8a186e9a5736eb0f1a,184
+duolingo.com,2026-08-30T16:17:27+00:00,scored,https://www.duolingo.com/robots.txt,200,13dbb017d9b20e5b8ccce6a1d4eb4eb9984d0684763dbc49a0cf17d3f91e74f7,826
+casper.com,2026-08-30T16:16:45+00:00,scored,https://casper.com/robots.txt,200,3914466d304df2d808ba6d5245d9964413a820f294d530395074a3ace95ba2da,5483
+mixpanel.com,2026-08-30T16:20:08+00:00,scored,https://mixpanel.com/robots.txt,200,1c00eb6fd7dc9b749d107055f45975245cf5e60161115285c9a63dba4361c0f4,314
+kuantokusta.pt,2026-08-30T09:57:50+00:00,aborted: homepage returned HTTP 403,,,,
+redis.io,2026-08-30T16:21:55+00:00,scored,https://redis.io/robots.txt,200,8a716c930ca7a9ff8b30f0cd5463e462afd1c07d3f88e9483fd1fcd310765599,578
+noesis.pt,2026-08-30T10:03:22+00:00,scored,https://noesis.pt/robots.txt,200,7e30df34cf28315042bd0838e15bed0b743412318e0aa70d18036c387a32758e,78
+booking.com,2026-08-30T10:04:35+00:00,aborted: homepage returned HTTP 202,,,,
+bebitus.pt,2026-08-30T09:56:49+00:00,scored,http://bebitus.pt/robots.txt,200,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0
+pagerduty.com,2026-08-30T16:21:16+00:00,scored,https://www.pagerduty.com/robots.txt,200,32cd8a2d35f26cae97d1d47f8a9576d05199cdafffbcf5b98bbc3df03c08d631,405
+figma.com,2026-08-30T10:05:16+00:00,scored,https://www.figma.com/robots.txt,200,c697a18811ea19cbb73ed5ada96d8508db3a9d1e571d4c68a4327f2ae5137885,381539
+slbenfica.pt,2026-08-30T10:00:08+00:00,scored,https://www.slbenfica.pt/robots.txt,200,d4c54bfb21479d7f17702d7b9656bef329a02ffd443f58e1c3f39c3dd56c23f2,1261
+fugas.publico.pt,2026-08-30T10:03:55+00:00,aborted: homepage returned HTTP 403,,,,
+observador.pt,2026-08-30T10:02:15+00:00,scored,https://observador.pt/robots.txt,200,3d66c9209097730288ecebfd3cca899e8409ea145b97f454e061da6a2088a1c2,1144
+cnn.com,2026-08-30T16:16:56+00:00,scored,https://edition.cnn.com/robots.txt,200,4eed8bbc909b9bc8816b2974b4cdcd4d7c9f15b620a40e31cb0f6452aae32aa0,3456
+businessinsider.com,2026-08-30T16:16:32+00:00,scored,https://www.businessinsider.com/robots.txt,200,89f51cf7e3b532fe80b2057cf13765fdc52bc55aafc263e876a37fe120873ddd,2231
+graza.co,2026-08-30T16:18:19+00:00,scored,https://www.graza.co/robots.txt,200,e67725cac91cc23bd7ce6a57d37e37f29965ae883bc752018d4ddb6d223755ca,3616
+jornaldamadeira.pt,2026-08-30T10:01:46+00:00,scored,http://jornaldamadeira.pt/robots.txt,200,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0
+pcguia.pt,2026-08-30T10:02:36+00:00,scored,https://www.pcguia.pt/robots.txt,404,,
+tumblr.com,2026-08-30T16:22:50+00:00,scored,https://www.tumblr.com/robots.txt,200,2892c51fb7e06e7629ccb662ecf47dec3b0bfa6a679b4e112f25f7565ac1fcb0,3452
+gap.com,2026-08-30T16:18:01+00:00,scored,https://www.gap.com/robots.txt,200,1ddac2a1ff79f194fd8b8e0328376509b5e140e45e7bf5ac4910af82aaa69e93,871
+namecheap.com,2026-08-30T16:20:25+00:00,aborted: homepage returned HTTP 403,,,,
+arrastao.blogs.sapo.pt,2026-08-30T10:04:19+00:00,scored,https://arrastao.blogs.sapo.pt/robots.txt,200,3558e663abda17d3a0d63cb49044e8d0247a074a7dee338f8f0f00b82ebc3bff,1299
+conforama.pt,2026-08-30T09:56:54+00:00,scored,https://www.conforama.pt/robots.txt,200,d1ea945624332501a77b17a01a066be3fbd78b692937958f0918c39626e5a5bf,907
+sword.health,2026-08-30T15:44:29+00:00,aborted: homepage returned HTTP 429,,,,
+ox.ac.uk,2026-08-30T16:21:11+00:00,aborted: homepage returned HTTP 403,,,,
+hostelworld.com,2026-08-30T10:03:16+00:00,scored,https://www.hostelworld.com/robots.txt,200,cf53811c86965b35913dd6435f51763385aa379bc8149b07884bc8394ceeab33,1119
+amazon.com,2026-08-30T10:05:02+00:00,scored,https://www.amazon.com/robots.txt,200,f62cfb6484ed7cc23380174e8cdeff3603d8815b1e022ddd4117460dd2408ba9,7887
+sentry.io,2026-08-30T16:22:07+00:00,scored,https://sentry.io/robots.txt,200,c0f7d803d97db6c0bf75804b97eed4a533f7249c27994e253ad4fa403652da96,140
+wsj.com,2026-08-30T16:23:28+00:00,aborted: homepage returned HTTP 401,,,,
+twitch.tv,2026-08-30T16:22:46+00:00,scored,https://www.twitch.tv/robots.txt,200,3bf83d9ad4057c9f328fab1cf3b6aa74d3bc7e3c5125e0f1ace3b27a36c04da6,1167
+walmart.com,2026-08-30T16:23:10+00:00,scored,https://www.walmart.com/robots.txt,200,2a7f8d1550d91c0ef5262f4fca3099a89a117249ee59999b9e70db30de3d3eeb,3584
+aptoide.com,2026-08-30T10:02:59+00:00,scored,https://en.aptoide.com/robots.txt,200,3e3c7bd1fb6a2945ba91cf0b731997a1fa26edc453580abc99b95f2b5333682f,2320
+pingodoce.pt,2026-08-30T09:59:49+00:00,scored,https://www.pingodoce.pt/robots.txt,200,97e3c02b5bb69a9fa60055670c611713fec2fbfdb9febf4d709ee05babea430a,1140
+sicnoticias.pt,2026-08-30T10:02:20+00:00,aborted: homepage returned HTTP 403,,,,
+hellofresh.com,2026-08-30T16:18:38+00:00,scored,https://www.hellofresh.com/robots.txt,200,f512d27e41b292f1485b86cedc8d27378f222b7483809f524539c23904e84250,725
+misfitsmarket.com,2026-08-30T16:19:59+00:00,scored,https://www.misfitsmarket.com/robots.txt,200,8ec02c44203971b927b3dec6e6ece4174369c5226e1e112deddf5ba245f3e2a5,481
+apnews.com,2026-08-30T16:15:07+00:00,scored,https://apnews.com/robots.txt,200,cda1601b3be07fd4441f840e2112fe8009e14c736517fcdd908c29cd6644ab35,1293
+fastly.com,2026-08-30T16:17:47+00:00,scored,https://www.fastly.com/robots.txt,200,23afd0d2868ab27736e15dd91bfa2b061fff83da62d60d131f335d21311dc6f3,398
+imaginarium.pt,2026-08-30T09:59:17+00:00,aborted: homepage unreachable: timeout,,,,
+archive.org,2026-08-30T16:15:13+00:00,scored,https://archive.org/robots.txt,200,83e00f46c71e9fa872694af73fa9c15a615b9052b2f10820a3d146bc506c6161,238
+intermarche.pt,2026-08-30T09:57:44+00:00,aborted: homepage returned HTTP 403,,,,
+fixando.pt,2026-08-30T10:03:01+00:00,scored,https://www.fixando.pt/robots.txt,200,ebd812d9000502c33491df9e22b4ac2e9f4316f59da51d986a8f2108891302a5,1554
+openai.com,2026-08-30T10:05:05+00:00,scored,https://openai.com/robots.txt,200,c53100563b9d289efeebb6f826a20c566578e1337e3096e298eb9da5ecc2e498,98
+sephora.com,2026-08-30T16:22:06+00:00,aborted: homepage returned HTTP 403,,,,
+prenatal.pt,2026-08-30T10:00:00+00:00,scored,https://www.toysrus.pt/robots.txt,200,bbab8c3829c3f95192c4b757bb76c75b5cb5f21f5f56d4e00d6dc7a17ead43e5,1017
+dropbox.com,2026-08-30T16:17:24+00:00,scored,https://www.dropbox.com/robots.txt,200,cc244a992405a4c1368861e7a1968a68ae1d48567b5802fe4d1f1e00d73974b3,801
+chiptec.pt,2026-08-30T09:56:49+00:00,scored,https://www.chiptec.net/robots.txt,200,d9b33780c01f5c0bf24309a724ceb2270735cdf28642566e1997d90c6eabba36,2813
+tacticalsoul-pb.com,2026-08-30T15:32:47+00:00,scored,https://tacticalsoul-pb.com/robots.txt,200,938faa5df1e350cd57cd4c297583e902cc6778221ed992d26a97429d77defa60,3644
+tecovas.com,2026-08-30T16:22:39+00:00,scored,https://www.tecovas.com/robots.txt,200,64d7c9ee6fb8a0c337860589a6e6644554b4624e2d8aca52d4b0145468e3fb39,2367
+target.com,2026-08-30T16:22:32+00:00,scored,https://www.target.com/robots.txt,200,3f8a9e45a59d43ab1b0e4534ae71241fd9e6cbbd3c37b5426bc9efd6eb320bd7,3226
+create.it,2026-08-30T10:02:55+00:00,scored,https://parking.nidoma.com/robots.txt,200,331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1,26
+miro.com,2026-08-30T16:19:56+00:00,scored,https://miro.com/robots.txt,200,d57b93e756e52f2f9c70d1e0ed8d146d6b874e76bca3ae8eb3e73dc0c7406c4c,1730
+godaddy.com,2026-08-30T16:18:11+00:00,aborted: homepage returned HTTP 403,,,,
+sapo.pt,2026-08-30T10:02:20+00:00,scored,https://sapo.pt/robots.txt,200,2efae8da84c999734a63b79149ee3af068fd8a9bb415ae202231011c81e714d3,2118
+asreceitaslaporcasa.blogspot.com,2026-08-30T10:03:43+00:00,aborted: homepage returned HTTP 404,,,,
+delas.pt,2026-08-30T10:01:58+00:00,scored,https://www.jn.pt/robots.txt,200,168b5623759397820ac4d1036770cb0e6c18284cf02791e4967d603a79184a83,2974
+netflix.com,2026-08-30T16:20:33+00:00,scored,https://www.netflix.com/robots.txt,200,1e14fa0284e9757b52b48dde38b390effae68afdd72447088e72f18f49b1aa09,3790
+railway.app,2026-08-30T16:21:36+00:00,scored,https://railway.com/robots.txt,200,07b16b12281eea08bccb8bccc9ecb63b4d0d9b2b80cd9c76395f7baa9e207960,519
+whitesmith.co,2026-08-30T10:03:41+00:00,scored,https://www.whitesmith.co/robots.txt,200,ee2e1970f8b50c090b3f7764b91ed8941c94ec6c7b087b78e066b702badb99bd,113
+faherty.com,2026-08-30T16:17:46+00:00,scored,https://fahertybrand.com/robots.txt,200,b9ea59e31910d3e62756ab4a44036a152addca2d34f8ed210cb7cb843640951b,3624
+blueapron.com,2026-08-30T16:15:36+00:00,aborted: homepage returned HTTP 403,,,,
+bloomberg.com,2026-08-30T16:15:34+00:00,aborted: homepage returned HTTP 403,,,,
+blasfemias.net,2026-08-30T10:03:47+00:00,scored,https://blasfemias.net/robots.txt,200,a67229bac2e793674049ced8bb253e676c2a921802dc59dd51ac9d88741125c7,628
+sograpevinhos.com,2026-08-30T09:59:58+00:00,scored,https://sogrape.com/robots.txt,200,a926d0921ce73b9851bd824184155087bfe9aee251ca60b9f0dd9941a354f6d9,115
+fly.io,2026-08-30T16:17:48+00:00,scored,https://fly.io/robots.txt,200,490e87e21d3dd12610a0cb0735a9cb1c279a4df4e1b9173e40ea8ee314214b6f,115
+intercom.com,2026-08-30T16:18:46+00:00,scored,https://www.intercom.com/robots.txt,200,1f08329e8f75385771074a85c54bc6c8ab54174c611d55b671d7735118956a34,257
+adegamayor.pt,2026-08-30T09:56:50+00:00,scored,https://www.adegamayor.pt/robots.txt,200,ec1f67057498bb393018ea179724629b29f2b07e36a7d8c39aeaa6fbe4a0ae64,775
+hulu.com,2026-08-30T16:18:44+00:00,scored,https://www.disneyplus.com/robots.txt,200,ea1fedfeaf8ce8df678df9ffb629dbbd7b3492aaa57814b5d8390d8dda1719cd,2794
+nowo.pt,2026-08-30T10:00:20+00:00,scored,https://www.nowo.pt/robots.txt,200,ccabe04089ac66e830cb4961f48cd0a705b0ea4f2702b431ef4c0aa466dc5304,268
+macys.com,2026-08-30T16:19:10+00:00,scored,https://www.macys.com/robots.txt,403,,
+rr.sapo.pt,2026-08-30T10:02:06+00:00,aborted: homepage returned HTTP 410,,,,
+sportsdirect.pt,2026-08-30T10:00:10+00:00,scored,https://www.sportsdirect.pt/robots.txt,200,5881ae1d37ef1c84a21731db5b587b27050bfa34002db3435df84e0f11701156,4604
+rgb.pt,2026-08-30T09:59:48+00:00,scored,http://rgb.pt/robots.txt,404,,
+memoriasquesebebem.com,2026-08-30T15:29:22+00:00,scored,https://www.memoriasquesebebem.com/robots.txt,200,63dc42df635e3a991b1d5f8d3d61417920625af81529f5bc4ad298a6a67b4d70,7322
+tiapureza.pt,2026-08-30T15:33:03+00:00,scored,https://tiapureza.pt/robots.txt,200,949a6aaefc51083baf4c79d2fde8477dd7669dad646e64f36a7646182d0baf09,7284
+switchtechnology.pt,2026-08-30T10:00:02+00:00,aborted: homepage returned HTTP 403,,,,
+infraspeak.com,2026-08-30T10:03:13+00:00,scored,https://infraspeak.com/robots.txt,200,59026f4839a391124db7f15f10593876b98d4a18728fda4171f5fd4ea7869aa0,265
+runtime-revolution.com,2026-08-30T16:14:52+00:00,scored,https://runtime-revolution.com/robots.txt,200,be44601d5c2f64e6cbcb0942cc9974c51cffa2f7f7c7c10d61d3ebf7cdabebd1,82
+zoom.us,2026-08-30T16:24:00+00:00,scored,https://www.zoom.com/robots.txt,200,976c7d36986250d19edd4eee596586de9edf5f7b33e6ec8b303a8bf58b679bf9,1193
+doist.com,2026-08-30T16:14:52+00:00,scored,https://doist.com/robots.txt,200,36978bc70e02f27ca0def5f253567ef5cc8acef2b7f0b9d5b10ba4a970f25b73,63
+sloowmarket.com,2026-08-30T15:31:40+00:00,scored,https://sloowmarket.com/robots.txt,200,1ca97fc2840abd903ca7a7395c2d026128ec08f357b8410ffa8a96a302f8a463,7206
+diariodominho.pt,2026-08-30T10:01:23+00:00,scored,https://www.diariodominho.pt/robots.txt,200,e36236d24c03f0666df6c342ad7f8c8effbded646d7b1ca482ea7025aba8e7f8,214
+mrbeastfeastables.com,2026-08-30T16:20:22+00:00,scored,https://mrbeastfeastables.com/robots.txt,200,3bb00d50e6a764de531dfde68b4167ffe81731bd951a42f4d482ca14fd4581f4,28
+twilio.com,2026-08-30T16:22:45+00:00,scored,https://www.twilio.com/robots.txt,200,138fe6da0c1b4682286cb07cb380e7968a940e8cf5a4d6834923fbb81aa626f0,975
+crateandbarrel.com,2026-08-30T16:16:58+00:00,aborted: homepage returned HTTP 403,,,,
+python.org,2026-08-30T10:04:54+00:00,scored,https://www.python.org/robots.txt,200,18cb4cd525df8528491845e76f3af26c29c6795d02ea8133974d3b341a2ddd9f,537
+stanley1913.com,2026-08-30T16:22:25+00:00,scored,https://www.stanley1913.com/robots.txt,200,38330a03c7174a347e1a99991f78ca2a0b44e856be7f377b315ec214925112bf,8554
+westelm.com,2026-08-30T16:23:13+00:00,aborted: homepage returned HTTP 403,,,,
+nodejs.org,2026-08-30T10:04:53+00:00,scored,https://nodejs.org/robots.txt,200,cbcd5e7d85caf581c61f7c0ffb148868b73ffa32e8426b37e08a21d145ce8f32,199
+jornaleconomico.pt,2026-08-30T10:01:59+00:00,scored,https://jornaleconomico.sapo.pt/robots.txt,200,f1b228a73d2f6621b81f8d7996fcdc6e94b0947ad904aecc635636f8adbe97eb,463
+patrimoniocultural.gov.pt,2026-08-30T16:15:03+00:00,scored,https://www.patrimoniocultural.gov.pt/robots.txt,200,b9f39d76c6f77fc7b9a848a725b823dc734735e7e30796471b034f70fa8307df,130
+bbdonna.com,2026-08-30T15:15:30+00:00,scored,https://www.bbdonna.com/robots.txt,200,30f6607e34ba7d05fee6871fe899ec0aad36f71749e1cb11918baf8e6f4d5ef0,3628
+coverflex.com,2026-08-30T16:14:51+00:00,scored,https://www.coverflex.com/robots.txt,200,44030b846dab8f30e690b3c5265ef4ee2b71820a47799775a5f1be0b4eeb81b1,79
+anthropic.com,2026-08-30T10:04:36+00:00,scored,https://www.anthropic.com/robots.txt,200,b8bb03567cf862a9024bd464bd4bd7afaf054b1029de79727b2ba94711480ec7,71
+remote.com,2026-08-30T16:14:53+00:00,scored,https://remote.com/robots.txt,200,691a4b4ba705d63e0a734e63a5df754f5ce1aa85ece9ea5c5138b2de502787ff,206
+eventbrite.com,2026-08-30T16:17:40+00:00,scored,https://www.eventbrite.com/robots.txt,200,b7fa62d995e2b649df4b7a9ec9fea2bc0c7461276cb58e892562d4193c498222,7559
+google.com,2026-08-30T10:04:48+00:00,scored,https://www.google.com/robots.txt,200,1aba570a1b32deb66941e0c29d4f37be71ee58aa1a624aa20754b3639538cf2c,6624
+wordpress.com,2026-08-30T16:23:27+00:00,scored,https://wordpress.com/robots.txt,200,afd9176153adb8a5358ceec0811f6660f3538cb400496a2712bca3b7c8d81e3a,1387
+harvard.edu,2026-08-30T16:18:25+00:00,scored,https://www.harvard.edu/robots.txt,200,14353df5d44dabd47535f2f91e1fbfdf3e0cc8de10bfe8f5d79e11b1d9cc2474,748
+guitarcenter.com,2026-08-30T16:18:14+00:00,aborted: homepage returned HTTP 403,,,,
+temu.com,2026-08-30T16:22:27+00:00,scored,https://www.temu.com/robots.txt,200,e6791399506405731bf4f737044195aee793aa81d5c17e12f7a79d82c0b3d8b8,8239
+ebay.com,2026-08-30T10:04:36+00:00,aborted: homepage returned HTTP 403,,,,
+theatlantic.com,2026-08-30T16:22:40+00:00,scored,https://www.theatlantic.com/robots.txt,200,4ec505c89c42a966e879604a0bee99b9f7721387cfc829d6d5d55cb6f52f9daf,3649
+hostinger.com,2026-08-30T16:18:35+00:00,scored,https://www.hostinger.com/robots.txt,200,42e115b43d853f196942bc3be677e957ad8551d9b62359fe174f001f5aef5731,18017
+wikipedia.org,2026-08-30T10:05:16+00:00,scored,https://www.wikipedia.org/robots.txt,200,48b98d80c8444d37cdf50cc9a4d2257b66039477e581066d2356062a4cbd678f,28275
+curology.com,2026-08-30T16:17:01+00:00,scored,https://curology.com/robots.txt,200,04f69f2ba076ea78e24fd912a99c1e4f9f6f6784257572cd1a6aafe274775763,388
+portugalglobal.pt,2026-08-30T16:14:57+00:00,scored,https://portugalglobal.pt/robots.txt,404,,
+lowes.com,2026-08-30T16:19:07+00:00,scored,https://www.lowes.com/robots.txt,403,,
+shein.com,2026-08-30T16:22:09+00:00,scored,https://pt.shein.com/robots.txt,200,fea18857c06ccff8ffe0eac535783846e8bd3c5c98f8f4e49f1f6b245ed45cf6,66
+edx.org,2026-08-30T16:17:32+00:00,scored,https://www.edx.org/robots.txt,200,0f48d4f23cc1244118140f294cea98e6e4ea7036d3fc02bf5cd453a644e9782e,1550
+cucawik.com,2026-08-30T15:27:19+00:00,scored,https://cucawik.com/robots.txt,200,0ae07afa4b0d23f6306f36f1646b8f44086ce173de2eb986465f04c9958df969,7277
+warbyparker.com,2026-08-30T16:23:09+00:00,scored,https://www.warbyparker.com/robots.txt,200,aedeaf1e7d2940ff19d2b9066e70e5a627e29180a5a01af4db41ae4ab7a352a4,1117
+paisefilhos.pt,2026-08-30T16:14:56+00:00,aborted: homepage returned HTTP 403,,,,
+monday.com,2026-08-30T16:20:20+00:00,scored,https://monday.com/robots.txt,200,2dfc4fa504381ce292062740f5cc0c42c6711b0113fdca6cbe1e648e8cb3cbb1,3091
+pura-ecoconcept.pt,2026-08-30T15:30:36+00:00,scored,https://pura-ecoconcept.pt/robots.txt,200,42ebda41d3118954cadb95d60031b229140942a25a4cd7be07f9afd405fbd629,7215
+pplware.sapo.pt,2026-08-30T10:02:35+00:00,scored,https://pplware.sapo.pt/robots.txt,200,296c5b4bf5cec3a762d61248c56f51c09b18fa97df0406e7fdf90f3fb1fbdcc0,839
+susanaduarte.com,2026-08-30T15:43:28+00:00,scored,https://susanaduarte.com/robots.txt,200,c727b98b6c9a567a32479d5f5570c74d03c221455daa81892dfe4045f8ff0d93,7209
+pinterest.com,2026-08-30T16:21:26+00:00,scored,https://www.pinterest.com/robots.txt,200,3f86f4a7782b66aa69d89920d76d934e086ad95fc746eb8fb2c7443b6ae8179a,30906
+tsf.pt,2026-08-30T10:02:59+00:00,scored,https://www.tsf.pt/robots.txt,200,53492fdb4dd3d12ec8210693899e46b9a0ddf89c589e737a1f1c94d5fe2c4697,2622
+si.edu,2026-08-30T16:22:08+00:00,scored,https://www.si.edu/robots.txt,200,5b0838a681529c175af82922e0733edc3f369c61bdbf83536981d2560f5fab87,3863
+olipop.com,2026-08-30T16:21:09+00:00,scored,http://olipop.com/robots.txt,404,,
+tonic.app,2026-08-30T16:14:53+00:00,scored,https://tonic.app/robots.txt,200,84f7242b69a0d079d88d20a768e20124979f0499d2b0e5b947cc4b32bc07dff9,66
+patagonia.com,2026-08-30T16:21:17+00:00,aborted: homepage returned HTTP 404,,,,
+pituka.pt,2026-08-30T15:42:09+00:00,scored,https://www.pituka.pt/robots.txt,200,b6f6aaffa48aed5b641a1318d98d1d5db23ad00046bfda3260afb74ab1298746,7285
+harrys.com,2026-08-30T16:18:24+00:00,scored,https://www.harrys.com/robots.txt,200,73f6ac256e2b4ef4105aaac5f9c5bf91b327d9d4cb90e3196165517a12ce4067,390
+axios.com,2026-08-30T16:15:23+00:00,aborted: homepage returned HTTP 403,,,,
+diariodecoimbra.pt,2026-08-30T10:01:33+00:00,scored,https://www.diariocoimbra.pt/robots.txt,200,10748aabe60644f121edc4b09d289f44c2e160ded8641ce43ecb38b76403b702,436
+sabado.pt,2026-08-30T10:02:15+00:00,scored,https://www.sabado.pt/robots.txt,404,,
+cdc.gov,2026-08-30T16:16:49+00:00,scored,https://cdc.gov/robots.txt,200,2837016c20845bf0f86ecfad68dbb4d37993338ee4584abd502087da48ea5ca7,1699
+floyddetroit.com,2026-08-30T16:17:53+00:00,scored,https://floydhome.com/robots.txt,200,a65ac4fad13da5a6fac3faab9d97914f3f21baaa60c97621681f9e6ca278087f,3620
+stanford.edu,2026-08-30T16:22:25+00:00,scored,https://www.stanford.edu/robots.txt,200,aadf777d4727200060490d80c1e1c942e45fbdc03ee179aaee40ef1de72dffbd,197
+ionline.sapo.pt,2026-08-30T16:14:55+00:00,scored,https://sol.iol.pt/robots.txt,200,995bc3ec4894ca03ef7c6d20b6495566d8eeb6ff82c9c456f866268872f8afd3,528
+texastribune.org,2026-08-30T16:22:35+00:00,scored,https://www.texastribune.org/robots.txt,200,69ee666110ea84e89e300df3e7065136109e6010dccff20a3671c53cf57b91ef,256
+foxnews.com,2026-08-30T16:18:00+00:00,scored,https://www.foxnews.com/robots.txt,200,4abc1bd3b4d0b87c64de7eba0eafe63dd90415f25d12133d88d7225cacb9dc07,301
+rei.com,2026-08-30T16:21:37+00:00,aborted: homepage returned HTTP 403,,,,
+techcrunch.com,2026-08-30T10:05:25+00:00,scored,https://techcrunch.com/robots.txt,200,5fbefc8fdb1ded6f6e24100293afdf08e45ac81a21a51b7a65b27e484c6a03e9,710
+asenhoradomonte.com,2026-08-30T16:15:09+00:00,scored,https://asenhoradomonte.com/robots.txt,200,964c7d3801f31d47dc1e89612d435c50dc5c8aa08c766066ee19539b65018070,255

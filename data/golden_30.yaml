@@ -1,0 +1,421 @@
+# Golden set. Sites verified by hand. 100 percent accuracy is required here.
+# Every entry names what makes this site hard.
+#
+# The expectations are robots.txt derived facts plus the Access score.
+# Readability is deliberately absent: it rests on heuristics that will be tuned,
+# and a golden set that breaks on every tuning stops being read.
+#
+# Shapes covered: no robots.txt, robots.txt answering 200 with HTML, blanket
+# Disallow, blanket Disallow with named exceptions, wildcards, conflicting Allow
+# and Disallow, Cloudflare generated files, llms.txt present, nested sitemap
+# indexes, a single page application, training blocked with citation open, and
+# four different ways for a run to abort.
+#
+# Two shapes from the original list are missing, and both absences are findings
+# rather than gaps in the search.
+#
+# Citation blocked with training left open was not found in the 54 site sample.
+#
+# All six citation crawlers blocked was not found either, because blocking
+# Googlebot means leaving classic search as well, and almost nobody does that.
+# A mutation test confirmed the consequence: changing CAP_ALL_CITATION_BLOCKED
+# does not break any entry here, only the unit tests. The twenty point cap is
+# real but it will rarely fire in the wild, which is worth remembering when the
+# study reports how many sites are flagged CRITICAL.
+#
+# Inventing sites to carry either shape would make this file fiction. Both are
+# covered by unit tests in tests/test_robots.py and tests/test_checks_access.py.
+#
+# Regenerate the fixtures with:
+#   python scripts/refresh_fixtures.py --out tests/fixtures/golden --only <domains>
+# then regenerate this file. Never edit an expectation to make a test pass
+# without first checking the robots.txt by hand.
+
+- domain: 4gnews.pt
+  reason: sitemap index with nested sitemaps, and a long Disallow list
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: abreu.pt
+  reason: robots.txt answers 200 with HTML, which is absence in disguise
+  expected:
+    outcome: scored
+    robots_is_real: false
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: false
+    access_score: 90.0
+    access_cap: null
+- domain: airbnb.com
+  reason: wildcards and dollar anchors throughout the paths
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: apolonia.com
+  reason: robots.txt answers 200 with HTML
+  expected:
+    outcome: scored
+    robots_is_real: false
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: bebitus.pt
+  reason: robots.txt answers 200 with HTML
+  expected:
+    outcome: scored
+    robots_is_real: false
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: false
+    access_score: 85.0
+    access_cap: null
+- domain: booking.com
+  reason: homepage answers 202 with a four kilobyte challenge page and an empty title
+  expected:
+    outcome: aborted
+    abort_reason: homepage returned HTTP 202
+- domain: bricomarche.pt
+  reason: Allow and Disallow on overlapping paths, nested sitemaps
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: casa.pt
+  reason: blanket Disallow on the star group, but Googlebot and Bingbot are named and allowed, so the
+    ten point cap must not fire
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 2
+    citation_total: 6
+    user_fetch_allowed: 0
+    user_fetch_total: 5
+    training_posture: closed
+    llms_txt: false
+    sitemap_reachable: false
+    access_score: 36.67
+    access_cap: null
+- domain: chiptec.pt
+  reason: training crawlers blocked, every citation crawler left open
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: cmjornal.pt
+  reason: training blocked, citation open, and ChatGPT-User named and blocked
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 4
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 96.0
+    access_cap: null
+- domain: codacy.com
+  reason: llms.txt present with real content
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: true
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: conforama.pt
+  reason: wildcards in paths and llms.txt present
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: true
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: contasconnosco.pt
+  reason: Cloudflare generated robots.txt, training blocked, llms.txt present
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: true
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: diariodecoimbra.pt
+  reason: wildcards, regional news site
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: true
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: eco.sapo.pt
+  reason: clean configuration, full Access marks, the control case
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: example.com
+  reason: no robots.txt at all, must score full marks on that dimension
+  expected:
+    outcome: scored
+    robots_is_real: false
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: false
+    access_score: 90.0
+    access_cap: null
+- domain: excalidraw.com
+  reason: single page application, wide open and unreadable, the case that shows why the two scores are
+    never averaged
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: farfetch.com
+  reason: homepage returns 403 from the edge, the run must abort with a reason
+  expected:
+    outcome: aborted
+    abort_reason: homepage returned HTTP 403
+- domain: figma.com
+  reason: Cloudflare generated robots.txt, training blocked
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: github.com
+  reason: large clean site, sitemap declared
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: true
+    sitemap_reachable: false
+    access_score: 90.0
+    access_cap: null
+- domain: imaginarium.pt
+  reason: homepage times out, the run must abort with a reason and not a traceback
+  expected:
+    outcome: aborted
+    abort_reason: 'homepage unreachable: timeout'
+- domain: jn.pt
+  reason: homepage ships 1463 characters of text against 357000 of script, the JavaScript heuristic case
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 100.0
+    access_cap: null
+- domain: leroymerlin.pt
+  reason: DataDome returns 403 to everything, the run must abort
+  expected:
+    outcome: aborted
+    abort_reason: homepage returned HTTP 403
+- domain: maisfutebol.iol.pt
+  reason: OAI-SearchBot and ChatGPT-User named and blocked, the rest open
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 5
+    citation_total: 6
+    user_fetch_allowed: 4
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 87.67
+    access_cap: null
+- domain: nytimes.com
+  reason: the most thorough AI blocklist in the set, citation and user fetch both hit
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 3
+    citation_total: 6
+    user_fetch_allowed: 1
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 56.0
+    access_cap: null
+- domain: observador.pt
+  reason: thirty eight consecutive User-agent lines sharing one rule block, with two Allow exceptions
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 4
+    citation_total: 6
+    user_fetch_allowed: 3
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 75.33
+    access_cap: null
+- domain: reddit.com
+  reason: User-agent star with Disallow slash and nothing else, Access capped at ten
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 0
+    citation_total: 6
+    user_fetch_allowed: 0
+    user_fetch_total: 5
+    training_posture: closed
+    llms_txt: false
+    sitemap_reachable: false
+    access_score: 10.0
+    access_cap: 'User-agent: * with Disallow: /'
+- domain: sapo.pt
+  reason: every AI only citation crawler blocked while Google and Bing pass, and a valid robots.txt served
+    as text/html
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 2
+    citation_total: 6
+    user_fetch_allowed: 1
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 48.67
+    access_cap: null
+- domain: theverge.com
+  reason: citation and user fetch blocked by name, training partly open
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 4
+    citation_total: 6
+    user_fetch_allowed: 0
+    user_fetch_total: 5
+    training_posture: partial
+    llms_txt: false
+    sitemap_reachable: true
+    access_score: 63.33
+    access_cap: null
+- domain: wikipedia.org
+  reason: a group named Fetch, aimed at a download manager, which substring matching wrongly applied to
+    Meta-ExternalFetcher
+  expected:
+    outcome: scored
+    robots_is_real: true
+    citation_allowed: 6
+    citation_total: 6
+    user_fetch_allowed: 5
+    user_fetch_total: 5
+    training_posture: open
+    llms_txt: false
+    sitemap_reachable: false
+    access_score: 90.0
+    access_cap: null

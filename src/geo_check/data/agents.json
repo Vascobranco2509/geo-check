@@ -1,0 +1,218 @@
+{
+  "schema_version": 2,
+  "last_reviewed": "2026-08-30",
+  "verified": true,
+  "note": "Every entry below was checked against the vendor documentation linked in its docs field on the last_reviewed date. Bucket assignment is the load bearing part of the score, not the user agent string. obeys_robots records whether the vendor documents the agent as honouring robots.txt: yes, no, or disputed. An agent that does not honour robots.txt cannot be blocked there, and the report says so instead of pretending the block worked.",
+  "buckets": {
+    "citation": "Feeds retrieval and citation in AI answers. Blocking these removes the site from AI results. Worth 50 points of the Access score. ai_only marks the ones that exist only to feed AI answers. Googlebot and Bingbot also carry classic search, so blocking them is a bigger and different story.",
+    "user_fetch": "Fetches a page on demand when a user pastes a link or asks about it. Worth 20 points of the Access score.",
+    "training": "Collects pages for model training. Worth zero points. Reported as posture, never penalised."
+  },
+  "agents": [
+    {
+      "token": "OAI-SearchBot",
+      "vendor": "OpenAI",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://developers.openai.com/api/docs/bots",
+      "note": "Powers ChatGPT search. Blocking this removes the site from ChatGPT results, which is what most people get wrong. GPTBot is the training crawler and is a different thing entirely.",
+      "ai_only": true
+    },
+    {
+      "token": "Claude-SearchBot",
+      "vendor": "Anthropic",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://support.claude.com/en/articles/8896518",
+      "note": "Improves search result quality for Claude users.",
+      "ai_only": true
+    },
+    {
+      "token": "PerplexityBot",
+      "vendor": "Perplexity",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://docs.perplexity.ai/guides/bots",
+      "note": "Surfaces and links websites in Perplexity results. Documented as not used for foundation model training.",
+      "ai_only": true
+    },
+    {
+      "token": "Googlebot",
+      "vendor": "Google",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "note": "Feeds Google Search, and AI Overviews are built from that index. Separate from Google-Extended, which does not affect Search.",
+      "ai_only": false
+    },
+    {
+      "token": "Bingbot",
+      "vendor": "Microsoft",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0",
+      "note": "Grounds Microsoft Copilot, and ChatGPT search also draws on the Bing index.",
+      "ai_only": false
+    },
+    {
+      "token": "Applebot",
+      "vendor": "Apple",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://support.apple.com/en-us/119829",
+      "note": "Powers Spotlight, Siri and Safari search. Also feeds Apple foundation models unless Applebot-Extended is disallowed.",
+      "ai_only": false
+    },
+    {
+      "token": "ChatGPT-User",
+      "vendor": "OpenAI",
+      "bucket": "user_fetch",
+      "obeys_robots": "no",
+      "docs": "https://developers.openai.com/api/docs/bots",
+      "note": "Fetches a page when a ChatGPT user asks about it. OpenAI documents that robots.txt rules may not apply to these user initiated fetches."
+    },
+    {
+      "token": "Claude-User",
+      "vendor": "Anthropic",
+      "bucket": "user_fetch",
+      "obeys_robots": "yes",
+      "docs": "https://support.claude.com/en/articles/8896518",
+      "note": "Fetches a page when a Claude user asks about it. Documented as honouring robots.txt."
+    },
+    {
+      "token": "Perplexity-User",
+      "vendor": "Perplexity",
+      "bucket": "user_fetch",
+      "obeys_robots": "no",
+      "docs": "https://docs.perplexity.ai/guides/bots",
+      "note": "Perplexity documents that this fetcher generally ignores robots.txt rules. Disallowing it here does not stop the fetch."
+    },
+    {
+      "token": "MistralAI-User",
+      "vendor": "Mistral",
+      "bucket": "user_fetch",
+      "obeys_robots": "yes",
+      "docs": "https://docs.mistral.ai/robots",
+      "note": "On demand fetch for Le Chat. Not used for training."
+    },
+    {
+      "token": "Meta-ExternalFetcher",
+      "vendor": "Meta",
+      "bucket": "user_fetch",
+      "obeys_robots": "no",
+      "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "note": "Fetches individual links at a user's request. Meta documents that it may bypass robots.txt for user initiated requests."
+    },
+    {
+      "token": "GPTBot",
+      "vendor": "OpenAI",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://developers.openai.com/api/docs/bots",
+      "note": "Training only. Blocking it does not affect ChatGPT search citations."
+    },
+    {
+      "token": "ClaudeBot",
+      "vendor": "Anthropic",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://support.claude.com/en/articles/8896518"
+    },
+    {
+      "token": "anthropic-ai",
+      "vendor": "Anthropic",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://support.claude.com/en/articles/8896518",
+      "note": "Legacy token, no longer listed in Anthropic documentation but still present in many robots.txt files."
+    },
+    {
+      "token": "Google-Extended",
+      "vendor": "Google",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "note": "Gemini training and grounding. Google documents that it does not affect Search inclusion or ranking."
+    },
+    {
+      "token": "Applebot-Extended",
+      "vendor": "Apple",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://support.apple.com/en-us/119829",
+      "note": "Opt out control for Apple foundation model training. Pages that disallow it still appear in Apple search."
+    },
+    {
+      "token": "CCBot",
+      "vendor": "Common Crawl",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://commoncrawl.org/ccbot",
+      "note": "Feeds an open crawl archive used by many downstream training datasets."
+    },
+    {
+      "token": "meta-externalagent",
+      "vendor": "Meta",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "note": "Trains Meta foundation models and indexes content directly."
+    },
+    {
+      "token": "MistralAI-Training",
+      "vendor": "Mistral",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://docs.mistral.ai/robots",
+      "note": "Builds datasets for Mistral generative models."
+    },
+    {
+      "token": "Bytespider",
+      "vendor": "ByteDance",
+      "bucket": "training",
+      "obeys_robots": "disputed",
+      "docs": "https://zhanzhang.toutiao.com/",
+      "note": "ByteDance claims robots.txt compliance but the reference URL is unreachable outside China, and independent measurements report it fetching disallowed pages. Treated as disputed."
+    },
+    {
+      "token": "Amazonbot",
+      "vendor": "Amazon",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://developer.amazon.com/amazonbot",
+      "note": "Improves Amazon products and trains Amazon AI models. Amzn-SearchBot is the separate search crawler."
+    },
+    {
+      "token": "cohere-ai",
+      "vendor": "Cohere",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://cohere.com/",
+      "note": "Collects web content for Cohere enterprise model training. Cohere publishes no dedicated crawler page."
+    },
+    {
+      "token": "Diffbot",
+      "vendor": "Diffbot",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://docs.diffbot.com/",
+      "note": "Sells structured web data onward for AI training and retrieval, so one block covers many downstream consumers."
+    },
+    {
+      "token": "omgilibot",
+      "vendor": "Webz.io",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://webz.io/",
+      "note": "Being replaced by webzio-extended. Both still appear in the wild."
+    },
+    {
+      "token": "webzio-extended",
+      "vendor": "Webz.io",
+      "bucket": "training",
+      "obeys_robots": "yes",
+      "docs": "https://webz.io/",
+      "note": "Successor token to omgilibot, specifically for AI training data."
+    }
+  ]
+}

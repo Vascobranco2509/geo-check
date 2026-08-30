@@ -1,0 +1,594 @@
+# Robustness corpus. One domain per line, comments start with #.
+#
+# 500 domains, last extended on 2026-08-30. The mix is deliberate: a corpus of
+# large sites alone would be almost uniformly configured, and this list exists to
+# produce variety of failure rather than prestige. It mixes ecommerce, small and
+# micro storefronts, news and media, SaaS and agencies, personal blogs, large
+# consumer platforms, reference and standards sites, universities and government.
+#
+# The list is one flat block ordered by sha256 of the domain. It carries no
+# sections, because a section boundary is a fact about the corpus that the
+# ordering has no business stating. Site type lives in data/corpus_categories.csv,
+# which is what scripts/run_study.py reads.
+#
+# Publishing platform is deliberately not a category. It is a property of a site,
+# measured for every one of the 500 and reported as a dimension that cuts across
+# all of them. Making it a category produced an artifact the first time: forty
+# domains read out of a Shopify directory came back 100 percent Shopify with 100
+# percent llms.txt adoption, which is what that platform ships rather than what
+# small businesses do.
+#
+# Sourcing non Shopify small businesses was attempted and did not
+# work. A marketplace of 850 independent brands does not resolve, two published
+# store lists return 404, and category searches return aggregators such as
+# TheFork and Time Out rather than the businesses' own domains. The Shopify
+# directory worked only because it publishes a sitemap. This is written down so
+# nobody repeats the search expecting a different result.
+#
+# How these were chosen. Candidates were assembled, every entry was checked to
+# resolve in DNS, and the dead ones were dropped. Where a category had more
+# survivors than its target, the selection was made by ordering on
+# sha256(domain) and taking the first N. That is reproducible and it is not
+# cherry picking. The candidates that did not make the cut are listed at the
+# bottom of this file rather than thrown away.
+#
+# marshmallow-concept.com is pinned rather than sampled, at the maintainer's
+# request.
+
+hubspot.com
+noaa.gov
+away.com
+contacto.lu
+sportzone.pt
+standvirtual.com
+subvisual.com
+xhockware.com
+slack.com
+glossier.com
+amalsoap.com
+doordash.com
+rust-lang.org
+zwame.pt
+meetup.com
+cloudflare.com
+sensei.tech
+abcnews.go.com
+aeiou.pt
+siete.com
+owala.com
+wish.com
+probely.com
+backcountry.com
+elastic.co
+green2you.pt
+queridandorinha.pt
+decathlon.pt
+nih.gov
+kinsta.com
+bellagoma.pt
+amplitude.com
+exameinformatica.pt
+segment.com
+parfois.com
+marinelayer.com
+fitfiu.pt
+decenio.com
+canva.com
+spotify.com
+lifecooler.com
+esquerda.net
+overstock.com
+zaask.pt
+nbcnews.com
+webflow.com
+oldnavy.com
+mozilla.org
+talkdesk.com
+mashable.com
+yeti.com
+siteground.com
+farfetch.com
+salsajeans.com
+quince.com
+sendgrid.com
+zippy.pt
+coviran.pt
+mybabybox.pt
+thrivemarket.com
+jornaldeleiria.pt
+outdoorvoices.com
+newrelic.com
+notino.pt
+bluehost.com
+meo.pt
+nist.gov
+abola.pt
+washingtonpost.com
+delitodeopiniao.blogs.sapo.pt
+tag-and-get.com
+prozis.com
+hydroflask.com
+omsom.com
+vallore.pt
+hims.com
+matematicaonline.pt
+italic.com
+census.gov
+stripe.com
+meiotesocks.com
+gitlab.com
+evasoes.pt
+w3.org
+apple.com
+lyft.com
+bluebottlecoffee.com
+4gnews.pt
+froiz.pt
+kitch.io
+microsoft.com
+outsystems.com
+cnnportugal.iol.pt
+pumpkin.pt
+irs.gov
+stara.pt
+datadoghq.com
+everlane.com
+underarmour.com
+delta-cafes.pt
+dott.pt
+publico.pt
+holon.pt
+engenhariacivil.com
+netlify.com
+laskasas.com
+bizay.com
+uber.com
+staples.pt
+vinha.pt
+barkyn.com
+acorianooriental.pt
+leyaonline.com
+ruggable.com
+executivedigest.sapo.pt
+babynest.pt
+tiffosi.com
+zappos.com
+chewy.com
+airtable.com
+klaviyo.com
+jn.pt
+jscrambler.com
+joaoferreira.pt
+dudeperfect.com
+planetscale.com
+economist.com
+tek.sapo.pt
+valeriusvii.com
+bostonglobe.com
+ruicorreia.pt
+springfield.com
+wook.pt
+rows.com
+cruwines.pt
+correiodominho.pt
+creat4you.com
+arstechnica.com
+github.com
+jornaldenegocios.pt
+defined.ai
+gutenberg.org
+berkeley.edu
+bonobos.com
+react.dev
+theverge.com
+fabamaq.com
+abreu.pt
+codacy.com
+shopify.com
+madewell.com
+azure.microsoft.com
+linear.app
+diariodeaveiro.pt
+eco.sapo.pt
+vinted.pt
+globaldata.pt
+theguardian.com
+portoeditora.pt
+substack.com
+sandeman.com
+medium.com
+lifestyle.sapo.pt
+aws.amazon.com
+carisma-store.com
+phonehouse.pt
+marshmallow-concept.com
+engadget.com
+magicspoon.com
+thatalabel.com
+bbc.com
+fcporto.pt
+economiafinancas.com
+theinformation.com
+vidadecao.pt
+mo-online.com
+dn.pt
+render.com
+bombas.com
+shifter.pt
+maxmat.pt
+visao.pt
+lojadadiana.pt
+magnetikco.com
+databricks.com
+cinco-quartos-de-laranja.blogspot.com
+partakefoods.com
+airbnb.com
+kohls.com
+imperfectfoods.com
+wix.com
+bohastore.pt
+electrodepot.pt
+rasembalagens.com
+bertrand.pt
+skynews.com
+timeout.pt
+criticalsoftware.com
+venturebeat.com
+etsy.com
+zdnet.com
+snowflake.com
+usatoday.com
+lululemon.com
+huckberry.com
+feedzai.com
+hbr.org
+docusign.com
+utrust.com
+akamai.com
+garrafeirabaco.pt
+mailchimp.com
+dinheirovivo.pt
+costco.com
+leak.pt
+cutxicutxi.com
+salesforce.com
+allbirds.com
+ovarmedia.blogs.sapo.pt
+landing.jobs
+bind.pt
+meusuper.pt
+receitasemamores.blogspot.com
+canemar.pt
+ft.com
+logitravel.pt
+rtp.pt
+nike.com
+burrow.com
+portaldasfinancas.gov.pt
+clausporto.com
+linkedin.com
+btech.pt
+homedepot.com
+coursera.org
+politico.com
+olx.pt
+bricomarche.pt
+garrafeiranacional.com
+asana.com
+haemiskin.pt
+newegg.com
+latimes.com
+grahams-port.com
+athleticgreens.com
+mediamarkt.pt
+uniplaces.com
+veniam.com
+lanidor.com
+gastronomias.com
+comur.com
+brightland.co
+corta-fitas.blogspot.com
+jarilo.eu
+vox.com
+druni.pt
+geocakes.com
+ulta.com
+defector.com
+fortune.com
+expedia.com
+quip.com
+wetheknot.com
+forbes.com
+mejuri.com
+aventar.eu
+geostar.pt
+opentable.com
+publituris.pt
+ifthenpay.com
+cozinhadaduquesa.blogspot.com
+esporao.com
+emailbidding.com
+ikea.com
+solostove.com
+flytap.com
+lidl.pt
+zendesk.com
+notion.so
+skinlife.pt
+404media.co
+nortravel.pt
+alojadacerveja.com
+fnac.pt
+yelp.com
+custojusto.pt
+combatsports.store
+niepoort-vinhos.com
+ietf.org
+estampesuaart.com
+meta.com
+liquiddeath.com
+noticiasaominuto.com
+quora.com
+stubhub.com
+apolonia.com
+ojogo.pt
+primeit.pt
+calendly.com
+gizmodo.com
+npr.org
+science4you.com
+mongodb.com
+maisfutebol.iol.pt
+dnoticias.pt
+tvi.iol.pt
+edreams.pt
+zap.aeiou.pt
+khanacademy.org
+reddit.com
+vuori.com
+dollarshaveclub.com
+makro.pt
+gerador.eu
+divergente.pt
+haus.com
+viajarentreviagens.pt
+reconquista.pt
+newyorker.com
+wells.pt
+stackoverflow.com
+muzzley.com
+bikeplanet.pt
+bhphotovideo.com
+lusa.pt
+casa.pt
+gouveiaspublicidade.pt
+contasconnosco.pt
+adidas.com
+mindera.com
+nos.pt
+vercel.com
+clickup.com
+loom.com
+wired.com
+toddsnyder.com
+fumaca.pt
+glintt.com
+continente.pt
+squarespace.com
+tripadvisor.com
+udemy.com
+comunidadeculturaearte.com
+vodafone.pt
+switch.pt
+bestbuy.com
+seatgeek.com
+go.dev
+wpengine.com
+cmjornal.pt
+mit.edu
+propublica.org
+chicagotribune.com
+box.com
+sweetwater.com
+cbsnews.com
+jenis.com
+xpand-it.com
+nasa.gov
+tugatech.com.pt
+portoferreira.pt
+aminhaterra.pt
+unbabel.com
+duolingo.com
+casper.com
+mixpanel.com
+kuantokusta.pt
+redis.io
+noesis.pt
+booking.com
+bebitus.pt
+pagerduty.com
+figma.com
+slbenfica.pt
+fugas.publico.pt
+observador.pt
+cnn.com
+businessinsider.com
+graza.co
+jornaldamadeira.pt
+pcguia.pt
+tumblr.com
+gap.com
+namecheap.com
+arrastao.blogs.sapo.pt
+conforama.pt
+sword.health
+ox.ac.uk
+hostelworld.com
+amazon.com
+sentry.io
+wsj.com
+twitch.tv
+walmart.com
+aptoide.com
+pingodoce.pt
+sicnoticias.pt
+hellofresh.com
+misfitsmarket.com
+apnews.com
+fastly.com
+imaginarium.pt
+archive.org
+intermarche.pt
+fixando.pt
+openai.com
+sephora.com
+prenatal.pt
+dropbox.com
+chiptec.pt
+tacticalsoul-pb.com
+tecovas.com
+target.com
+create.it
+miro.com
+godaddy.com
+sapo.pt
+asreceitaslaporcasa.blogspot.com
+delas.pt
+netflix.com
+railway.app
+whitesmith.co
+faherty.com
+blueapron.com
+bloomberg.com
+blasfemias.net
+sograpevinhos.com
+fly.io
+intercom.com
+adegamayor.pt
+hulu.com
+nowo.pt
+macys.com
+rr.sapo.pt
+sportsdirect.pt
+rgb.pt
+memoriasquesebebem.com
+tiapureza.pt
+switchtechnology.pt
+infraspeak.com
+runtime-revolution.com
+zoom.us
+doist.com
+sloowmarket.com
+diariodominho.pt
+mrbeastfeastables.com
+twilio.com
+crateandbarrel.com
+python.org
+stanley1913.com
+westelm.com
+nodejs.org
+jornaleconomico.pt
+patrimoniocultural.gov.pt
+bbdonna.com
+coverflex.com
+anthropic.com
+remote.com
+eventbrite.com
+google.com
+wordpress.com
+harvard.edu
+guitarcenter.com
+temu.com
+ebay.com
+theatlantic.com
+hostinger.com
+wikipedia.org
+curology.com
+portugalglobal.pt
+lowes.com
+shein.com
+edx.org
+cucawik.com
+warbyparker.com
+paisefilhos.pt
+monday.com
+pura-ecoconcept.pt
+pplware.sapo.pt
+susanaduarte.com
+pinterest.com
+tsf.pt
+si.edu
+olipop.com
+tonic.app
+patagonia.com
+pituka.pt
+harrys.com
+axios.com
+diariodecoimbra.pt
+sabado.pt
+cdc.gov
+floyddetroit.com
+stanford.edu
+ionline.sapo.pt
+texastribune.org
+foxnews.com
+rei.com
+techcrunch.com
+asenhoradomonte.com
+
+# Verified but not selected, kept so the trim is visible.
+#   almedina.net
+#   asbeiras.pt
+#   auchan.pt
+#   benamor1925.com
+#   bordallopinheiro.com
+#   bright.pt
+#   brooklinen.com
+#   celeiro.pt
+#   chicco.pt
+#   cnet.com
+#   coisas.com
+#   concreto.pt
+#   cortefiel.com
+#   cpu.pt
+#   doutorfinancas.pt
+#   easypay.pt
+#   elcorteingles.pt
+#   eureka.pt
+#   expresso.pt
+#   farmaciasportuguesas.pt
+#   instacart.com
+#   jornaldofundao.pt
+#   josefinas.com
+#   laredoute.pt
+#   leroymerlin.pt
+#   licorbeirao.com
+#   loc.gov
+#   mensagem.pt
+#   mercadao.pt
+#   minicool.pt
+#   mo.pt
+#   moviflor.pt
+#   nordstrom.com
+#   novabase.pt
+#   nytimes.com
+#   oficinadepsicologia.com
+#   pcdiga.com
+#   perfumesecompanhia.pt
+#   radiopopular.pt
+#   recheio.pt
+#   record.pt
+#   reuters.com
+#   rfc-editor.org
+#   ritual.com
+#   rmelectronica.pt
+#   sacoor.com
+#   slate.com
+#   sonae.pt
+#   storesdaspaixao.com
+#   sumol.pt
+#   supabase.com
+#   usa.gov
+#   vistaalegre.com
+#   wayfair.com
+#   worten.pt

@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-08-30T16:39:50+00:00",
+  "corpus": 500,
+  "compared": 384,
+  "skipped": {
+    "aborted": 92,
+    "no robots.txt": 24
+  },
+  "verdicts": 9600,
+  "tool_vs_literal": {
+    "agree": 9600,
+    "share": 100.0,
+    "disagreements": []
+  },
+  "tool_vs_stdlib": {
+    "agree": 9596,
+    "share": 99.96,
+    "note": "The standard library matches user agents by substring, so a group named bot captures GPTBot and a group named Fetch captures Meta-ExternalFetcher. Disagreements here are expected and are evidence for the tool. A disagreement the other way is a defect.",
+    "disagreements": [
+      {
+        "domain": "dnoticias.pt",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
+      {
+        "domain": "fixando.pt",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
+      {
+        "domain": "madewell.com",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
+      {
+        "domain": "wikipedia.org",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      }
+    ]
+  },
+  "needs_hand_check": {
+    "note": "Three implementations agreeing proves consistency, not correctness. These are the sites where the tool reports a block, so these are the verdicts that carry the score and have to be read by a human against the robots.txt.",
+    "sites_reporting_a_block": [
+      "abcnews.go.com",
+      "amazon.com",
+      "apnews.com",
+      "arstechnica.com",
+      "bbc.com",
+      "casa.pt",
+      "cmjornal.pt",
+      "cnn.com",
+      "cnnportugal.iol.pt",
+      "create.it",
+      "forbes.com",
+      "hulu.com",
+      "ionline.sapo.pt",
+      "jornaldenegocios.pt",
+      "lifestyle.sapo.pt",
+      "lusa.pt",
+      "maisfutebol.iol.pt",
+      "mashable.com",
+      "nbcnews.com",
+      "netflix.com",
+      "newyorker.com",
+      "noticiasaominuto.com",
+      "npr.org",
+      "observador.pt",
+      "pinterest.com",
+      "portoferreira.pt",
+      "reddit.com",
+      "sapo.pt",
+      "techcrunch.com",
+      "theatlantic.com",
+      "theguardian.com",
+      "theverge.com",
+      "tvi.iol.pt",
+      "usatoday.com",
+      "vox.com",
+      "wired.com",
+      "zdnet.com"
+    ]
+  }
+}

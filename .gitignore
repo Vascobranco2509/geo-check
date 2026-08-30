@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+reports/
+.claude-flow/
+[INFO] Recording command outcome: printf
+
+[OK] Command outcome recorded
+
+# Robustness fixtures for the 500 site corpus. Recorded locally with
+# scripts/refresh_fixtures.py, never committed: 500 sites of real HTML is 208 MB.
+# The golden set under tests/fixtures/golden is committed and is 8 MB.
+tests/fixtures/corpus/
+[INFO] Recording command outcome: printf
+
+[OK] Command outcome recorded
+
+# The aggregate analysis. Regenerate it with scripts/run_study.py. Not
+# committed: it carries every finding in structured form, and the write up of
+# those findings is the maintainer to publish, not the repository to hand over.
+data/study.json
+
+# Shell and hook accidents. A mistyped redirection in the repository root lands
+# as a file named after a line number or an awk fragment, and `git add -A` will
+# happily commit it. Eighteen of them reached a commit once.
+/[0-9]*
