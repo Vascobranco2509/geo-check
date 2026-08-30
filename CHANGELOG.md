@@ -3,7 +3,9 @@
 Notable changes, newest first. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## v0.1.0
+## Unreleased
+
+## v0.1.0 - 2026-08-30
 
 First release. The GitHub Action is published to the
 [Marketplace](https://github.com/marketplace/actions/geo-check) from this tag,
