@@ -3,7 +3,11 @@
 Notable changes, newest first. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## Unreleased
+## v0.1.0
+
+First release. The GitHub Action is published to the
+[Marketplace](https://github.com/marketplace/actions/geo-check) from this tag,
+under `Vascobranco2509/geo-check@v0`.
 
 ### Added
 

@@ -3,6 +3,7 @@
 </h1>
 
 <p align="center">
+  <a href="https://github.com/marketplace/actions/geo-check"><img src="https://img.shields.io/badge/GitHub%20Marketplace-geo--check-24292f?logo=github&logoColor=white" alt="On the GitHub Marketplace"></a>
   <a href="https://github.com/Vascobranco2509/geo-check/actions/workflows/ci.yml"><img src="https://github.com/Vascobranco2509/geo-check/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
   <img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence">
   <img src="https://img.shields.io/badge/python-3.10%2B-1f6feb" alt="Python 3.10 or newer">
@@ -117,7 +118,11 @@ months. Add this to any workflow and a bad `robots.txt` fails the build:
     fail-under-readability: 50
 ```
 
-Both thresholds are optional. Leave them out and it reports without failing.
+Both thresholds are optional. Leave them out and it reports without failing. The
+full report goes into the job summary, and the scores come back as outputs you
+can read in later steps.
+
+It is on the [GitHub Marketplace](https://github.com/marketplace/actions/geo-check).
 
 ## The two scores
 
