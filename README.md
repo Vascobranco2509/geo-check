@@ -235,7 +235,7 @@ block verdicts were each traced by hand to the robots.txt group that produced
 them, and that is the number worth trusting. The comparison is in
 [data/accuracy_report.json](data/accuracy_report.json).
 
-`pytest` runs 161 tests offline in about fifteen seconds. It never touches the
+`pytest` runs 164 tests offline in about fifteen seconds. It never touches the
 network.
 
 ## What this does not do

@@ -26,8 +26,3 @@ tests/fixtures/corpus/
 # committed: it carries every finding in structured form, and the write up of
 # those findings is the maintainer to publish, not the repository to hand over.
 data/study.json
-
-# Shell and hook accidents. A mistyped redirection in the repository root lands
-# as a file named after a line number or an awk fragment, and `git add -A` will
-# happily commit it. Eighteen of them reached a commit once.
-/[0-9]*

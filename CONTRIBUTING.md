@@ -81,11 +81,39 @@ python scripts/build_manifest.py
 ```
 
 It writes `data/corpus_manifest.csv`, one row per domain with the read timestamp,
-the outcome and the SHA-256 of the `robots.txt` body. Site type lives separately,
-in `data/corpus_categories.csv`, because the corpus file is one flat block with no
-sections: a section boundary orders the domains, and an ordering states something
-about the corpus that the list has no business stating. Adding a domain means
-adding a row there too, or `scripts/run_study.py` fails loudly. That file is how a reader
+the outcome and the SHA-256 of the `robots.txt` body.
+
+## Site type
+
+`data/corpus_categories.csv` maps each of the 500 domains to one of nine types:
+ecommerce, storefront, news, saas, blog, platform, reference, education,
+government. `scripts/run_study.py` reads it, and adding a domain to the corpus
+means adding a row here too, or the script fails loudly.
+
+It lives apart from `data/corpus_500.txt` because that file is one flat block
+with no sections. A section boundary orders the domains, and an ordering states
+something about the corpus that a list of domains has no business stating.
+
+**These are judgements, not measurements, and the file says so here because it
+cannot say so in a CSV.** Each domain was assigned by hand from what the site is,
+then checked against the title and meta description in its recorded homepage.
+193 domains could be checked that way. The rest had aborted or returned a
+challenge page, so there was nothing recorded to check against. Three of the 193
+were wrong and were corrected: `owala.com` is a
+WordPress blog rather than the drinkware brand, `haus.com` sells home equity
+rather than goods, and `siete.com` is an online casino. That is a 1.6 percent
+error rate on the part that could be checked, and about a quarter of the file
+rests on judgement the recordings cannot confirm either way.
+
+The boundaries are not sharp and no rule will make them sharp. A marketplace can
+be read as ecommerce or as a platform, a direct-to-consumer brand as ecommerce or
+as a storefront. The working distinction is that `ecommerce` sells many brands or
+is a large retailer, `storefront` sells its own single brand, and `platform` is a
+service whose product is other people's activity.
+
+Nothing this repository publishes is grouped by type. The file exists for the
+study output, which is regenerated locally and not committed. Treat any number
+derived from it as resting on the paragraph above. That file is how a reader
 without the 208 MB checks the numbers, so a pull request that re-records the
 corpus should refresh it in the same commit.
 

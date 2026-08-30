@@ -16,11 +16,27 @@ Notable changes, newest first. Format loosely follows
   it was read, with `scripts/build_manifest.py` to rebuild it and
   `scripts/verify_manifest.py` to check rows against the live web. The 208 MB of
   recordings do not ship, so the fingerprints do
+- `data/corpus_categories.csv`, site type for all 500 domains, read by
+  `scripts/run_study.py`. Hand assigned and checked against recorded pages;
+  `CONTRIBUTING.md` states the method, the boundaries, and what reading every row
+  back against its recorded homepage found
 - A sectioning measure inside `answer_shaped_content`, with thresholds taken from
   12301 blocks across 868 pages rather than borrowed
 - `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` and issue templates
 
+### Changed
+
+- `data/corpus_500.txt` is one flat block ordered by sha256 of the domain, with
+  no section comments. Site type moved to its own file
+
 ### Fixed
+
+Ten figures in the documentation were corrected against the data behind them,
+including `excalidraw.com`'s Readability score, the share of pages that are a
+single block, the distance between the contradictory `CCBot` rules, and the
+scope of the hand-traced block verdicts. Two claims were removed for resting on
+data that does not ship, and the JavaScript heuristic's known false negative is
+now stated in `docs/RUBRIC.md` rather than counted out of the sample.
 
 Three defects in `robots.txt` handling, all found by the validation harness
 before anyone hit them in the field. Each has a regression test.

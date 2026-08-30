@@ -26,9 +26,9 @@
 # nobody repeats the search expecting a different result.
 #
 # How these were chosen. Candidates were assembled, every entry was checked to
-# resolve in DNS, and the dead ones were dropped. Where a category had more
-# survivors than its target, the selection was made by ordering on
-# sha256(domain) and taking the first N. That is reproducible and it is not
+# resolve in DNS, and the dead ones were dropped. Where more candidates survived
+# than were wanted, the selection was made by ordering on sha256(domain) and
+# taking the first N. That is reproducible and it is not
 # cherry picking. The candidates that did not make the cut are listed at the
 # bottom of this file rather than thrown away.
 #

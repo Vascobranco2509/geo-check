@@ -221,6 +221,16 @@ comments to that file, however convenient they look, and when writing down that
 this was fixed, describe the shape of the leak rather than quoting it. The note
 has reintroduced it once already.
 
+**Site type is a judgement and the repository says so.**
+`data/corpus_categories.csv` is hand assigned. Reading every row back against
+the recorded homepage found 31 of 500 wrong, six percent, and that is a floor:
+the same judgement did the assigning and the checking, and roughly a fifth of the
+corpus has no usable recording to check against. `CONTRIBUTING.md` carries the
+method, the boundary rule and that caveat. Nothing the repository publishes is grouped by type; the file exists
+for the study output. If a later session ever publishes a per type figure, that
+paragraph has to move with it, because an unqualified category number is an
+assertion dressed as a measurement.
+
 **Publishing platform is a dimension, not a category.** Making it a category
 produced an artifact: forty domains read out of a Shopify directory came back
 100 percent Shopify with 100 percent llms.txt adoption, which is what that
