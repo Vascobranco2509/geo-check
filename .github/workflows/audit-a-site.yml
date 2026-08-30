@@ -52,3 +52,22 @@ jobs:
           path: |
             geo-check.md
             geo-check.json
+
+  # The job above runs the action from the working tree. This one runs the
+  # published tag the way a stranger's workflow would, which is the only thing
+  # that proves the release actually works for anyone but us.
+  consume-the-published-action:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - id: geo
+        uses: Vascobranco2509/geo-check@v0
+        with:
+          domain: ${{ inputs.domain }}
+          pages: "1"
+
+      - name: It answered
+        shell: bash
+        run: |
+          test -n "${{ steps.geo.outputs.access }}" || { echo "no score came back"; exit 1; }
+          echo "published action returned Access ${{ steps.geo.outputs.access }} (${{ steps.geo.outputs.access-grade }})"
