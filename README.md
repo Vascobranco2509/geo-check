@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="assets/banner.svg" alt="geo-check" width="100%">
+  <img src="https://raw.githubusercontent.com/Vascobranco2509/geo-check/main/assets/banner.svg" alt="geo-check" width="100%">
 </h1>
 
 <p align="center">
@@ -15,26 +15,29 @@
   Two scores, never averaged. Blocking model training costs no points.
 </p>
 
-> Not on PyPI yet. Clone and `pip install -e .` until it is.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Vascobranco2509/geo-check/main/assets/output.png" alt="geo-check auditing nytimes.com: Access 56 out of 100 grade D, Readability 82.5 out of 100 grade B, three of six citation crawlers allowed, and the exact robots.txt lines to add." width="624">
+</p>
 
-## What this is
+<p align="center">
+  <sub>A real run, replayed from a recording committed to this repository. Trimmed for height.</sub>
+</p>
 
-A Claude Code skill, and a command line tool, that audits one domain for two
-things: whether AI systems can reach it, and whether they can make sense of it
-once they have.
-
-You give it a domain. It reads `robots.txt`, the sitemap, `llms.txt` and five
-pages sampled from that sitemap, then returns two scores from 0 to 100 with a
-letter each, the exact robots.txt lines to paste if something is blocked, and
-the rule that produced every verdict so you can check the work.
+## Try it
 
 ```bash
-geo-check example.com
+git clone https://github.com/Vascobranco2509/geo-check && cd geo-check
+pip install -e .
+geo-check your-domain.com
 ```
 
-It runs on your machine, needs open network access, and calls no model. The
-scoring path is deterministic: two runs against an unchanged site give the same
-answer, and every response can be recorded and replayed.
+Python 3.10 or newer and open network access. No API key, no account, no model
+call. It does not run inside sandboxes that only reach an allowlist of domains.
+
+> Not on PyPI yet, so clone for now.
+
+Or run it without installing anything: fork this repository, open the **Actions**
+tab, choose **audit a site** and press Run. The report lands in the run summary.
 
 ## What GEO is, and why it matters
 
@@ -60,67 +63,6 @@ and from outside a robots.txt file you cannot tell which is which. What you can
 tell is exactly which lines are there and what each one costs, which is what this
 prints.
 
-## What it tells you
-
-```
-geo-check 0.1.0   nytimes.com
-https://www.nytimes.com/   5 pages sampled
-
-  ACCESS        56/100  D
-  READABILITY   82.5/100  B
-
-  Training posture: partial (3 of 14 allowed)
-  Informational only. Blocking model training is a business decision and
-  costs no points here.
-
-------------------------------------------------------------------------
-CITATION CRAWLERS   3 of 6 allowed
-  allowed  Googlebot, Bingbot, Applebot
-  blocked  OAI-SearchBot, Claude-SearchBot, PerplexityBot
-           because of  User-agent: Claude-SearchBot | Disallow: /
-           because of  User-agent: OAI-SearchBot | Disallow: /
-           because of  User-agent: PerplexityBot | Disallow: /
-
-USER FETCH CRAWLERS   1 of 5 allowed
-  allowed  MistralAI-User
-  blocked  ChatGPT-User, Claude-User, Perplexity-User, Meta-ExternalFetcher
-           because of  User-agent: ChatGPT-User | Disallow: /
-           because of  User-agent: Claude-User | Disallow: /
-           because of  User-agent: Meta-ExternalFetcher | Disallow: /
-           because of  User-agent: Perplexity-User | Disallow: /
-
-------------------------------------------------------------------------
-WHAT TO CHANGE FIRST
-
-  Add these lines to https://www.nytimes.com/robots.txt:
-
-      User-agent: OAI-SearchBot
-      Allow: /
-      
-      User-agent: Claude-SearchBot
-      Allow: /
-      
-      User-agent: PerplexityBot
-      Allow: /
-      
-      User-agent: Claude-User
-      Allow: /
-
-  25 points  Citation crawlers allowed
-            Allow the citation crawlers in robots.txt. Each group sits alongside whatever Disallow rules are already there, and none of them opens the site to model training.
-
-  [ ... four more fixes, then every check with its evidence, the full
-        crawler table, and what this tool cannot see ]
-```
-
-The New York Times is a deliberate configuration rather than an accident. Google,
-Bing and Apple are let in, OpenAI, Anthropic and Perplexity are shut out by name.
-The tool reads that correctly and does not call it a mistake. It tells you what
-is true and leaves the judgement to you.
-
-That run, and the `excalidraw.com` one further down, both replay from fixtures
-committed to this repository, so you can reproduce them exactly.
-
 ## What makes this one different
 
 **Two scores, never averaged.** `excalidraw.com` scores 100 on Access and 32 on
@@ -135,20 +77,17 @@ measuring, it is lobbying. Training appears as one informational line and never
 touches either score.
 
 **Nothing is scored by a model.** No LLM sits in the scoring path. Every point
-comes from a rule you can read in [docs/RUBRIC.md](docs/RUBRIC.md) and trace to
-the line of `robots.txt` or markup that earned it, so the same site scores the
-same twice and a score you disagree with is an argument you can have.
+comes from a rule you can read in
+[docs/RUBRIC.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md)
+and trace to the line of `robots.txt` or markup that earned it, so the same site
+scores the same twice and a score you disagree with is an argument you can have.
 
 **Validated against 500 real sites, and the validation found bugs here first.**
-408 scored, zero crashes, and no abort without a reason. Of the 92 that did not
-score, 64 refused an automated client on purpose, 20 were unreachable from here
-and may answer fine from elsewhere, and 8 are gone. Then every `robots.txt` was
-read three ways and compared per agent, 9600 verdicts, agreeing 100 percent with
-an independent reader written from RFC 9309.
-
-That is the easy half. The half that counts is the 182 block verdicts traced by
-hand to the `robots.txt` group that produced each one, because three
-implementations agreeing proves consistency and not correctness.
+408 scored, zero crashes, and no abort without a reason. Every `robots.txt` was
+then read three ways and compared per agent, 9600 verdicts, agreeing 100 percent
+with an independent reader written from RFC 9309. Three implementations agreeing
+proves consistency and not correctness, so the 182 verdicts that carry a score
+were each traced by hand to the group that produced them.
 
 It caught three real defects in this tool before anyone else could:
 
@@ -156,43 +95,31 @@ It caught three real defects in this tool before anyone else could:
 | --- | --- |
 | User agents matched by substring | A site writing `User-agent: bot` would have silently blocked six citation crawlers at once |
 | Groups declaring the same agent not merged | A site that contradicts itself got the first rule instead of the merge RFC 9309 requires |
-| A bare `Crawl-delay` closing nothing | One site's `CCBot` inherited a `Disallow` aimed at `AhrefsBot` |
+| A bare `Crawl-delay` closing nothing | One site's `CCBot` inherited a `Disallow` aimed at a marketing crawler |
 
 The 208 MB of recordings behind that are too large to ship, so
-[data/corpus_manifest.csv](data/corpus_manifest.csv) carries the SHA-256 of every
-`robots.txt` as it was read, all 500 rows, dated. To check them against the live
-web:
+[data/corpus_manifest.csv](https://github.com/Vascobranco2509/geo-check/blob/main/data/corpus_manifest.csv)
+carries the SHA-256 of every `robots.txt` as it was read, all 500 rows, dated.
+`python scripts/verify_manifest.py --sample 25` fetches them today and tells you
+which still match. The evidence, and what it does not prove, is in
+[docs/VALIDATION.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/VALIDATION.md).
 
-```bash
-python scripts/verify_manifest.py --sample 25
+## Keep it from regressing
+
+A site is one deploy away from losing its AI visibility, and nobody notices for
+months. Add this to any workflow and a bad `robots.txt` fails the build:
+
+```yaml
+- uses: Vascobranco2509/geo-check@main
+  with:
+    domain: your-domain.com
+    fail-under-access: 60
+    fail-under-readability: 50
 ```
 
-The evidence, and what it does not prove, is in
-[docs/VALIDATION.md](docs/VALIDATION.md).
+Both thresholds are optional. Leave them out and it reports without failing.
 
-## Install
-
-```bash
-pip install -e .
-```
-
-Python 3.10 or newer, and open network access. It does not run inside sandboxes
-that only reach an allowlist of domains.
-
-## Use
-
-```bash
-geo-check example.com
-```
-
-```bash
-geo-check example.com --pages 10 --json report.json --output report.md
-```
-
-The JSON is the real result. The markdown report and the terminal output are
-both rendered from it, so the three can never disagree about the same run.
-
-## The two scores in full
+## The two scores
 
 **Access** is whether AI systems can reach the site at all. Citation crawlers
 allowed (50), user fetch crawlers allowed (20), sampled pages reachable without
@@ -209,48 +136,57 @@ Three critical failures cap the Access score. All citation crawlers blocked caps
 it at 20. A blanket `Disallow: /` caps it at 10. A homepage that does not return
 200 aborts the run, because there is nothing honest to score.
 
-The full rubric, with the reasoning and the two weaknesses it still has, is in
-[docs/RUBRIC.md](docs/RUBRIC.md).
+The full rubric, with the reasoning and the weaknesses it still has, is in
+[docs/RUBRIC.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md).
 
-## How accurate is it
+## Questions people actually ask
 
-Two things are measured and published rather than claimed.
+**Isn't this just reading robots.txt?**
+That is one of the thirteen checks, and it is the one most tools get wrong.
+Matching a crawler to a group is a specification, not a substring search, and
+following RFC 9309 properly is where all three bugs found here lived. The other
+twelve read the sitemap, `llms.txt`, and five sampled pages for structure,
+JSON-LD, headings, authorship and whether the content survives without
+JavaScript.
 
-**A golden set of thirty hard sites.** Sites with no robots.txt, with a homepage
-served at `/robots.txt`, with blanket blocks, with blanket blocks that name
-exceptions, with wildcards, with Cloudflare generated files, with nested sitemap
-indexes, and four different ways for a run to abort. Every expectation in
-[data/golden_30.yaml](data/golden_30.yaml) was traced by hand to the robots.txt
-group that produced it. These require 100 percent.
+**Why doesn't blocking model training cost points?**
+Because it is a decision, not a defect. Plenty of publishers block training
+deliberately and are right to. A tool that deducts for it has an opinion about
+your business model rather than a measurement of your site. It is reported as one
+line so you can see it, and it moves neither score.
 
-**An accuracy run across the corpus.** Every robots.txt read three ways and
-compared per agent, 9600 verdicts: the tool, the Python standard library, and a
-literal reader written from RFC 9309 sharing no code with either. The tool and
-the literal reader agree on 100 percent. The standard library disagrees four
-times, every one on a site with a group named `Fetch` that it applies to
-`Meta-ExternalFetcher` by substring.
+**Why two scores instead of one?**
+Because they fail independently and different people fix them. A site can be
+perfectly reachable and impossible to read, or beautifully structured and blocked
+at the first line of `robots.txt`. One number hides whichever half is broken.
 
-Three implementations agreeing proves consistency, not correctness. So the 182
-block verdicts were each traced by hand to the robots.txt group that produced
-them, and that is the number worth trusting. The comparison is in
-[data/accuracy_report.json](data/accuracy_report.json).
+**Does it work if I am behind Cloudflare?**
+It reads what your `robots.txt` and markup say. It cannot see a bot manager
+returning 403 to crawlers while serving you fine, and it says so in the report
+rather than scoring around it. If the homepage refuses this tool, the run aborts
+with the reason instead of inventing a score.
 
-`pytest` runs 164 tests offline in about fifteen seconds. It never touches the
-network.
+**Why trust a number a heuristic produced?**
+Only trust the ones that are measured, and the report tells you which is which.
+The JavaScript check is a heuristic with thresholds taken from 22 live pages, and
+[docs/RUBRIC.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md)
+names the page in that sample it gets wrong. The `robots.txt` verdicts are not a
+heuristic, and they carry most of the Access score.
+
+**Do I need llms.txt?**
+Probably not urgently. It is a proposal rather than a standard and no major
+assistant is documented as requiring it, which is why it is worth 5 points out of
+100 here and not more.
 
 ## What this does not do
 
 It does not detect blocking at the CDN or WAF level. Your robots.txt can say yes
-while Cloudflare returns 403 to AI crawlers, and this tool will not see it. The
-one place it surfaces is a run that aborts on the homepage, and 64 of the 500
-were refused there outright.
+while Cloudflare returns 403 to AI crawlers, and this tool will not see it.
 
 It does not render JavaScript. The raw HTML check measures how much readable text
 arrives in the initial response and how much of that response is script. The
 thresholds were measured across 22 live pages rather than chosen, and both the
-numbers and the script that produced them are in the repository, at
-[data/js_calibration.csv](data/js_calibration.csv) and
-[scripts/calibrate_js_threshold.py](scripts/calibrate_js_threshold.py).
+numbers and the script that produced them are in the repository.
 
 Answer shaped content is detected structurally. The check can see that a page has
 an ordered list of five steps and that the prose is broken into sections. It
@@ -261,35 +197,31 @@ and much larger problem.
 
 ## The crawler list
 
-Every user agent, its vendor, its bucket, whether the vendor documents it as
-honouring robots.txt, and a link to the official documentation lives in
-[src/geo_check/data/agents.json](src/geo_check/data/agents.json). Every entry was
-checked against vendor documentation on 2026-08-30.
+Twenty five user agents, each with its vendor, its bucket, whether the vendor
+documents it as honouring `robots.txt`, and a link to that documentation.
+[docs/CRAWLERS.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/CRAWLERS.md)
+explains how the buckets work and why three of the on demand fetchers are
+reported as ignoring a block aimed at them.
 
-Three of the five on demand fetchers say plainly that they ignore robots.txt.
-`Perplexity-User` and `ChatGPT-User` are documented that way by Perplexity and
-OpenAI themselves, and `Meta-ExternalFetcher` may bypass it for user initiated
-requests. A `Disallow` aimed at those changes nothing, so the report says so
-instead of pretending the block worked, and they are left out of the robots.txt
-block it offers you.
-
-The list moves. Pull requests adding or correcting entries, with the vendor
-documentation URL, are the most useful contribution you can make.
+The list moves. Pull requests adding or correcting an entry, with the vendor's
+own documentation URL, are the most useful contribution you can make.
 
 ## Contributing
 
 Adding a check is one file in `src/geo_check/checks/` and one line in the
-registry. The most useful contribution is a correction to the crawler list, with
-the vendor's own documentation URL.
+registry.
 
 ```bash
 pip install -e ".[dev]" && pytest
 ```
 
-[CONTRIBUTING.md](CONTRIBUTING.md) has the rest: how a check is written, how the
-golden set works, how to record fixtures, and why the recorder is deliberately
-slow. [SECURITY.md](SECURITY.md) carries one known and unfixed issue worth
-reading before you pipe this tool's output into an agent.
+164 tests, offline, about fifteen seconds. The suite never touches the network.
+[CONTRIBUTING.md](https://github.com/Vascobranco2509/geo-check/blob/main/CONTRIBUTING.md)
+has the rest: how a check is written, how the golden set works, how to record
+fixtures, and why the recorder is deliberately slow.
+[SECURITY.md](https://github.com/Vascobranco2509/geo-check/blob/main/SECURITY.md)
+carries one known and unfixed issue worth reading before you pipe this tool's
+output into an agent.
 
 ## Licence
 

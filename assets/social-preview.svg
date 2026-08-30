@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img"
+     aria-label="geo-check. Is your site reachable and readable by AI crawlers? The New York Times scores 56 out of 100 on Access, grade D, and 82.5 out of 100 on Readability, grade B.">
+  <title>geo-check</title>
+
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#131c31"/>
+    </linearGradient>
+    <style>
+      .sans { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#ground)"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#38bdf8"/>
+
+  <text class="mono" x="80" y="150" font-size="82" font-weight="700" fill="#f1f5f9">geo-check</text>
+  <text class="sans" x="80" y="222" font-size="34" fill="#cbd5e1">Can ChatGPT, Claude and Perplexity</text>
+  <text class="sans" x="80" y="268" font-size="34" fill="#cbd5e1">actually read your site?</text>
+
+  <rect x="80" y="316" width="520" height="1" fill="#1e293b"/>
+
+  <text class="sans" x="80" y="360" font-size="21" fill="#94a3b8">Two scores, never averaged.</text>
+  <text class="sans" x="80" y="394" font-size="21" fill="#94a3b8">Blocking model training costs no points.</text>
+  <text class="sans" x="80" y="428" font-size="21" fill="#94a3b8">No language model anywhere in the scoring.</text>
+
+  <text class="mono" x="80" y="536" font-size="19" fill="#64748b">pip install geo-check</text>
+  <text class="sans" x="80" y="574" font-size="17" fill="#475569">Validated across 500 real sites. MIT.</text>
+
+  <!-- the two scores, from the real nytimes.com run -->
+  <g transform="translate(690 150)">
+    <rect x="0" y="0" width="240" height="250" rx="18" fill="#111c30" stroke="#1e293b" stroke-width="2"/>
+    <text class="sans" x="28" y="48" font-size="16" letter-spacing="2" fill="#94a3b8">ACCESS</text>
+    <rect x="172" y="26" width="44" height="32" rx="9" fill="#f59e0b" opacity="0.16"/>
+    <text class="mono" x="194" y="50" font-size="21" font-weight="700" fill="#f59e0b" text-anchor="middle">D</text>
+    <text class="mono" x="28" y="146" font-size="82" font-weight="700" fill="#f59e0b">56</text>
+    <text class="mono" x="144" y="146" font-size="28" fill="#64748b">/100</text>
+    <rect x="28" y="178" width="184" height="9" rx="4.5" fill="#1e293b"/>
+    <rect x="28" y="178" width="103" height="9" rx="4.5" fill="#f59e0b"/>
+    <text class="sans" x="28" y="214" font-size="15" fill="#64748b">3 of 6 citation</text>
+    <text class="sans" x="28" y="234" font-size="15" fill="#64748b">crawlers allowed</text>
+  </g>
+
+  <g transform="translate(958 150)">
+    <rect x="0" y="0" width="240" height="250" rx="18" fill="#111c30" stroke="#1e293b" stroke-width="2"/>
+    <text class="sans" x="28" y="48" font-size="16" letter-spacing="2" fill="#94a3b8">READABILITY</text>
+    <rect x="172" y="26" width="44" height="32" rx="9" fill="#38bdf8" opacity="0.16"/>
+    <text class="mono" x="194" y="50" font-size="21" font-weight="700" fill="#38bdf8" text-anchor="middle">B</text>
+    <text class="mono" x="28" y="146" font-size="82" font-weight="700" fill="#38bdf8">82</text>
+    <text class="mono" x="144" y="146" font-size="28" fill="#64748b">.5/100</text>
+    <rect x="28" y="178" width="184" height="9" rx="4.5" fill="#1e293b"/>
+    <rect x="28" y="178" width="152" height="9" rx="4.5" fill="#38bdf8"/>
+    <text class="sans" x="28" y="214" font-size="15" fill="#64748b">structured, and</text>
+    <text class="sans" x="28" y="234" font-size="15" fill="#64748b">easy to quote</text>
+  </g>
+
+  <text class="sans" x="690" y="448" font-size="17" fill="#64748b">The same site, nytimes.com. An average of 69</text>
+  <text class="sans" x="690" y="472" font-size="17" fill="#64748b">would describe neither half of it.</text>
+</svg>

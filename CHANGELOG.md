@@ -7,6 +7,18 @@ Notable changes, newest first. Format loosely follows
 
 ### Added
 
+- `action.yml`, a GitHub Action. Five lines in any workflow audits a site on
+  every deploy and fails the build below a score you set. It installs the exact
+  ref the caller pinned, so the audit and the rubric that scored it never drift
+  apart, and it writes the full report into the run summary
+- A manual `audit a site` workflow, so anyone can run the tool from the Actions
+  tab of a fork without installing anything. Manual only: the suite is offline by
+  design and CI stays that way
+- `docs/CRAWLERS.md`, all 25 user agents with vendor, bucket, whether the vendor
+  documents it as honouring `robots.txt`, and a link to that documentation.
+  Generated from `agents.json`, which stays the source of truth
+- `assets/output.png` and `assets/social-preview.png`, both rendered from a real
+  recorded run rather than mocked up
 - Validation across 500 real sites, with the evidence in `docs/VALIDATION.md`
 - An accuracy harness, `scripts/verify_accuracy.py`, reading every `robots.txt`
   three ways and comparing per agent
@@ -26,6 +38,10 @@ Notable changes, newest first. Format loosely follows
 
 ### Changed
 
+- The README leads with the result. The real output sits above the fold as a
+  rendered terminal, the crawler table moved to `docs/CRAWLERS.md`, and a section
+  answering the questions people actually ask replaces detail that belonged in
+  `docs/`. Every link is absolute, because relative links break on the PyPI page
 - `data/corpus_500.txt` is one flat block ordered by sha256 of the domain, with
   no section comments. Site type moved to its own file
 

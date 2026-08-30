@@ -1,0 +1,132 @@
+name: geo-check
+description: Audit a site for AI crawler access and readability, and fail the build when it regresses.
+author: Vasco Caldeira Branco
+
+branding:
+  icon: search
+  color: blue
+
+inputs:
+  domain:
+    description: The domain to audit, for example example.com.
+    required: true
+  pages:
+    description: How many pages to sample, the homepage included.
+    required: false
+    default: "5"
+  fail-under-access:
+    description: >
+      Fail the job when the Access score is below this. Leave unset to report
+      without failing.
+    required: false
+    default: ""
+  fail-under-readability:
+    description: >
+      Fail the job when the Readability score is below this. Leave unset to
+      report without failing.
+    required: false
+    default: ""
+  python-version:
+    description: Python used to run the audit.
+    required: false
+    default: "3.12"
+
+outputs:
+  access:
+    description: Access score, 0 to 100.
+    value: ${{ steps.audit.outputs.access }}
+  access-grade:
+    description: Access letter grade.
+    value: ${{ steps.audit.outputs.access-grade }}
+  readability:
+    description: Readability score, 0 to 100.
+    value: ${{ steps.audit.outputs.readability }}
+  readability-grade:
+    description: Readability letter grade.
+    value: ${{ steps.audit.outputs.readability-grade }}
+  report:
+    description: Path to the markdown report.
+    value: ${{ steps.audit.outputs.report }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    # Installs the exact ref the caller pinned with `uses:`, so the audit and the
+    # rubric that scored it are always the same version. No PyPI round trip.
+    - name: Install geo-check
+      shell: bash
+      run: python -m pip install --quiet "${{ github.action_path }}"
+
+    - name: Audit ${{ inputs.domain }}
+      id: audit
+      shell: bash
+      env:
+        DOMAIN: ${{ inputs.domain }}
+        PAGES: ${{ inputs.pages }}
+        MIN_ACCESS: ${{ inputs.fail-under-access }}
+        MIN_READABILITY: ${{ inputs.fail-under-readability }}
+      run: |
+        set -o pipefail
+        # geo-check exits non-zero when the site refuses the audit. That is a
+        # result, not a crash, so it is reported before anything is decided.
+        geo-check "$DOMAIN" --pages "$PAGES" \
+          --json geo-check.json --output geo-check.md || true
+
+        if [ ! -f geo-check.json ]; then
+          echo "::error title=geo-check::No result for $DOMAIN. The homepage did not answer."
+          exit 1
+        fi
+
+        python - <<'PY'
+        import json, os, sys
+        from pathlib import Path
+
+        payload = json.loads(Path("geo-check.json").read_text(encoding="utf-8"))
+        scores = payload["scores"]
+        access, readability = scores["access"], scores["readability"]
+
+        def emit(name, value):
+            with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+                handle.write(f"{name}={value}\n")
+
+        emit("access", access["score"])
+        emit("access-grade", access["letter"])
+        emit("readability", readability["score"])
+        emit("readability-grade", readability["letter"])
+        emit("report", "geo-check.md")
+
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            report = Path("geo-check.md")
+            with open(summary, "a", encoding="utf-8") as handle:
+                if report.exists():
+                    handle.write(report.read_text(encoding="utf-8"))
+                else:
+                    handle.write(f"Access {access['score']}, Readability {readability['score']}\n")
+
+        print(f"Access {access['score']}/100 {access['letter']}   "
+              f"Readability {readability['score']}/100 {readability['letter']}")
+
+        failed = False
+        for label, got, floor in (
+            ("Access", access["score"], os.environ.get("MIN_ACCESS", "")),
+            ("Readability", readability["score"], os.environ.get("MIN_READABILITY", "")),
+        ):
+            if not floor.strip():
+                continue
+            try:
+                threshold = float(floor)
+            except ValueError:
+                print(f"::error title=geo-check::{label} threshold '{floor}' is not a number")
+                failed = True
+                continue
+            if got < threshold:
+                print(f"::error title=geo-check::{label} is {got}, below the {threshold} floor")
+                failed = True
+
+        sys.exit(1 if failed else 0)
+        PY

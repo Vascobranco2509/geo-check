@@ -1,0 +1,54 @@
+# Run the tool without installing anything: fork this repository, open the
+# Actions tab, pick this workflow and press Run.
+#
+# Manual only. The test suite is offline by design and CI must stay that way, so
+# nothing here runs on push or pull request where a stranger's robots.txt could
+# turn the badge red. This is also the smoke test for action.yml, which nothing
+# else exercises.
+name: audit a site
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: Domain to audit, for example example.com
+        required: true
+        default: example.com
+      pages:
+        description: How many pages to sample
+        required: false
+        default: "5"
+      fail-under-access:
+        description: Fail the run below this Access score, blank to just report
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: geo
+        uses: ./
+        with:
+          domain: ${{ inputs.domain }}
+          pages: ${{ inputs.pages }}
+          fail-under-access: ${{ inputs.fail-under-access }}
+
+      - name: Show the scores
+        shell: bash
+        run: |
+          echo "Access      ${{ steps.geo.outputs.access }} (${{ steps.geo.outputs.access-grade }})"
+          echo "Readability ${{ steps.geo.outputs.readability }} (${{ steps.geo.outputs.readability-grade }})"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: geo-check-report
+          path: |
+            geo-check.md
+            geo-check.json
