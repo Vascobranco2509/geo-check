@@ -38,7 +38,7 @@ from geo_check.robots import classify, load_agents
 from geo_check.site import SiteUnavailable, build_site
 
 ROOT = Path(__file__).resolve().parents[1]
-CORPUS = ROOT / "data" / "corpus_500.txt"
+CORPUS = ROOT / "data" / "corpus.txt"
 FIXTURES = ROOT / "tests" / "fixtures" / "corpus"
 
 _UA_LINE = re.compile(r"^\s*user-agent\s*:\s*(.*?)\s*$", re.IGNORECASE)

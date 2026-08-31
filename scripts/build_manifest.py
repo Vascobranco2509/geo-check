@@ -29,7 +29,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from geo_check import fixtures
 
-CORPUS = ROOT / "data" / "corpus_500.txt"
+CORPUS = ROOT / "data" / "corpus.txt"
 FIXTURES = ROOT / "tests" / "fixtures" / "corpus"
 MANIFEST = ROOT / "data" / "corpus_manifest.csv"
 

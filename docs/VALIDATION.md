@@ -10,12 +10,12 @@ against recorded responses, so this is reproducible rather than remembered.
 
 ## It survives the real web
 
-500 real sites, recorded and replayed.
+906 real sites, recorded and replayed.
 
 | | Sites |
 | --- | ---: |
-| Audited and scored | 408 |
-| Aborted with a logged reason | 92 |
+| Audited and scored | 744 |
+| Aborted with a logged reason | 162 |
 | Crashed | 0 |
 | Aborted without an explanation | 0 |
 
@@ -23,14 +23,14 @@ The per site outcome is in
 [data/robustness_report.json](../data/robustness_report.json).
 
 Completing means the tool handled the site, not that the site answered. None of
-the 92 is the tool failing, but they do not all mean the same thing, and a single
-number hides that:
+the 162 is the tool failing, but they do not all mean the same thing, and a
+single number hides that:
 
 | | Sites | What came back |
 | --- | ---: | --- |
-| Refused deliberately | 64 | 61 x 403, and one each of 401, 406 and a 202 challenge page |
-| Unavailable to this client | 20 | 7 x 429, 8 timeouts, 5 connection errors |
-| Gone | 8 | 7 x 404 and one 410 |
+| Refused deliberately | 107 | 100 x 403, and a handful of 401, 406, 451 and 202 challenge pages |
+| Unavailable to this client | 45 | 19 timeouts, 12 connection errors, 11 x 429, and three 5xx |
+| Gone | 10 | 9 x 404 and one 410 |
 
 The middle row is the one to be careful with. Those twenty may answer perfectly
 for a reader on a different network, and nothing in this run proves otherwise.
@@ -53,15 +53,17 @@ counted as aborted and excluded from any claim about a site.
 
 ## The answers are right
 
-Every `robots.txt` in the corpus was read three ways and compared per agent, 9600
-verdicts across the 384 sites that have a real one. Of the other 116, 92 never
-reached `robots.txt` and 14 returned a non-200 for it. The remaining 10 answered
+Every `robots.txt` in the corpus was read three ways and compared per agent,
+17025 verdicts across the 681 sites that have a real one. Of the other 225, 162
+never reached `robots.txt` and 34 returned a non-200 for it. The remaining 29
+answered
 with HTTP 200 and a body carrying no directives: five served markup instead of
 `robots.txt`, including `linkedin.com`, which returned a reCAPTCHA challenge
-page, and `abreu.pt`, which returned 68 KB of HTML; three served an empty file;
-and two served a valid `text/plain` file of nothing but comments. Only the first
-five are a site answering the wrong thing. The other five are legitimately
-permissive, and all ten are treated the same way, as a site with no rules.
+page, and `abreu.pt`, which returned 68 KB of HTML; ten served an empty file;
+and seven served a valid `text/plain` file of nothing but comments. Only the
+first twelve are a site answering the wrong thing. The other seventeen are
+legitimately permissive, and all twenty nine are treated the same way, as a site
+with no rules.
 
 - **the tool**
 - **the Python standard library**, `urllib.robotparser`, on the raw file
@@ -78,10 +80,10 @@ library's: it matches user agents by substring, so a site with a group named
 `Meta-ExternalFetcher`. The tool gets all four right.
 
 **Three implementations agreeing proves consistency, not correctness.** So the
-work that actually establishes accuracy was done by hand: all 182 scoring block
-verdicts across 37 sites were traced to the `robots.txt` group that produced
+work that actually establishes accuracy was done by hand: all 289 scoring block
+verdicts across 63 sites were traced to the `robots.txt` group that produced
 them, and none was unexplained. Scoring means the citation and user fetch
-buckets, 77 and 105 verdicts. The same 37 sites also block training crawlers 338
+buckets, 118 and 171 verdicts. The same 63 sites also block training crawlers 579
 times, which was not traced by hand, because a training block earns and costs
 nothing and cannot move a score. A separate sample of 25 sites the tool reports as fully
 open was checked for false negatives and found clean.
@@ -188,8 +190,8 @@ no network.
 python scripts/refresh_fixtures.py --out tests/fixtures/corpus
 ```
 
-Records the 500 sites. Touches the live web and takes about forty minutes. The
-fixtures are not committed, because 500 sites of real HTML is 208 MB and
+Records the 906 sites. Touches the live web and takes about ninety minutes. The
+fixtures are not committed, because 906 sites of real HTML is 342 MB and
 truncating them was measured and rejected: at a 300 KB cap, 6 of 12 test domains
 moved their Readability score.
 
@@ -201,16 +203,16 @@ python scripts/verify_accuracy.py --out data/accuracy_report.json
 pytest -m slow
 ```
 
-Replays all 500 offline, in five to ten minutes depending on the machine. Opt
+Replays all 906 offline, in ten to twenty minutes depending on the machine. Opt
 in, because a slow
 default is a suite people stop running.
 
 ## Checking the numbers without the fixtures
 
-The 208 MB of recordings stay out of the repository, so the figures above rest on
+The 342 MB of recordings stay out of the repository, so the figures above rest on
 files one machine holds. [data/corpus_manifest.csv](../data/corpus_manifest.csv)
-is the part that fits: 500 rows, one per domain, each naming when it was read,
-what the run did with it, and the SHA-256 of the `robots.txt` body. 394 domains
+is the part that fits: 906 rows, one per domain, each naming when it was read,
+what the run did with it, and the SHA-256 of the `robots.txt` body. 710 domains
 carry a hash; the other 106 either aborted before that point or answered
 `/robots.txt` with a non-200. A hash records what came back rather than what it
 should have been, so the pages that were not `robots.txt` are fingerprinted too.
@@ -233,7 +235,7 @@ match. All 25 matched on 2026-08-30.
 
 A `CHANGED` row is not a failure. Sites edit `robots.txt`, which is why every row
 is dated. What the manifest rules out is a number that was never measured, and it
-covers all 500 including the 92 that never scored, so nothing was quietly
+covers all 906 including the 162 that never scored, so nothing was quietly
 dropped.
 
 The hash is taken over the decoded body re-encoded as UTF-8, because recording

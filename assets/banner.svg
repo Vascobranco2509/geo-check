@@ -22,7 +22,7 @@
   <text class="sans" x="64" y="194" font-size="21" fill="#94a3b8">and score it.</text>
 
   <text class="sans" x="64" y="252" font-size="16.5" fill="#64748b">Two scores. Never averaged. Blocking model training costs no points.</text>
-  <text class="sans" x="64" y="277" font-size="16.5" fill="#64748b">Validated across 500 real sites. Zero crashes, and three bugs found in itself.</text>
+  <text class="sans" x="64" y="277" font-size="16.5" fill="#64748b">Validated across 906 real sites. Zero crashes, and three bugs found in itself.</text>
 
   <!-- the two scores, from the real nytimes.com run -->
   <g transform="translate(700 74)">

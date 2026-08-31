@@ -27,7 +27,7 @@ from geo_check.fixtures import Recorder, save
 from geo_check.site import SiteUnavailable, build_site
 
 ROOT = Path(__file__).resolve().parents[1]
-CORPUS = ROOT / "data" / "corpus_500.txt"
+CORPUS = ROOT / "data" / "corpus.txt"
 FIXTURES = ROOT / "tests" / "fixtures"
 
 

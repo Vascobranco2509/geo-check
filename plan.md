@@ -75,7 +75,7 @@ what the tool cannot see.
 
 ## Phase 4, corpus and tests. DONE
 
-- [x] `data/corpus_500.txt`, extended to 500 on 2026-08-30, every one
+- [x] `data/corpus.txt`, extended to 906 on 2026-08-31, every one
       checked to resolve before
       it went in. Where a category had more survivors than its target the trim
       was made by ordering on sha256 of the domain, and the 55 candidates that
@@ -151,10 +151,12 @@ would undo the decision without knowing there was one. Inside the repository the
 500 site run has one job: proving the tool handles real input and gives correct
 answers. What the run says about anyone's website belongs to the article.
 
-What the repository does claim, and what `docs/VALIDATION.md` carries: 408
-scored, 92 aborted with a logged reason, zero crashes, 9600 verdicts at 100
+What the repository claimed at the end of this phase, when the corpus was 500:
+408 scored, 92 aborted with a logged reason, zero crashes, 9600 verdicts at 100
 percent agreement with an independent reader, 182 block verdicts traced by hand,
-and the three parser defects the validation found in this tool.
+and the three parser defects the validation found in this tool. Phase 7 doubled
+the corpus and every one of those figures moved; `docs/VALIDATION.md` carries the
+current ones.
 
 Hardened 2026-08-30, so the evidence survives a stranger checking it.
 
@@ -203,8 +205,31 @@ not in any file.
 Four things were wrong and are fixed. `docs/VALIDATION.md` attributed five of the
 seven 429s to Vercel; it is four Vercel, two istio-envoy, one Cloudflare. The
 suite was documented at twelve seconds and measures fifteen. The
-README called all 92 aborts CDN refusals. And `data/corpus_500.txt` still
+README called every abort a CDN refusal. And `data/corpus.txt` still
 carried the withheld comparison in its structure, with no sentence saying so.
+## Phase 7, the corpus doubled and the study redone. DONE
+
+- [x] 406 domains sourced, DNS checked, added to make `data/corpus.txt` 906.
+      One side of the corpus is much harder to source than the other, and it
+      constrained the run again: the easy candidates resolved at 100 percent and
+      the hard ones at 42, a published shop list returned 404 and a brand
+      directory showed names without domains. The shortfall was not filled from
+      the easy side, which would have skewed the comparison the study exists to
+      make
+- [x] Categories assigned from the recorded homepage rather than from memory,
+      which is what the six percent error rate on the first 500 cost
+- [x] Manifest, robustness, accuracy and study regenerated: 906 corpus, 744
+      scored, 162 aborted, 17025 verdicts at 100 percent agreement with the
+      independent reader, 289 scoring block verdicts across 63 sites
+- [x] Every published figure updated across seven documents
+
+**What the larger sample did to the finding.** At 500 sites the two halves of
+the corpus differed by six points of readability, which looked publishable. At
+906 the difference changed sign and the formal test fell to z = -1.01. It did not
+shrink, it reversed, which is what a difference that was never there looks like.
+Publishing at 500 would have published a false result in a confident tone. What
+the halves are, and what the comparison shows, stays with the maintainer.
+
 ## Open items
 
 - **The user fetch bucket counts blocks that do not work.** Three of its five

@@ -16,7 +16,7 @@ import hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CORPUS = ROOT / "data" / "corpus_500.txt"
+CORPUS = ROOT / "data" / "corpus.txt"
 CATEGORIES = ROOT / "data" / "corpus_categories.csv"
 
 

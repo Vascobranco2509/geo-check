@@ -1,22 +1,54 @@
 {
-  "generated_at": "2026-08-30T16:39:50+00:00",
-  "corpus": 500,
-  "compared": 384,
+  "generated_at": "2026-08-31T07:14:50+00:00",
+  "corpus": 906,
+  "compared": 681,
   "skipped": {
-    "aborted": 92,
-    "no robots.txt": 24
+    "aborted": 162,
+    "no robots.txt": 63
   },
-  "verdicts": 9600,
+  "verdicts": 17025,
   "tool_vs_literal": {
-    "agree": 9600,
+    "agree": 17025,
     "share": 100.0,
     "disagreements": []
   },
   "tool_vs_stdlib": {
-    "agree": 9596,
+    "agree": 17018,
     "share": 99.96,
     "note": "The standard library matches user agents by substring, so a group named bot captures GPTBot and a group named Fetch captures Meta-ExternalFetcher. Disagreements here are expected and are evidence for the tool. A disagreement the other way is a defect.",
     "disagreements": [
+      {
+        "domain": "mediapost.com",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
+      {
+        "domain": "madewell.com",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
+      {
+        "domain": "turijobs.pt",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
+      {
+        "domain": "distribuicaohoje.com",
+        "token": "Meta-ExternalFetcher",
+        "bucket": "user_fetch",
+        "tool": true,
+        "literal": true,
+        "stdlib": false
+      },
       {
         "domain": "dnoticias.pt",
         "token": "Meta-ExternalFetcher",
@@ -27,14 +59,6 @@
       },
       {
         "domain": "fixando.pt",
-        "token": "Meta-ExternalFetcher",
-        "bucket": "user_fetch",
-        "tool": true,
-        "literal": true,
-        "stdlib": false
-      },
-      {
-        "domain": "madewell.com",
         "token": "Meta-ExternalFetcher",
         "bucket": "user_fetch",
         "tool": true,
@@ -55,42 +79,68 @@
     "note": "Three implementations agreeing proves consistency, not correctness. These are the sites where the tool reports a block, so these are the verdicts that carry the score and have to be read by a human against the robots.txt.",
     "sites_reporting_a_block": [
       "abcnews.go.com",
+      "adage.com",
       "amazon.com",
+      "androidcentral.com",
       "apnews.com",
       "arstechnica.com",
+      "ativa.sapo.pt",
+      "barrons.com",
+      "bbc.co.uk",
       "bbc.com",
+      "burlington.com",
       "casa.pt",
+      "citylab.com",
       "cmjornal.pt",
       "cnn.com",
       "cnnportugal.iol.pt",
       "create.it",
+      "flash.pt",
       "forbes.com",
+      "hackernoon.com",
       "hulu.com",
+      "infoworld.com",
+      "interiordefine.com",
       "ionline.sapo.pt",
       "jornaldenegocios.pt",
+      "kiplinger.com",
       "lifestyle.sapo.pt",
       "lusa.pt",
       "maisfutebol.iol.pt",
       "mashable.com",
       "nbcnews.com",
+      "negocios.pt",
       "netflix.com",
       "newyorker.com",
       "noticiasaominuto.com",
       "npr.org",
       "observador.pt",
+      "ourplace.com",
       "pinterest.com",
       "portoferreira.pt",
+      "prana.com",
       "reddit.com",
       "sapo.pt",
+      "seekingalpha.com",
+      "semafor.com",
+      "sol.sapo.pt",
       "techcrunch.com",
+      "techradar.com",
       "theatlantic.com",
       "theguardian.com",
+      "thenavigatorcompany.com",
+      "theregister.com",
       "theverge.com",
+      "tomshardware.com",
       "tvi.iol.pt",
       "usatoday.com",
+      "viagens.sapo.pt",
+      "vidaeconomica.pt",
       "vox.com",
       "wired.com",
-      "zdnet.com"
+      "xda-developers.com",
+      "zdnet.com",
+      "zoominfo.com"
     ]
   }
 }

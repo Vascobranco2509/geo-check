@@ -25,16 +25,16 @@ under `Vascobranco2509/geo-check@v0`.
   Generated from `agents.json`, which stays the source of truth
 - `assets/output.png` and `assets/social-preview.png`, both rendered from a real
   recorded run rather than mocked up
-- Validation across 500 real sites, with the evidence in `docs/VALIDATION.md`
+- Validation across 906 real sites, with the evidence in `docs/VALIDATION.md`
 - An accuracy harness, `scripts/verify_accuracy.py`, reading every `robots.txt`
   three ways and comparing per agent
 - Continuous integration across Python 3.10 to 3.14, plus a clean install of the
   built wheel
 - `data/corpus_manifest.csv`, the SHA-256 of every `robots.txt` in the corpus as
   it was read, with `scripts/build_manifest.py` to rebuild it and
-  `scripts/verify_manifest.py` to check rows against the live web. The 208 MB of
+  `scripts/verify_manifest.py` to check rows against the live web. The 342 MB of
   recordings do not ship, so the fingerprints do
-- `data/corpus_categories.csv`, site type for all 500 domains, read by
+- `data/corpus_categories.csv`, site type for all 906 domains, read by
   `scripts/run_study.py`. Hand assigned and checked against recorded pages;
   `CONTRIBUTING.md` states the method, the boundaries, and what reading every row
   back against its recorded homepage found
@@ -48,7 +48,7 @@ under `Vascobranco2509/geo-check@v0`.
   rendered terminal, the crawler table moved to `docs/CRAWLERS.md`, and a section
   answering the questions people actually ask replaces detail that belonged in
   `docs/`. Every link is absolute, because relative links break on the PyPI page
-- `data/corpus_500.txt` is one flat block ordered by sha256 of the domain, with
+- `data/corpus.txt` is one flat block ordered by sha256 of the domain, with
   no section comments. Site type moved to its own file
 
 ### Fixed

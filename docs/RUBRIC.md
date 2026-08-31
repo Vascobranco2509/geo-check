@@ -178,15 +178,15 @@ robots.txt would give a truer number.
 
 **The 20 point cap has never fired.** It requires every citation crawler to be
 blocked, `Googlebot` included, and blocking Googlebot means leaving classic
-search as well. Almost nobody does that. Across 500 real sites, exactly two shut
+search as well. Almost nobody does that. Across 906 real sites, exactly two shut
 out every citation crawler, `reddit.com` and `create.it`, and both did it with a
 blanket `User-agent: * / Disallow: /`, so both were caught by the stricter 10
 point cap before this one could apply. The 20 point cap exists for a site that
-names and blocks all six deliberately, and no site in five hundred does.
+names and blocks all six deliberately, and no site in the corpus does.
 
-The failure that actually happens is narrower and five times as common: every
+The failure that actually happens is narrower and nine times as common: every
 crawler that exists only to feed AI answers blocked, while Google and Bing still
-get through. Ten sites in five hundred. That is reported at full severity in the
+get through. Eighteen sites, against two. That is reported at full severity in the
 evidence, and it does not change the score, because the rubric splits the 50
 points evenly and changing that is a separate decision.
 
@@ -196,7 +196,7 @@ Blocking at the CDN or WAF level. Real JavaScript rendering. Whether AI
 assistants actually cite you. Batch mode across many domains. History and run
 comparison.
 
-The first of those is the largest gap. Across a 500 site corpus, 61 sites
+The first of those is the largest gap. Across the corpus, 100 sites
 returned HTTP 403 from a bot manager, and they return 403 to a browser user agent
 just as readily. Their robots.txt is beside the point. This tool can only report
 that the front door did not open, and it says so.

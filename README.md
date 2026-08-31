@@ -7,7 +7,7 @@
   <a href="https://github.com/Vascobranco2509/geo-check/actions/workflows/ci.yml"><img src="https://github.com/Vascobranco2509/geo-check/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
   <img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence">
   <img src="https://img.shields.io/badge/python-3.10%2B-1f6feb" alt="Python 3.10 or newer">
-  <img src="https://img.shields.io/badge/audited-500%20sites-6f42c1" alt="Audited across 500 sites">
+  <img src="https://img.shields.io/badge/audited-906%20sites-6f42c1" alt="Audited across 906 sites">
   <img src="https://img.shields.io/badge/LLM%20calls-none-2da44e" alt="No LLM calls">
 </p>
 
@@ -83,11 +83,11 @@ comes from a rule you can read in
 and trace to the line of `robots.txt` or markup that earned it, so the same site
 scores the same twice and a score you disagree with is an argument you can have.
 
-**Validated against 500 real sites, and the validation found bugs here first.**
-408 scored, zero crashes, and no abort without a reason. Every `robots.txt` was
-then read three ways and compared per agent, 9600 verdicts, agreeing 100 percent
+**Validated against 906 real sites, and the validation found bugs here first.**
+744 scored, zero crashes, and no abort without a reason. Every `robots.txt` was
+then read three ways and compared per agent, 17025 verdicts, agreeing 100 percent
 with an independent reader written from RFC 9309. Three implementations agreeing
-proves consistency and not correctness, so the 182 verdicts that carry a score
+proves consistency and not correctness, so the 289 verdicts that carry a score
 were each traced by hand to the group that produced them.
 
 It caught three real defects in this tool before anyone else could:
@@ -98,9 +98,9 @@ It caught three real defects in this tool before anyone else could:
 | Groups declaring the same agent not merged | A site that contradicts itself got the first rule instead of the merge RFC 9309 requires |
 | A bare `Crawl-delay` closing nothing | One site's `CCBot` inherited a `Disallow` aimed at a marketing crawler |
 
-The 208 MB of recordings behind that are too large to ship, so
+The 342 MB of recordings behind that are too large to ship, so
 [data/corpus_manifest.csv](https://github.com/Vascobranco2509/geo-check/blob/main/data/corpus_manifest.csv)
-carries the SHA-256 of every `robots.txt` as it was read, all 500 rows, dated.
+carries the SHA-256 of every `robots.txt` as it was read, all 906 rows, dated.
 `python scripts/verify_manifest.py --sample 25` fetches them today and tells you
 which still match. The evidence, and what it does not prove, is in
 [docs/VALIDATION.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/VALIDATION.md).

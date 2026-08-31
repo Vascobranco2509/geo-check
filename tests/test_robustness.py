@@ -32,7 +32,7 @@ from geo_check.site import SiteUnavailable, build_site
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "tests" / "fixtures" / "corpus"
-CORPUS = ROOT / "data" / "corpus_500.txt"
+CORPUS = ROOT / "data" / "corpus.txt"
 MINIMUM_COMPLETION = 95.0
 
 
@@ -81,11 +81,17 @@ def audit(domain: str) -> tuple[str, str]:
     return "scored", str(payload["scores"]["access"]["score"])
 
 
-def test_the_corpus_is_five_hundred_unique_domains():
-    """The corpus is the input the robustness claim rests on, so it is asserted."""
+def test_every_corpus_domain_is_listed_once():
+    """The corpus is the input the robustness claim rests on, so it is asserted.
+
+    The count is read from the file rather than hard coded. Pinning it meant
+    that growing the corpus failed a test that was not about growth, and the
+    property worth protecting is that no domain is counted twice.
+    """
     domains = read_corpus()
-    assert len(domains) == 500
-    assert len(set(domains)) == 500
+    duplicates = {d for d in domains if domains.count(d) > 1}
+    assert not duplicates, f"listed more than once: {sorted(duplicates)}"
+    assert len(domains) > 400, "the corpus lost most of its domains"
 
 
 @slow

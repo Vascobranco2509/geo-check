@@ -62,7 +62,7 @@ the wheel and installs it into an empty environment.
 
 ## Fixtures
 
-The 500 site corpus is recorded locally and not committed, because it is 208 MB
+The 906 site corpus is recorded locally and not committed, because it is 342 MB
 and truncating it was measured and rejected.
 
 ```bash
@@ -85,12 +85,12 @@ the outcome and the SHA-256 of the `robots.txt` body.
 
 ## Site type
 
-`data/corpus_categories.csv` maps each of the 500 domains to one of nine types:
+`data/corpus_categories.csv` maps each of the 906 domains to one of ten types:
 ecommerce, storefront, news, saas, blog, platform, reference, education,
 government. `scripts/run_study.py` reads it, and adding a domain to the corpus
 means adding a row here too, or the script fails loudly.
 
-It lives apart from `data/corpus_500.txt` because that file is one flat block
+It lives apart from `data/corpus.txt` because that file is one flat block
 with no sections. A section boundary orders the domains, and an ordering states
 something about the corpus that a list of domains has no business stating.
 
@@ -116,7 +116,7 @@ study output, which is regenerated locally and not committed. Treat any number
 derived from it as resting on the paragraph above.
 
 `data/corpus_manifest.csv` is the other file a re-recording touches, and it is
-the one a reader without the 208 MB uses to check the numbers, so a pull request
+the one a reader without the 342 MB uses to check the numbers, so a pull request
 that re-records the corpus should refresh it in the same commit.
 
 ```bash

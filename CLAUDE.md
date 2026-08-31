@@ -100,7 +100,7 @@ as having no robots.txt at all, which inflated its score. A body that starts
 with HTML markup is rejected; a body full of robots directives is accepted
 whatever the header claims.
 
-**The analysis stays out of the repository.** What the 500 site run says about
+**The analysis stays out of the repository.** What the corpus run says about
 the web is the maintainer's article. Inside the repository that run proves the
 tool works and nothing else: `docs/VALIDATION.md` carries outcomes, agreement
 rates and the defects the validation found, and no conclusion about anyone's
@@ -188,12 +188,22 @@ The v1 report explicitly states that it does not check CDN level blocking.
 
 ## Testing strategy
 
-Robustness corpus of 500 real sites in `data/corpus_500.txt`, mixing ecommerce,
+Robustness corpus of 906 real sites in `data/corpus.txt`, mixing ecommerce,
 small and micro storefronts, news and media, SaaS and agencies, personal blogs,
-and large well known sites across sectors. Extended to 500 on 2026-08-30.
+and large well known sites across sectors. Extended to 906 on 2026-08-31.
 
-**The fixtures do not ship, so the fingerprints do.** 500 sites of recorded HTML
-is 208 MB and stays out of the repository, which would leave every published
+Doubling it was not tidying. At 500 sites the two halves of the corpus showed a
+readability gap that looked publishable. At 906 the gap changed sign and the
+formal test fell to z = -1.01, which is the signature of something that was never
+there. A study published at 500 would have been confidently wrong. Sample size is
+not a detail in this project, it is the finding.
+
+The name lost its count for the same reason: `corpus_500.txt` became
+`data/corpus.txt`, because a filename that carries a number is wrong the second
+time the corpus grows.
+
+**The fixtures do not ship, so the fingerprints do.** 906 sites of recorded HTML
+is 342 MB and stays out of the repository, which would leave every published
 figure resting on files one machine holds. `data/corpus_manifest.csv` carries one
 row per domain with the read timestamp, the outcome and the SHA-256 of the
 `robots.txt` body, and `scripts/verify_manifest.py` re-fetches and re-hashes with
@@ -205,13 +215,13 @@ text rather than bytes. That is why the checker is a script: a documented
 normalisation the reader has to reproduce by hand is a normalisation that will be
 reproduced wrong.
 
-How the 500 divide, and what that division shows, is the maintainer's article
+How the corpus divides, and what that division shows, is the maintainer's article
 and is not stated anywhere in this repository. That includes per category counts:
 a set of counts that partitions the corpus states the division by arithmetic even
 when no sentence does, which is how it survived the first two attempts to remove
 it. Describe the mix, never partition it.
 
-**The corpus file carries no sections.** `data/corpus_500.txt` is one flat block
+**The corpus file carries no sections.** `data/corpus.txt` is one flat block
 ordered by sha256 of the domain, and site type lives in
 `data/corpus_categories.csv`. Changed 2026-08-30, on the third attempt, because
 the first two removed the words and left the structure. Sections have sizes, and
@@ -223,7 +233,8 @@ has reintroduced it once already.
 
 **Site type is a judgement and the repository says so.**
 `data/corpus_categories.csv` is hand assigned. Reading every row back against
-the recorded homepage found 31 of 500 wrong, six percent, and that is a floor:
+the recorded homepage found 31 of the first 500 wrong, six percent, and that is
+a floor:
 the same judgement did the assigning and the checking, and roughly a fifth of the
 corpus has no usable recording to check against. `CONTRIBUTING.md` carries the
 method, the boundary rule and that caveat. Nothing the repository publishes is grouped by type; the file exists
@@ -236,7 +247,7 @@ produced an artifact: forty domains read out of a Shopify directory came back
 100 percent Shopify with 100 percent llms.txt adoption, which is what that
 platform ships rather than what small businesses do. Reported as micro
 businesses it would have credited a hosting platform's work to company size and
-distorted an adoption figure. So platform is now detected for all 500 and
+distorted an adoption figure. So platform is now detected for every domain and
 reported across every category, which is a better comparison and cannot be gamed
 by where the domains came from.
 
@@ -277,7 +288,7 @@ so the number worth publishing is the count of block verdicts traced by hand to
 the robots.txt line that produced them.
 
 Amended 2026-08-30, with measurement. Only the golden set ships in the
-repository, at 8 MB. The 500 site corpus is 208 MB, and truncating the
+repository, at 8 MB. The full corpus is 342 MB, and truncating the
 pages was tested and rejected: at a 300 KB cap, 6 of 12 domains changed their
 Readability score, one of them by 15 points. Access is unaffected, because it
 rests on robots.txt. So `tests/fixtures/corpus/` is gitignored, recorded
@@ -304,7 +315,7 @@ the registry. Do not build a plugin system or entry points in v1.
 ## Project goal
 
 The maintainer wants real visibility for this repository, including as portfolio
-evidence. GitHub stars come from distribution, not code quality. The 500 site
+evidence. GitHub stars come from distribution, not code quality. The corpus
 sweep produces a publishable study, which the maintainer writes and publishes
 himself. Its thesis is not recorded here, deliberately. That study launches the
 tool, and the tool proves the study. Treat them as one project.
