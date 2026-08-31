@@ -26,7 +26,7 @@
   <text class="sans" x="80" y="394" font-size="21" fill="#94a3b8">Blocking model training costs no points.</text>
   <text class="sans" x="80" y="428" font-size="21" fill="#94a3b8">No language model anywhere in the scoring.</text>
 
-  <text class="mono" x="80" y="536" font-size="19" fill="#64748b">pip install geo-check</text>
+  <text class="mono" x="80" y="536" font-size="19" fill="#64748b">github.com/Vascobranco2509/geo-check</text>
   <text class="sans" x="80" y="574" font-size="17" fill="#475569">Validated across 906 real sites. MIT.</text>
 
   <!-- the two scores, from the real nytimes.com run -->
