@@ -23,7 +23,7 @@ Notable changes, newest first. Format loosely follows
 
 First release. The GitHub Action is published to the
 [Marketplace](https://github.com/marketplace/actions/geo-check) from this tag,
-under `Vascobranco2509/geo-check@v0`.
+under `vasco-branco06/geo-check@v0`.
 
 ### Added
 

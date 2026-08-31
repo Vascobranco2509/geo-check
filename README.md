@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/Vascobranco2509/geo-check/main/assets/banner.svg" alt="geo-check" width="100%">
+  <img src="https://raw.githubusercontent.com/vasco-branco06/geo-check/main/assets/banner.svg" alt="geo-check" width="100%">
 </h1>
 
 <p align="center">
   <a href="https://github.com/marketplace/actions/geo-check"><img src="https://img.shields.io/badge/GitHub%20Marketplace-geo--check-24292f?logo=github&logoColor=white" alt="On the GitHub Marketplace"></a>
-  <a href="https://github.com/Vascobranco2509/geo-check/actions/workflows/ci.yml"><img src="https://github.com/Vascobranco2509/geo-check/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
+  <a href="https://github.com/vasco-branco06/geo-check/actions/workflows/ci.yml"><img src="https://github.com/vasco-branco06/geo-check/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
   <img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence">
   <img src="https://img.shields.io/badge/python-3.10%2B-1f6feb" alt="Python 3.10 or newer">
   <img src="https://img.shields.io/badge/audited-906%20sites-6f42c1" alt="Audited across 906 sites">
@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Vascobranco2509/geo-check/main/assets/output.png" alt="geo-check auditing nytimes.com: Access 56 out of 100 grade D, Readability 82.5 out of 100 grade B, three of six citation crawlers allowed, and the exact robots.txt lines to add." width="624">
+  <img src="https://raw.githubusercontent.com/vasco-branco06/geo-check/main/assets/output.png" alt="geo-check auditing nytimes.com: Access 56 out of 100 grade D, Readability 82.5 out of 100 grade B, three of six citation crawlers allowed, and the exact robots.txt lines to add." width="624">
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 ## Try it
 
 ```bash
-git clone https://github.com/Vascobranco2509/geo-check && cd geo-check
+git clone https://github.com/vasco-branco06/geo-check && cd geo-check
 pip install -e .
 geo-check your-domain.com
 ```
@@ -79,7 +79,7 @@ touches either score.
 
 **Nothing is scored by a model.** No LLM sits in the scoring path. Every point
 comes from a rule you can read in
-[docs/RUBRIC.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md)
+[docs/RUBRIC.md](https://github.com/vasco-branco06/geo-check/blob/main/docs/RUBRIC.md)
 and trace to the line of `robots.txt` or markup that earned it, so the same site
 scores the same twice and a score you disagree with is an argument you can have.
 
@@ -99,11 +99,11 @@ It caught three real defects in this tool before anyone else could:
 | A bare `Crawl-delay` closing nothing | One site's `CCBot` inherited a `Disallow` aimed at a marketing crawler |
 
 The 342 MB of recordings behind that are too large to ship, so
-[data/corpus_manifest.csv](https://github.com/Vascobranco2509/geo-check/blob/main/data/corpus_manifest.csv)
+[data/corpus_manifest.csv](https://github.com/vasco-branco06/geo-check/blob/main/data/corpus_manifest.csv)
 carries the SHA-256 of every `robots.txt` as it was read, all 906 rows, dated.
 `python scripts/verify_manifest.py --sample 25` fetches them today and tells you
 which still match. The evidence, and what it does not prove, is in
-[docs/VALIDATION.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/VALIDATION.md).
+[docs/VALIDATION.md](https://github.com/vasco-branco06/geo-check/blob/main/docs/VALIDATION.md).
 
 ## Keep it from regressing
 
@@ -111,7 +111,7 @@ A site is one deploy away from losing its AI visibility, and nobody notices for
 months. Add this to any workflow and a bad `robots.txt` fails the build:
 
 ```yaml
-- uses: Vascobranco2509/geo-check@v0
+- uses: vasco-branco06/geo-check@v0
   with:
     domain: your-domain.com
     fail-under-access: 60
@@ -142,7 +142,7 @@ it at 20. A blanket `Disallow: /` caps it at 10. A homepage that does not return
 200 aborts the run, because there is nothing honest to score.
 
 The full rubric, with the reasoning and the weaknesses it still has, is in
-[docs/RUBRIC.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md).
+[docs/RUBRIC.md](https://github.com/vasco-branco06/geo-check/blob/main/docs/RUBRIC.md).
 
 ## Questions people actually ask
 
@@ -174,7 +174,7 @@ with the reason instead of inventing a score.
 **Why trust a number a heuristic produced?**
 Only trust the ones that are measured, and the report tells you which is which.
 The JavaScript check is a heuristic with thresholds taken from 22 live pages, and
-[docs/RUBRIC.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md)
+[docs/RUBRIC.md](https://github.com/vasco-branco06/geo-check/blob/main/docs/RUBRIC.md)
 names the page in that sample it gets wrong. The `robots.txt` verdicts are not a
 heuristic, and they carry most of the Access score.
 
@@ -204,7 +204,7 @@ and much larger problem.
 
 Twenty five user agents, each with its vendor, its bucket, whether the vendor
 documents it as honouring `robots.txt`, and a link to that documentation.
-[docs/CRAWLERS.md](https://github.com/Vascobranco2509/geo-check/blob/main/docs/CRAWLERS.md)
+[docs/CRAWLERS.md](https://github.com/vasco-branco06/geo-check/blob/main/docs/CRAWLERS.md)
 explains how the buckets work and why three of the on demand fetchers are
 reported as ignoring a block aimed at them.
 
@@ -221,10 +221,10 @@ pip install -e ".[dev]" && pytest
 ```
 
 164 tests, offline, about fifteen seconds. The suite never touches the network.
-[CONTRIBUTING.md](https://github.com/Vascobranco2509/geo-check/blob/main/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/vasco-branco06/geo-check/blob/main/CONTRIBUTING.md)
 has the rest: how a check is written, how the golden set works, how to record
 fixtures, and why the recorder is deliberately slow.
-[SECURITY.md](https://github.com/Vascobranco2509/geo-check/blob/main/SECURITY.md)
+[SECURITY.md](https://github.com/vasco-branco06/geo-check/blob/main/SECURITY.md)
 carries one known and unfixed issue worth reading before you pipe this tool's
 output into an agent.
 

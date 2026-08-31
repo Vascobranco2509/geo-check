@@ -36,12 +36,12 @@ dependencies = [
 dev = ["pytest>=8.0", "ruff>=0.5", "pyyaml>=6.0"]
 
 [project.urls]
-Homepage = "https://github.com/Vascobranco2509/geo-check"
-Repository = "https://github.com/Vascobranco2509/geo-check"
-Issues = "https://github.com/Vascobranco2509/geo-check/issues"
-Changelog = "https://github.com/Vascobranco2509/geo-check/blob/main/CHANGELOG.md"
-Validation = "https://github.com/Vascobranco2509/geo-check/blob/main/docs/VALIDATION.md"
-Rubric = "https://github.com/Vascobranco2509/geo-check/blob/main/docs/RUBRIC.md"
+Homepage = "https://github.com/vasco-branco06/geo-check"
+Repository = "https://github.com/vasco-branco06/geo-check"
+Issues = "https://github.com/vasco-branco06/geo-check/issues"
+Changelog = "https://github.com/vasco-branco06/geo-check/blob/main/CHANGELOG.md"
+Validation = "https://github.com/vasco-branco06/geo-check/blob/main/docs/VALIDATION.md"
+Rubric = "https://github.com/vasco-branco06/geo-check/blob/main/docs/RUBRIC.md"
 
 [project.scripts]
 geo-check = "geo_check.cli:main"

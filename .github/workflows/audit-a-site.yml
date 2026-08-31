@@ -61,7 +61,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - id: geo
-        uses: Vascobranco2509/geo-check@v0
+        uses: vasco-branco06/geo-check@v0
         with:
           domain: ${{ inputs.domain }}
           pages: "1"

@@ -21,7 +21,7 @@ from dataclasses import dataclass, field
 
 import httpx
 
-USER_AGENT = "geo-check/0.1 (+https://github.com/Vascobranco2509/geo-check)"
+USER_AGENT = "geo-check/0.1 (+https://github.com/vasco-branco06/geo-check)"
 TIMEOUT_SECONDS = 15.0
 MAX_RETRIES = 2
 MAX_BYTES = 5_000_000

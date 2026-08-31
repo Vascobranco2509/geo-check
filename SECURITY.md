@@ -2,7 +2,7 @@
 
 ## Reporting
 
-Open a [security advisory](https://github.com/Vascobranco2509/geo-check/security/advisories/new)
+Open a [security advisory](https://github.com/vasco-branco06/geo-check/security/advisories/new)
 rather than a public issue. If that is not available to you, an issue titled
 `security` with no detail is enough to start a private conversation.
 
