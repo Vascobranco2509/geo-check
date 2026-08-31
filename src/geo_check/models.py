@@ -176,6 +176,10 @@ class SiteContext:
     sitemap_url: str | None
     llms_txt: str | None
     pages: list[PageContext]
+    # The body exactly as served, kept even when robots_is_real is False. A file
+    # of nothing but comments carries no crawl rules and can still carry a
+    # Content-Signal declaration, and that declaration is a fact about the file.
+    robots_body: str | None = None
     sitemap_declared_url: str | None = None
     errors: list[str] = field(default_factory=list)
 

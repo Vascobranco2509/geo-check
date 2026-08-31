@@ -14,6 +14,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 
 from .. import __version__
+from ..content_signals import parse as parse_content_signals
 from ..models import Bucket, Category, CheckResult, SiteContext
 from ..robots import allow_snippet, bucket_counts, is_blanket_disallow
 from ..scoring import ACCESS_WEIGHTS, READABILITY_WEIGHTS, ScoreBreakdown, training_posture
@@ -196,6 +197,7 @@ def build(
             "total": training_total,
             "note": "Informational only. Blocking model training costs no points.",
         },
+        "content_signals": _content_signals(site),
         "crawlers": _crawlers(site),
         "robots": {
             "url": site.base_url + "/robots.txt",
@@ -210,4 +212,23 @@ def build(
         "robots_txt_additions": robots_additions(results),
         "errors": list(site.errors),
         "limitations": LIMITATIONS,
+    }
+
+
+def _content_signals(site) -> dict | None:
+    """What the site declared about AI use, if it declared anything.
+
+    Informational, like training posture. A site saying no to one of these has
+    made a decision rather than a mistake, and the score does not move either way.
+    """
+    signals = parse_content_signals(site.robots_body or site.robots_txt)
+    if signals is None:
+        return None
+    return {
+        "declared": signals.declared,
+        "unknown_keys": signals.unknown_keys,
+        "terms_without_a_signal": signals.boilerplate_only,
+        "summary": signals.summary(),
+        "raw": signals.raw,
+        "note": "Informational only. A declaration about AI use never moves a score.",
     }

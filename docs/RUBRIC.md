@@ -190,6 +190,30 @@ get through. Eighteen sites, against two. That is reported at full severity in t
 evidence, and it does not change the score, because the rubric splits the 50
 points evenly and changing that is a separate decision.
 
+## Content signals, reported and never scored
+
+Some sites now put a `Content-Signal` line in robots.txt declaring what they are
+willing to have done with their content by AI systems: appearing in search, being
+used to train a model, being quoted as input to an answer.
+
+It is reported and it moves neither score, for the same reason training posture
+does not. Saying what you allow is a business decision, and a tool that deducts
+points for one of the answers is arguing rather than measuring.
+
+**The keys come from measurement, not from the draft.** Of the 906 sites in the
+corpus, 47 declare signals, and what they send is `search`, `ai-train`,
+`ai-input` and `use`. Two keys the draft describes, `ai-personalization` and
+`ai-retrieval`, appear nowhere. Both sets are accepted, because the draft is
+still moving and a site following it is not making a mistake. A key belonging to
+neither set is reported rather than dropped.
+
+A further 8 sites publish the explanatory terms and never declare a signal. By
+the wording of those same terms that grants and restricts nothing, so it is
+reported as its own state rather than as an absence. Those files are also the
+reason the declaration is read from the response body rather than from the parsed
+robots.txt: a file of nothing but comments carries no crawl rules and is treated
+as absent for every other purpose, and the declaration in it is still a fact.
+
 ## What is deliberately not measured
 
 Blocking at the CDN or WAF level. Real JavaScript rendering. Whether AI

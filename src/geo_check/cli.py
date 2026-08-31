@@ -151,6 +151,9 @@ def render_text(payload: dict) -> str:
         + str(posture["total"])
         + " allowed)"
     )
+    signals = payload.get("content_signals")
+    if signals:
+        add("  Content signals: " + signals["summary"])
     add("  Informational only. Blocking model training is a business decision and")
     add("  costs no points here.")
     add("")

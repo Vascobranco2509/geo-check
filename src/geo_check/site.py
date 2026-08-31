@@ -104,6 +104,7 @@ def build_site(domain: str, pages: int = 5, fetcher=None) -> SiteContext:
             robots_txt=robots_txt,
             robots_status=robots.status,
             robots_is_real=robots_is_real,
+            robots_body=robots.text if robots.status == 200 else None,
             agent_verdicts=verdicts,
             sitemap_url=sitemap_url,
             sitemap_declared_url=declared_url,

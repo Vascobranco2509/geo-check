@@ -107,6 +107,16 @@ def _scores(payload: dict) -> list[str]:
                 "",
             ]
 
+    signals = payload.get("content_signals")
+    if signals:
+        lines += ["**Content signals.** " + signals["summary"], ""]
+        if signals["unknown_keys"]:
+            lines += [
+                "Keys we do not recognise, which may simply be newer than this tool: "
+                + ", ".join("`" + k + "`" for k in signals["unknown_keys"]),
+                "",
+            ]
+
     posture = payload["training_posture"]
     lines += [
         "**Training posture: "

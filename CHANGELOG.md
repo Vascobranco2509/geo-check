@@ -5,6 +5,20 @@ Notable changes, newest first. Format loosely follows
 
 ## Unreleased
 
+### Added
+
+- Content signals. Sites that declare what AI systems may do with their content,
+  through a `Content-Signal` line in robots.txt, now have that declaration read
+  and translated into a sentence. Reported and never scored, like training
+  posture. The recognised keys were taken from the 47 sites in the corpus that
+  send the directive rather than from the draft specification, which describes
+  two keys no site sends and omits two that most do. A further 8 sites publish
+  the explanatory terms without declaring anything, which by those terms grants
+  and restricts nothing, and is reported as its own state
+- `SiteContext.robots_body`, the response body exactly as served. A robots.txt of
+  nothing but comments is treated as absent for crawl rules, correctly, and can
+  still carry a declaration worth reading
+
 ## v0.1.0 - 2026-08-30
 
 First release. The GitHub Action is published to the
