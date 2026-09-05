@@ -165,16 +165,28 @@ password field on a page with less than 1500 characters of visible text. A
 paywall that serves the full article to the crawler and hides it with CSS passes
 here, correctly, because the crawler does get the text.
 
-## Two known weaknesses, stated rather than hidden
+## A weakness that was stated here, and then fixed
 
-**The user fetch bucket counts blocks that do not work.** Three of the five
-agents in it are documented by their own vendors as ignoring robots.txt:
+**The user fetch bucket used to count blocks that do not work.** Three of the
+five agents in it are documented by their own vendors as ignoring robots.txt:
 `Perplexity-User` and `ChatGPT-User` explicitly, and `Meta-ExternalFetcher` for
-user initiated requests. A `Disallow` aimed at them changes nothing, so a site
-loses points here for a block that has no effect. The evidence line says exactly
-which blocks are real, and the robots.txt fix leaves the ineffective ones out,
-but the score still counts all five. Scoring only the agents that honour
-robots.txt would give a truer number.
+user initiated requests. A `Disallow` aimed at them changes nothing, and until
+0.2.0 the site lost points for it anyway. This paragraph said so, and said that
+scoring only the agents which honour robots.txt would give a truer number.
+
+It now does. An agent that ignores robots.txt counts as reachable whatever the
+file says, and only a block that works costs points. Replaying the corpus put a
+size on the error before it was removed: of 744 scored sites, 61 block at least
+one of these agents, 53 scored differently under the new rule, and 26 of those
+changed letter grade. `theverge.com` moved from 63.3 to 75.3 and `nytimes.com`
+from 56.0 to 68.0.
+
+The reported counts did not change, and they are not the score. A site blocking
+all five still reads `0 of 5 user fetch crawlers allowed`, because that is what
+its robots.txt says. The score differs because three of those five blocks do
+nothing, and the evidence line names which ones.
+
+## A known weakness, stated rather than hidden
 
 **The 20 point cap has never fired.** It requires every citation crawler to be
 blocked, `Googlebot` included, and blocking Googlebot means leaving classic

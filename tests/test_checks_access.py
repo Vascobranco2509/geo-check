@@ -85,11 +85,15 @@ def test_a_block_on_an_agent_that_ignores_robots_is_called_out():
     assert "ignoring robots.txt" in result.evidence
     # No fix offered, because nothing in robots.txt would change the outcome.
     assert result.fix is None
+    # And no points lost either: the block does not stop the fetch.
+    assert result.ratio == 1.0
 
 
 def test_a_block_on_an_agent_that_honours_robots_gets_a_fix():
     result = user_fetch_crawlers_allowed(make_site("User-agent: Claude-User\nDisallow: /\n"))
     assert "User-agent: Claude-User" in result.fix.snippet
+    # This one honours robots.txt, so the block works and costs its share.
+    assert result.ratio == 0.8
 
 
 def test_a_blanket_disallow_caps_access_at_ten():

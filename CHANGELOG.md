@@ -21,6 +21,14 @@ Notable changes, newest first. Format loosely follows
 
 ### Fixed
 
+- The user fetch score no longer counts blocks that do not work. Three of the
+  five agents in that bucket are documented by their own vendors as ignoring
+  robots.txt, so a Disallow aimed at one of them changes nothing and now costs
+  nothing. docs/RUBRIC.md had described this as a known weakness since the
+  first release. Replaying the corpus measured it before the change: of 744
+  scored sites, 61 block at least one of these agents, 53 score differently
+  under the new rule, and 26 of those change letter grade. The reported counts
+  are unchanged, because they report the robots.txt and not the score
 - A domain containing a colon no longer ends the process with a traceback.
   `httpx.InvalidURL` inherits from `Exception` rather than from `HTTPError`, so
   it walked past every clause meant to catch it. It is now reported as

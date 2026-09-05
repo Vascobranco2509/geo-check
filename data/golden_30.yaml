@@ -133,7 +133,7 @@
     training_posture: closed
     llms_txt: false
     sitemap_reachable: false
-    access_score: 36.67
+    access_score: 48.67
     access_cap: null
 - domain: chiptec.pt
   reason: training crawlers blocked, every citation crawler left open
@@ -161,7 +161,7 @@
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 96.0
+    access_score: 100.0
     access_cap: null
 - domain: codacy.com
   reason: llms.txt present with real content
@@ -331,7 +331,7 @@
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 87.67
+    access_score: 91.67
     access_cap: null
 - domain: nytimes.com
   reason: the most thorough AI blocklist in the set, citation and user fetch both hit
@@ -345,7 +345,7 @@
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 56.0
+    access_score: 68.0
     access_cap: null
 - domain: observador.pt
   reason: thirty eight consecutive User-agent lines sharing one rule block, with two Allow exceptions
@@ -359,7 +359,7 @@
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 75.33
+    access_score: 83.33
     access_cap: null
 - domain: reddit.com
   reason: User-agent star with Disallow slash and nothing else, Access capped at ten
@@ -388,7 +388,7 @@
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 48.67
+    access_score: 56.67
     access_cap: null
 - domain: theverge.com
   reason: citation and user fetch blocked by name, training partly open
@@ -402,7 +402,7 @@
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 63.33
+    access_score: 75.33
     access_cap: null
 - domain: wikipedia.org
   reason: a group named Fetch, aimed at a download manager, which substring matching wrongly applied to
