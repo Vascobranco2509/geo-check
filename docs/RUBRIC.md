@@ -25,16 +25,19 @@ Vendors run separate crawlers for separate jobs, and they are controlled
 separately in robots.txt. Treating them as one thing is the mistake this whole
 project exists to correct.
 
-**Citation.** Feeds retrieval and citation in AI answers. `OAI-SearchBot`,
-`Claude-SearchBot`, `PerplexityBot`, `Googlebot`, `Bingbot`, `Applebot`.
-Blocking these removes the site from AI results. Worth 50 points.
+**Citation.** Feeds retrieval and citation in AI answers. 11 agents, from
+OpenAI, Anthropic, Perplexity, Google, Microsoft, Apple, Meta, Mistral, Amazon,
+DuckDuckGo and You.com. Blocking these removes the site from those answers.
+Worth 50 points. The full list, with a documentation link for every row, is in
+[CRAWLERS.md](CRAWLERS.md).
 
 **User fetch.** Retrieves one page on demand, when someone pastes a link or asks
-about a URL. `ChatGPT-User`, `Claude-User`, `Perplexity-User`, `MistralAI-User`,
-`Meta-ExternalFetcher`. Worth 20 points.
+about a URL. 8 agents, of which six are documented by their own vendors as
+not honouring robots.txt, so a block aimed at those costs nothing here. Worth 20
+points.
 
 **Training.** Collects pages for model training. `GPTBot`, `ClaudeBot`,
-`Google-Extended`, `CCBot` and ten others. Worth nothing, and that is the next
+`Google-Extended`, `CCBot` and 9 others. Worth nothing, and that is the next
 section.
 
 ## Training crawlers are worth zero points
@@ -60,8 +63,8 @@ partial or closed`, and never touches either score.
 
 | Weight | Check | What it means |
 | ---: | --- | --- |
-| 50 | Citation crawlers allowed | Split evenly across the six. Five of six allowed earns 41.67. |
-| 20 | User fetch crawlers allowed | Split evenly across the five. |
+| 50 | Citation crawlers allowed | Split evenly across the 11. Ten of eleven allowed earns 45.45. |
+| 20 | User fetch crawlers allowed | Split evenly across the 8, and only a block that works costs anything. |
 | 15 | Sampled pages reachable | HTTP 200 and no sign of a login wall. |
 | 10 | Sitemap declared and reachable | Declared in robots.txt and answering with XML. |
 | 5 | No noindex | In the meta robots tag and in the `X-Robots-Tag` header. The header is the one people forget. |
@@ -182,9 +185,9 @@ changed letter grade. `theverge.com` moved from 63.3 to 75.3 and `nytimes.com`
 from 56.0 to 68.0.
 
 The reported counts did not change, and they are not the score. A site blocking
-all five still reads `0 of 5 user fetch crawlers allowed`, because that is what
-its robots.txt says. The score differs because three of those five blocks do
-nothing, and the evidence line names which ones.
+every one of them still reads `0 of 8 user fetch crawlers allowed`, because that
+is what its robots.txt says. The score differs because six of those eight blocks
+do nothing, and the evidence line names which ones.
 
 ## A known weakness, stated rather than hidden
 
@@ -194,13 +197,24 @@ search as well. Almost nobody does that. Across 906 real sites, exactly two shut
 out every citation crawler, `reddit.com` and `create.it`, and both did it with a
 blanket `User-agent: * / Disallow: /`, so both were caught by the stricter 10
 point cap before this one could apply. The 20 point cap exists for a site that
-names and blocks all six deliberately, and no site in the corpus does.
+names and blocks all eleven deliberately, and no site in the corpus does.
 
 The failure that actually happens is narrower and nine times as common: every
 crawler that exists only to feed AI answers blocked, while Google and Bing still
 get through. Eighteen sites, against two. That is reported at full severity in the
 evidence, and it does not change the score, because the rubric splits the 50
 points evenly and changing that is a separate decision.
+
+**Which crawlers count as AI only is deliberately narrow, and this is where it
+was nearly lost.** Adding five newly documented citation crawlers, from Meta,
+Mistral, Amazon, DuckDuckGo and You.com, would have taken that eighteen down to
+four. Not because those sites opened up, but because the condition asks for
+every AI only crawler to be blocked, and nobody blocks one they have never heard
+of. So the flag marks the AI answer crawlers established enough that shutting
+all of them out is a decision: today OpenAI's, Anthropic's and Perplexity's. The
+other five are scored like any citation crawler and simply do not carry the
+signal. That boundary will need revisiting as they become well known, and it
+should be revisited by measuring rather than by guessing.
 
 ## Content signals, reported and never scored
 

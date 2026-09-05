@@ -26,16 +26,24 @@
 
 ## Try it
 
+**As a Claude Code skill.** The `SKILL.md` at the root of this repository is the
+skill, and one command installs it:
+
 ```bash
-git clone https://github.com/vasco-branco06/geo-check && cd geo-check
-pip install -e .
+npx skills add vasco-branco06/geo-check
+```
+
+**As a command line tool**, which is also what the skill runs:
+
+```bash
+pip install git+https://github.com/vasco-branco06/geo-check
 geo-check your-domain.com
 ```
 
 Python 3.10 or newer and open network access. No API key, no account, no model
 call. It does not run inside sandboxes that only reach an allowlist of domains.
 
-> Not on PyPI yet, so clone for now.
+> Not on PyPI yet, so the install comes from git for now.
 
 Or run it without installing anything: fork this repository, open the **Actions**
 tab, choose **audit a site** and press Run. The report lands in the run summary.
@@ -202,10 +210,10 @@ and much larger problem.
 
 ## The crawler list
 
-Twenty five user agents, each with its vendor, its bucket, whether the vendor
+32 user agents, each with its vendor, its bucket, whether the vendor
 documents it as honouring `robots.txt`, and a link to that documentation.
 [docs/CRAWLERS.md](https://github.com/vasco-branco06/geo-check/blob/main/docs/CRAWLERS.md)
-explains how the buckets work and why three of the on demand fetchers are
+explains how the buckets work and why six of the on demand fetchers are
 reported as ignoring a block aimed at them.
 
 The list moves. Pull requests adding or correcting an entry, with the vendor's

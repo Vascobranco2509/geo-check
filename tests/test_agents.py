@@ -13,7 +13,13 @@ def test_every_agent_has_the_required_fields():
         assert agent["vendor"], agent
         assert agent["bucket"] in {"citation", "user_fetch", "training"}, agent
         assert agent["obeys_robots"] in {"yes", "no", "disputed"}, agent
-        assert agent["docs"].startswith("http"), agent
+        # An entry either points at the vendor's own documentation or admits it
+        # cannot. Pointing at something that is not documentation is the one
+        # option this file does not allow itself.
+        if agent.get("undocumented"):
+            assert agent["docs"] is None, agent
+        else:
+            assert agent["docs"].startswith("http"), agent
 
 
 def test_tokens_are_unique():
@@ -31,3 +37,15 @@ def test_the_file_ships_inside_the_package():
     from geo_check.robots import load_agents
 
     assert len(load_agents()) == len(AGENTS["agents"])
+
+
+def test_nothing_undocumented_carries_a_score():
+    """The citation and user fetch buckets are the Access score.
+
+    Deducting points from a real site because of an agent whose existence rests
+    on hearsay is the kind of thing this project is supposed to be against. An
+    entry with no vendor documentation can be reported, and cannot be scored.
+    """
+    for agent in AGENTS["agents"]:
+        if agent.get("undocumented"):
+            assert agent["bucket"] == "training", agent["token"]

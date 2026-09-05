@@ -36,10 +36,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: true
@@ -50,10 +50,10 @@
   expected:
     outcome: scored
     robots_is_real: false
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: false
@@ -64,10 +64,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: true
@@ -78,10 +78,10 @@
   expected:
     outcome: scored
     robots_is_real: false
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: true
@@ -92,10 +92,10 @@
   expected:
     outcome: scored
     robots_is_real: false
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: false
@@ -111,10 +111,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: true
@@ -127,23 +127,23 @@
     outcome: scored
     robots_is_real: true
     citation_allowed: 2
-    citation_total: 6
+    citation_total: 11
     user_fetch_allowed: 0
-    user_fetch_total: 5
+    user_fetch_total: 8
     training_posture: closed
     llms_txt: false
     sitemap_reachable: false
-    access_score: 48.67
+    access_score: 44.09
     access_cap: null
 - domain: chiptec.pt
   reason: training crawlers blocked, every citation crawler left open
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
@@ -154,10 +154,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 4
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 7
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
@@ -168,10 +168,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: true
     sitemap_reachable: true
@@ -182,10 +182,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: true
     sitemap_reachable: true
@@ -196,10 +196,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: true
     sitemap_reachable: true
@@ -210,10 +210,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: true
     sitemap_reachable: true
@@ -224,10 +224,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: true
@@ -238,10 +238,10 @@
   expected:
     outcome: scored
     robots_is_real: false
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: false
@@ -253,10 +253,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: true
@@ -272,10 +272,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
@@ -286,10 +286,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: true
     sitemap_reachable: false
@@ -305,10 +305,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
@@ -324,42 +324,42 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 5
-    citation_total: 6
-    user_fetch_allowed: 4
-    user_fetch_total: 5
+    citation_allowed: 10
+    citation_total: 11
+    user_fetch_allowed: 7
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 91.67
+    access_score: 95.45
     access_cap: null
 - domain: nytimes.com
   reason: the most thorough AI blocklist in the set, citation and user fetch both hit
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 3
-    citation_total: 6
-    user_fetch_allowed: 1
-    user_fetch_total: 5
+    citation_allowed: 5
+    citation_total: 11
+    user_fetch_allowed: 4
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 68.0
+    access_score: 67.23
     access_cap: null
 - domain: observador.pt
   reason: thirty eight consecutive User-agent lines sharing one rule block, with two Allow exceptions
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 4
-    citation_total: 6
-    user_fetch_allowed: 3
-    user_fetch_total: 5
+    citation_allowed: 7
+    citation_total: 11
+    user_fetch_allowed: 6
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 83.33
+    access_score: 81.82
     access_cap: null
 - domain: reddit.com
   reason: User-agent star with Disallow slash and nothing else, Access capped at ten
@@ -367,9 +367,9 @@
     outcome: scored
     robots_is_real: true
     citation_allowed: 0
-    citation_total: 6
+    citation_total: 11
     user_fetch_allowed: 0
-    user_fetch_total: 5
+    user_fetch_total: 8
     training_posture: closed
     llms_txt: false
     sitemap_reachable: false
@@ -381,28 +381,28 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 2
-    citation_total: 6
-    user_fetch_allowed: 1
-    user_fetch_total: 5
+    citation_allowed: 5
+    citation_total: 11
+    user_fetch_allowed: 4
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 56.67
+    access_score: 65.73
     access_cap: null
 - domain: theverge.com
   reason: citation and user fetch blocked by name, training partly open
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 4
-    citation_total: 6
-    user_fetch_allowed: 0
-    user_fetch_total: 5
+    citation_allowed: 7
+    citation_total: 11
+    user_fetch_allowed: 3
+    user_fetch_total: 8
     training_posture: partial
     llms_txt: false
     sitemap_reachable: true
-    access_score: 75.33
+    access_score: 76.82
     access_cap: null
 - domain: wikipedia.org
   reason: a group named Fetch, aimed at a download manager, which substring matching wrongly applied to
@@ -410,10 +410,10 @@
   expected:
     outcome: scored
     robots_is_real: true
-    citation_allowed: 6
-    citation_total: 6
-    user_fetch_allowed: 5
-    user_fetch_total: 5
+    citation_allowed: 11
+    citation_total: 11
+    user_fetch_allowed: 8
+    user_fetch_total: 8
     training_posture: open
     llms_txt: false
     sitemap_reachable: false

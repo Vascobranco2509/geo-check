@@ -51,7 +51,7 @@ def record(domain: str, pages: int, directory: Path, delay: float = 0.0) -> tupl
         except SiteUnavailable as exc:
             outcome = "aborted: " + exc.reason
         except Exception as exc:  # noqa: BLE001 - a crash here is the finding
-            outcome = "crashed: " + type(exc).__name__ + ": " + exc
+            outcome = "crashed: " + type(exc).__name__ + ": " + str(exc)
     finally:
         client.close()
     target = save(directory, domain, recorder.responses, outcome)

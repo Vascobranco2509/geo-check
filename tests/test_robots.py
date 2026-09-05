@@ -14,6 +14,7 @@ from geo_check.robots import (
     describe_group,
     group_for,
     is_blanket_disallow,
+    load_agents,
     looks_like_robots,
     parse_groups,
 )
@@ -33,6 +34,24 @@ TRAINING_ONLY_BLOCK = (
 WIDE_OPEN = "User-agent: *\nDisallow:\nSitemap: https://example.pt/sitemap.xml\n"
 
 
+def _size(bucket):
+    """How many agents that bucket holds, read from the list rather than typed.
+
+    These assertions used to spell the sizes out, so adding a crawler broke
+    thirteen tests that had no opinion about crawlers. What they mean is all of
+    them, or none of them.
+    """
+    return sum(1 for a in load_agents() if a["bucket"] == bucket.value)
+
+
+def _all(bucket):
+    return (_size(bucket), _size(bucket))
+
+
+def _none(bucket):
+    return (0, _size(bucket))
+
+
 def _allowed(robots_txt, bucket):
     return bucket_counts(classify(robots_txt, BASE), bucket)
 
@@ -45,8 +64,8 @@ def test_no_robots_txt_allows_everything():
 
 def test_blanket_disallow_blocks_every_bucket():
     assert is_blanket_disallow(BLANKET) is True
-    assert _allowed(BLANKET, Bucket.CITATION) == (0, 6)
-    assert _allowed(BLANKET, Bucket.USER_FETCH) == (0, 5)
+    assert _allowed(BLANKET, Bucket.CITATION) == _none(Bucket.CITATION)
+    assert _allowed(BLANKET, Bucket.USER_FETCH) == _none(Bucket.USER_FETCH)
 
 
 def test_a_narrower_allow_is_not_a_blanket_disallow():
@@ -74,8 +93,8 @@ def test_consecutive_user_agent_lines_share_the_rules():
 
 def test_blocking_training_does_not_touch_citation():
     """The whole point of the project, in one assertion."""
-    assert _allowed(TRAINING_ONLY_BLOCK, Bucket.CITATION) == (6, 6)
-    assert _allowed(TRAINING_ONLY_BLOCK, Bucket.USER_FETCH) == (5, 5)
+    assert _allowed(TRAINING_ONLY_BLOCK, Bucket.CITATION) == _all(Bucket.CITATION)
+    assert _allowed(TRAINING_ONLY_BLOCK, Bucket.USER_FETCH) == _all(Bucket.USER_FETCH)
     training_allowed, training_total = _allowed(TRAINING_ONLY_BLOCK, Bucket.TRAINING)
     assert training_allowed < training_total
 
@@ -108,14 +127,14 @@ def test_comments_are_ignored():
 
 def test_wildcard_paths_do_not_block_the_root():
     robots = "User-agent: *\nDisallow: /*.pdf$\nDisallow: /search?*\n"
-    assert _allowed(robots, Bucket.CITATION) == (6, 6)
+    assert _allowed(robots, Bucket.CITATION) == _all(Bucket.CITATION)
     assert is_blanket_disallow(robots) is False
 
 
 def test_allow_wins_over_a_disallow_of_the_same_path():
     robots = "User-agent: *\nDisallow: /\nAllow: /\n"
     assert is_blanket_disallow(robots) is False
-    assert _allowed(robots, Bucket.CITATION) == (6, 6)
+    assert _allowed(robots, Bucket.CITATION) == _all(Bucket.CITATION)
 
 
 def test_obeys_robots_is_carried_into_the_verdict():
@@ -158,8 +177,8 @@ def test_a_real_html_page_labelled_text_plain_is_still_not_robots_txt():
 def test_a_group_named_bot_does_not_capture_every_crawler():
     """One line would otherwise silently block six citation crawlers."""
     robots = "User-agent: bot\nDisallow: /\n\nUser-agent: *\nAllow: /\n"
-    assert _allowed(robots, Bucket.CITATION) == (6, 6)
-    assert _allowed(robots, Bucket.USER_FETCH) == (5, 5)
+    assert _allowed(robots, Bucket.CITATION) == _all(Bucket.CITATION)
+    assert _allowed(robots, Bucket.USER_FETCH) == _all(Bucket.USER_FETCH)
 
 
 def test_a_group_named_fetch_does_not_capture_meta_externalfetcher():
@@ -232,7 +251,7 @@ def test_merging_does_not_reach_across_different_agents():
 
 def test_repeated_star_groups_are_merged_too():
     robots = "User-agent: *\nDisallow: /\n\nUser-agent: *\nAllow: /\n"
-    assert _allowed(robots, Bucket.CITATION) == (6, 6)
+    assert _allowed(robots, Bucket.CITATION) == _all(Bucket.CITATION)
 
 
 def test_a_crawl_delay_line_closes_the_agent_block():

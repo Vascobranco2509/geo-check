@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-09-05",
   "verified": true,
   "note": "Every entry below was checked against the vendor documentation linked in its docs field on the last_reviewed date. Bucket assignment is the load bearing part of the score, not the user agent string. obeys_robots records whether the vendor documents the agent as honouring robots.txt: yes, no, or disputed. An agent that does not honour robots.txt cannot be blocked there, and the report says so instead of pretending the block worked.",
   "buckets": {
-    "citation": "Feeds retrieval and citation in AI answers. Blocking these removes the site from AI results. Worth 50 points of the Access score. ai_only marks the ones that exist only to feed AI answers. Googlebot and Bingbot also carry classic search, so blocking them is a bigger and different story.",
+    "citation": "Feeds retrieval and citation in AI answers. Blocking these removes the site from AI results. Worth 50 points of the Access score, split evenly. ai_only marks the AI answer crawlers that are established enough that a site blocking every one of them has decided to, rather than simply never having heard of them. The blackout signal rests on that flag, and widening it blunts the signal instead of sharpening it: adding five newly documented citation crawlers to it took the detection across the corpus from 18 sites to 4, because almost nobody blocks a crawler they do not know exists. Googlebot, Bingbot and Applebot are false for a different reason, which is that they carry classic search too.",
     "user_fetch": "Fetches a page on demand when a user pastes a link or asks about it. Worth 20 points of the Access score.",
     "training": "Collects pages for model training. Worth zero points. Reported as posture, never penalised."
   },
@@ -64,12 +64,57 @@
       "ai_only": false
     },
     {
+      "token": "Meta-WebIndexer",
+      "vendor": "Meta",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "note": "Meta's own page says allowing this one helps Meta AI cite and link to your content. Meta had no citation crawler in this list before, so a site shut out of Meta AI scored clean.",
+      "ai_only": false
+    },
+    {
+      "token": "MistralAI-Index",
+      "vendor": "Mistral",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://docs.mistral.ai/robots",
+      "note": "Indexes for Mistral search, which answers questions in Vibe. Mistral documents it as indexing only and explicitly not for training, which is the whole distinction this bucket exists to make.",
+      "ai_only": false
+    },
+    {
+      "token": "DuckAssistBot",
+      "vendor": "DuckDuckGo",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot/",
+      "note": "Feeds DuckDuckGo's AI assisted answers, which cite their sources, and the data is not used for training. DuckDuckGo says opting out does not affect organic rankings, which is why this counts as AI only. A robots.txt change takes 72 hours to take effect.",
+      "ai_only": false
+    },
+    {
+      "token": "Amzn-SearchBot",
+      "vendor": "Amazon",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://developer.amazon.com/amazonbot",
+      "note": "Makes content eligible for Alexa search experiences, and Amazon documents that it does not crawl for generative AI training. If robots.txt does not name it but allows other search bots, it follows those rules.",
+      "ai_only": false
+    },
+    {
+      "token": "YouBot",
+      "vendor": "You.com",
+      "bucket": "citation",
+      "obeys_robots": "yes",
+      "docs": "https://you.com/docs/youbot",
+      "note": "Powers the You.com search engine, which is an AI answer product rather than a classic index, so blocking it costs nothing in Google or Bing. You.com documents that it fully respects robots.txt including crawl-delay.",
+      "ai_only": false
+    },
+    {
       "token": "ChatGPT-User",
       "vendor": "OpenAI",
       "bucket": "user_fetch",
-      "obeys_robots": "no",
+      "obeys_robots": "disputed",
       "docs": "https://developers.openai.com/api/docs/bots",
-      "note": "Fetches a page when a ChatGPT user asks about it. OpenAI documents that robots.txt rules may not apply to these user initiated fetches."
+      "note": "Fetches a page when someone asks ChatGPT about a link. OpenAI writes that robots.txt rules may not apply because the action is user initiated, which is weaker than Perplexity's flat statement that it ignores them, so this is recorded as disputed rather than no. Either way a block here is not something to rely on."
     },
     {
       "token": "Claude-User",
@@ -93,7 +138,7 @@
       "bucket": "user_fetch",
       "obeys_robots": "yes",
       "docs": "https://docs.mistral.ai/robots",
-      "note": "On demand fetch for Le Chat. Not used for training."
+      "note": "On demand fetch for Vibe, formerly named Le Chat. Mistral documents it as honouring robots.txt, unlike the on demand fetchers from OpenAI, Perplexity and Meta."
     },
     {
       "token": "Meta-ExternalFetcher",
@@ -102,6 +147,33 @@
       "obeys_robots": "no",
       "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
       "note": "Fetches individual links at a user's request. Meta documents that it may bypass robots.txt for user initiated requests."
+    },
+    {
+      "token": "Amzn-User",
+      "vendor": "Amazon",
+      "bucket": "user_fetch",
+      "obeys_robots": "no",
+      "docs": "https://developer.amazon.com/amazonbot",
+      "note": "Answers Alexa queries that need current information. Amazon writes that because the action is user initiated it may not follow all robots.txt directives, so a block aimed here does not stop the fetch.",
+      "ai_only": false
+    },
+    {
+      "token": "Google-GeminiNotebook",
+      "vendor": "Google",
+      "bucket": "user_fetch",
+      "obeys_robots": "no",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers",
+      "note": "Fetches a page a person added to Gemini Notebook. Google documents its user triggered fetchers as generally ignoring robots.txt. Google-NotebookLM is the former name and Google supports it only until August 2026.",
+      "ai_only": false
+    },
+    {
+      "token": "Google-Agent",
+      "vendor": "Google",
+      "bucket": "user_fetch",
+      "obeys_robots": "no",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers",
+      "note": "Web navigation on behalf of Google infrastructure agents, user triggered and therefore documented as generally ignoring robots.txt.",
+      "ai_only": false
     },
     {
       "token": "GPTBot",
@@ -116,7 +188,8 @@
       "vendor": "Anthropic",
       "bucket": "training",
       "obeys_robots": "yes",
-      "docs": "https://support.claude.com/en/articles/8896518"
+      "docs": "https://support.claude.com/en/articles/8896518",
+      "note": "Anthropic's training crawler. Blocking it keeps the site out of training data and costs nothing in Claude's search results, which are fed by Claude-SearchBot."
     },
     {
       "token": "anthropic-ai",
@@ -124,7 +197,7 @@
       "bucket": "training",
       "obeys_robots": "yes",
       "docs": "https://support.claude.com/en/articles/8896518",
-      "note": "Legacy token, no longer listed in Anthropic documentation but still present in many robots.txt files."
+      "note": "A legacy token. Anthropic's crawler page documents ClaudeBot, Claude-User and Claude-SearchBot and does not mention this one, so the docs link is the vendor's page rather than a source for this row. Kept because sites still write it, and blocking it costs nothing either way."
     },
     {
       "token": "Google-Extended",
@@ -171,8 +244,9 @@
       "vendor": "ByteDance",
       "bucket": "training",
       "obeys_robots": "disputed",
-      "docs": "https://zhanzhang.toutiao.com/",
-      "note": "ByteDance claims robots.txt compliance but the reference URL is unreachable outside China, and independent measurements report it fetching disallowed pages. Treated as disputed."
+      "docs": null,
+      "note": "ByteDance publishes no crawler page, no IP list and no robots.txt statement in any reachable form. The docs field is null on purpose: this entry cannot point at a source, and pretending otherwise would be the opposite of what this file is for. Widely reported as ignoring robots.txt, which is why obeys_robots is disputed rather than yes.",
+      "undocumented": true
     },
     {
       "token": "Amazonbot",
@@ -183,20 +257,12 @@
       "note": "Improves Amazon products and trains Amazon AI models. Amzn-SearchBot is the separate search crawler."
     },
     {
-      "token": "cohere-ai",
-      "vendor": "Cohere",
-      "bucket": "training",
-      "obeys_robots": "yes",
-      "docs": "https://cohere.com/",
-      "note": "Collects web content for Cohere enterprise model training. Cohere publishes no dedicated crawler page."
-    },
-    {
       "token": "Diffbot",
       "vendor": "Diffbot",
       "bucket": "training",
-      "obeys_robots": "yes",
-      "docs": "https://docs.diffbot.com/",
-      "note": "Sells structured web data onward for AI training and retrieval, so one block covers many downstream consumers."
+      "obeys_robots": "disputed",
+      "docs": "https://www.diffbot.com/docs/crawl/faq/robots-txt",
+      "note": "Diffbot documents that its crawls adhere to robots.txt by default, including Disallow and Crawl-delay, but that the instruction can be overridden under a partnership or agreement. Default on and customer overridable is not the same guarantee as Google's."
     },
     {
       "token": "omgilibot",
@@ -204,7 +270,7 @@
       "bucket": "training",
       "obeys_robots": "yes",
       "docs": "https://webz.io/",
-      "note": "Being replaced by webzio-extended. Both still appear in the wild."
+      "note": "Webz.io describes this one as replaced by its Webzio pair. Kept because sites still carry the rule. Webz.io publishes no page with exact user agent strings, so this row rests on prose."
     },
     {
       "token": "webzio-extended",

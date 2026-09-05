@@ -8,7 +8,7 @@ from geo_check.checks.access_sitemap import sitemap_available
 from geo_check.checks.access_user_fetch import user_fetch_crawlers_allowed
 from geo_check.cli import collect_caps
 from geo_check.models import Category, PageContext, Severity, SiteContext
-from geo_check.robots import classify
+from geo_check.robots import classify, load_agents
 from geo_check.scoring import ACCESS_WEIGHTS, CAP_BLANKET_DISALLOW, score_category
 
 BASE = "https://example.pt"
@@ -93,7 +93,10 @@ def test_a_block_on_an_agent_that_honours_robots_gets_a_fix():
     result = user_fetch_crawlers_allowed(make_site("User-agent: Claude-User\nDisallow: /\n"))
     assert "User-agent: Claude-User" in result.fix.snippet
     # This one honours robots.txt, so the block works and costs its share.
-    assert result.ratio == 0.8
+    # This one honours robots.txt, so the block works and costs its share of
+    # the bucket, whatever the bucket happens to hold today.
+    total = sum(1 for a in load_agents() if a["bucket"] == "user_fetch")
+    assert result.ratio == (total - 1) / total
 
 
 def test_a_blanket_disallow_caps_access_at_ten():
@@ -110,14 +113,8 @@ def test_a_cloudflare_style_file_does_not_trigger_the_blanket_cap():
 
 
 def test_all_citation_blocked_without_a_blanket_caps_at_twenty():
-    tokens = (
-        "OAI-SearchBot",
-        "Claude-SearchBot",
-        "PerplexityBot",
-        "Googlebot",
-        "Bingbot",
-        "Applebot",
-    )
+    # Read from the list, because the cap is about all of them and the list grows.
+    tokens = [a["token"] for a in load_agents() if a["bucket"] == "citation"]
     robots = "".join("User-agent: " + t + "\nDisallow: /\n\n" for t in tokens)
     site = make_site(robots)
     caps = collect_caps(site)

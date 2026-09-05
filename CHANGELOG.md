@@ -3,6 +3,64 @@
 Notable changes, newest first. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## v0.3.0 - 2026-09-05
+
+### Added
+
+- Five citation crawlers the list did not know about, each with its vendor's own
+  documentation: `Meta-WebIndexer`, `MistralAI-Index`, `Amzn-SearchBot`,
+  `DuckAssistBot` and `YouBot`. Meta and Mistral had no citation crawler here at
+  all, so a site shut out of Meta AI or Mistral search scored clean. Meta's page
+  says allowing theirs helps Meta AI cite and link your content; Mistral
+  documents theirs as indexing for search and explicitly not for training
+- Three on demand fetchers documented as not honouring robots.txt: `Amzn-User`,
+  `Google-GeminiNotebook` and `Google-Agent`. Google was represented here as
+  honouring robots.txt everywhere, and its own page says its user triggered
+  fetchers generally ignore it
+- `scripts/build_crawlers_doc.py`. `docs/CRAWLERS.md` has claimed since the first
+  release that it is generated from `agents.json`, and nothing generated it, so
+  it fell behind. `tests/test_crawlers_doc.py` now fails when the two disagree,
+  and it also binds the count the README quotes
+
+### Removed
+
+- `cohere-ai`. Cohere now publishes a crawler page whose bot table reads N/A and
+  which states that it does not use bots or user agents to crawl the web for
+  training. The token appears nowhere on it
+
+### Changed
+
+- The citation bucket holds eleven agents rather than six, so the 50 points split
+  eleven ways. A site blocking one of the original six is penalised less than it
+  was, which is right, because it is still reachable by ten others. A site
+  blocking with a wildcard is penalised more, which is also right: `casa.pt` goes
+  from 48.7 to 44.1 because it shuts out nine citation crawlers and the old list
+  only knew about four of them
+- `ai_only` now marks the AI answer crawlers established enough that blocking
+  every one of them is a decision, rather than every crawler that only serves AI.
+  This was measured before it was chosen. Flagging all five newcomers took the
+  blackout detection, which `docs/RUBRIC.md` calls the failure this tool exists to
+  find, from 18 sites in the corpus to 4, because nobody blocks a crawler they
+  have never heard of. Narrowing the flag holds it at 18
+- Entries whose documentation did not support them. `Bytespider` pointed at a
+  webmaster portal that is not reachable and is not crawler documentation, so it
+  now carries no link and says so; a new test refuses to let an undocumented
+  entry sit in a bucket that scores. `Diffbot` reads disputed rather than yes,
+  because the vendor says robots.txt is honoured by default and can be overridden
+  by agreement. `ChatGPT-User` reads disputed rather than no, because OpenAI
+  writes that the rules may not apply, which is weaker than Perplexity's flat
+  statement that it ignores them
+
+### Fixed
+
+- `scripts/refresh_fixtures.py` no longer dies on the path written to keep it
+  alive. The handler built its message by adding an exception to a string, which
+  raises `TypeError` inside the `except`, so one unexpected crash took down a
+  whole sweep instead of being logged as one domain's outcome
+- Tests no longer hard code how many agents a bucket holds. Adding a crawler
+  broke fifteen assertions that had no opinion about crawlers; they now read the
+  size from the list and mean all of them, or none of them
+
 ## v0.2.0 - 2026-09-05
 
 ### Added
