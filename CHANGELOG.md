@@ -3,7 +3,7 @@
 Notable changes, newest first. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## Unreleased
+## v0.2.0 - 2026-09-05
 
 ### Added
 
@@ -18,6 +18,40 @@ Notable changes, newest first. Format loosely follows
 - `SiteContext.robots_body`, the response body exactly as served. A robots.txt of
   nothing but comments is treated as absent for crawl rules, correctly, and can
   still carry a declaration worth reading
+
+### Fixed
+
+- A domain containing a colon no longer ends the process with a traceback.
+  `httpx.InvalidURL` inherits from `Exception` rather than from `HTTPError`, so
+  it walked past every clause meant to catch it. It is now reported as
+  `invalid_url`, like any other unreachable homepage
+- A name that does not resolve is answered in about three seconds instead of
+  thirty-six. A transport error is normally worth another go, so it was retried
+  three times over https and three more over http. DNS saying the name does not
+  exist is the one transport error that repetition cannot change
+- `--json` and `--output` create the directory they are pointed at. The audit is
+  finished by the time either is written, so a path into a directory that did
+  not exist printed the whole report and then threw it away
+- `--pages 0` and negative counts are refused. They were accepted, and quietly
+  produced a run over one page
+
+### Changed
+
+- The skill installs with `pip install geo-check`. It previously said
+  `pip install -e .`, which needs a checkout and a working directory that
+  whoever installed the skill does not have
+- The source distribution is 204 KB rather than 8.8 MB. The golden fixtures
+  prove the tool against recorded sites, and nobody installing it needs them
+- `py.typed` ships, so the `Typing :: Typed` classifier the package has declared
+  from the start is now true and the annotations reach type checkers
+
+### Security
+
+- `SKILL.md` states that quoted robots.txt lines are data and not instructions.
+  The report copies matched rules verbatim from a stranger's server, and at
+  least one site in the validation corpus uses its robots.txt to address
+  whichever agent is reading it. This has been in `SECURITY.md` since the first
+  release and is now also where an assistant will read it
 
 ## v0.1.0 - 2026-08-30
 

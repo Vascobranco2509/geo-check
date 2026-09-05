@@ -1,6 +1,6 @@
 [project]
 name = "geo-check"
-version = "0.1.0"
+version = "0.2.0"
 description = "Check whether a website is reachable and readable by AI crawlers, and score it."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -53,11 +53,17 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/geo_check"]
 
+# The golden fixtures are 8 MB and exist to prove the tool against recorded
+# sites. Nobody installing it needs them, and a PyPI version is permanent, so
+# they stay out of the sdist rather than being shipped once and regretted.
+[tool.hatch.build.targets.sdist]
+exclude = ["tests/fixtures", "assets", "dist", ".claude-flow"]
+
 [tool.ruff]
 line-length = 100
 
 [tool.pytest.ini_options]
-# The 500 site replay takes minutes and needs fixtures recorded with
+# The 906 site replay takes minutes and needs fixtures recorded with
 # scripts/refresh_fixtures.py. Run it deliberately: pytest -m slow
 addopts = "-m 'not slow'"
 markers = ["slow: replays the whole corpus, opt in"]
