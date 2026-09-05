@@ -16,6 +16,7 @@ large response would otherwise stall a sweep across hundreds of unknown hosts.
 
 from __future__ import annotations
 
+import socket
 import time
 from dataclasses import dataclass, field
 
@@ -118,10 +119,18 @@ def fetch(url: str, client: httpx.Client | None = None) -> FetchResult:
                 return _failure(url, "too_many_redirects")
             except httpx.UnsupportedProtocol:
                 return _failure(url, "unsupported_protocol")
+            except httpx.InvalidURL:
+                # InvalidURL inherits from Exception and not from HTTPError, so
+                # it walks past every clause below and out of the process. A
+                # domain with a colon in it is enough to produce one.
+                return _failure(url, "invalid_url")
             except httpx.TimeoutException:
                 last_failure = _failure(url, "timeout")
             except httpx.TransportError as exc:
-                last_failure = _failure(url, f"network: {type(exc).__name__}")
+                failure = _failure(url, f"network: {type(exc).__name__}")
+                if _name_does_not_resolve(exc):
+                    return failure
+                last_failure = failure
             except httpx.HTTPError as exc:
                 return _failure(url, f"http: {type(exc).__name__}")
 
@@ -146,3 +155,21 @@ def _pause_for(result: FetchResult, attempt: int) -> float:
 
 def _failure(url: str, reason: str) -> FetchResult:
     return FetchResult(url=url, final_url=url, status=None, error=reason)
+
+
+def _name_does_not_resolve(exc: BaseException) -> bool:
+    """Whether DNS said the name does not exist.
+
+    A TransportError is normally worth another go, which is why one is not
+    returned immediately. A name that does not resolve is the exception: no
+    amount of waiting invents a DNS record, and retrying it three times over
+    https and three more over http spent thirty-six seconds proving that a
+    typo was still a typo. httpx wraps the original, so the chain is what
+    carries the answer.
+    """
+    cause: BaseException | None = exc
+    while cause is not None:
+        if isinstance(cause, socket.gaierror):
+            return True
+        cause = cause.__cause__
+    return False

@@ -40,6 +40,29 @@ WAF_ABORT_NOTE = (
 ABORT_NOTE = {401: WAF_ABORT_NOTE, 403: WAF_ABORT_NOTE}
 
 
+def _at_least_one(value: str) -> int:
+    """A page count, refused below one.
+
+    argparse takes any int otherwise, and --pages 0 then reported a run over
+    one page: you cannot ask for none, and the tool used to accept the request
+    without saying so.
+    """
+    count = int(value)
+    if count < 1:
+        raise argparse.ArgumentTypeError(f"needs to be 1 or more, got {count}")
+    return count
+
+
+def _ready(path: Path) -> Path:
+    """Make sure a parent directory exists before the audit is written into it.
+
+    The run is already finished by the time these are written, so a missing
+    directory used to throw away the whole thing after printing it.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    return path
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="geo-check",
@@ -48,7 +71,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("domain", help="Domain or URL to audit, for example example.com")
     parser.add_argument(
         "--pages",
-        type=int,
+        type=_at_least_one,
         default=5,
         help="How many pages to sample, the homepage included. Default 5.",
     )
@@ -215,11 +238,11 @@ def main(argv: list[str] | None = None) -> int:
     print(render_text(payload))
 
     if args.json_path:
-        path = Path(args.json_path)
+        path = _ready(Path(args.json_path))
         path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print("\nJSON written to " + str(path))
     if args.md_path:
-        path = Path(args.md_path)
+        path = _ready(Path(args.md_path))
         path.write_text(render_markdown(payload), encoding="utf-8")
         print("Markdown report written to " + str(path))
     return EXIT_OK
