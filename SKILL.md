@@ -1,5 +1,6 @@
 ---
 name: geo-check
+description: Check whether a website is reachable and readable by AI crawlers, and score it. Use when the user asks whether their site is blocked from ChatGPT, Claude, Perplexity or Google AI Overviews, wants a robots.txt reviewed for AI bots, asks about GEO or AEO, llms.txt, or wants to know why their site is not being cited by AI assistants. Requires network access and Python 3.10 or newer.
 ---
 
 # geo-check
