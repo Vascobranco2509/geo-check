@@ -1,6 +1,6 @@
 """The corpus file must not regain a shape that states how the corpus divides.
 
-How the 500 divide is the maintainer's article and is deliberately absent from
+How the corpus divides is the maintainer's article and is deliberately absent from
 this repository. Three separate attempts to remove it left it in: the first
 removed the sentence and kept the counts, the second removed the counts and kept
 the sections whose sizes were the counts, and later prose reintroduced a figure
@@ -18,6 +18,23 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CORPUS = ROOT / "data" / "corpus.txt"
 CATEGORIES = ROOT / "data" / "corpus_categories.csv"
+
+# The vocabulary CONTRIBUTING.md documents. Kept here rather than derived from
+# the file, because a set read out of the data agrees with the data by
+# construction and would catch nothing.
+KNOWN_TYPES = {
+    "b2b",
+    "blog",
+    "ecommerce",
+    "education",
+    "government",
+    "news",
+    "parked",
+    "platform",
+    "reference",
+    "saas",
+    "storefront",
+}
 
 
 def read_lines() -> list[str]:
@@ -46,6 +63,20 @@ def test_the_corpus_is_one_flat_block_with_no_sections():
 def test_the_corpus_is_ordered_by_hash_so_the_order_carries_nothing():
     entries = domains()
     assert entries == sorted(entries, key=lambda d: hashlib.sha256(d.encode()).hexdigest())
+
+
+def test_the_site_type_vocabulary_is_closed():
+    """A type has to be decided on, not arrive.
+
+    `b2b` and `parked` were in the data while CONTRIBUTING.md named nine types
+    and claimed ten. Nothing was checking, so a category could appear without
+    anybody choosing it, and a documented vocabulary that disagrees with the
+    file it documents is worse than no vocabulary at all.
+    """
+    with CATEGORIES.open(encoding="utf-8", newline="") as handle:
+        found = {row["category"] for row in csv.DictReader(handle)}
+
+    assert found == KNOWN_TYPES, f"undocumented site type: {sorted(found - KNOWN_TYPES)}"
 
 
 def test_every_domain_has_a_site_type_and_no_type_is_half_the_corpus():

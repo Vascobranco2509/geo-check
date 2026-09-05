@@ -3,7 +3,7 @@
 What this document is: the evidence that `geo-check` does what it says. Not a
 study of the web. Every number here is about the tool.
 
-Measured 2026-08-30. The aggregation scripts are
+Measured 2026-08-31. The aggregation scripts are
 [scripts/run_study.py](../scripts/run_study.py) and
 [scripts/verify_accuracy.py](../scripts/verify_accuracy.py), and both run offline
 against recorded responses, so this is reproducible rather than remembered.
@@ -32,7 +32,7 @@ single number hides that:
 | Unavailable to this client | 45 | 19 timeouts, 12 connection errors, 11 x 429, and three 5xx |
 | Gone | 10 | 9 x 404 and one 410 |
 
-The middle row is the one to be careful with. Those twenty may answer perfectly
+The middle row is the one to be careful with. Those forty-five may answer perfectly
 for a reader on a different network, and nothing in this run proves otherwise.
 The first row is a site turning away an automated client on purpose, usually
 through a CDN or a bot manager.
@@ -43,8 +43,8 @@ centre just as readily. From outside you cannot separate an AI policy from an
 infrastructure policy, so the tool reports the refusal and declines to interpret
 it.
 
-**HTTP 429 is ambiguous in both directions.** The seven answer from three
-infrastructures, four from Vercel, two from istio-envoy and one from Cloudflare,
+**HTTP 429 is ambiguous in both directions.** Seven of the eleven were traced to
+three infrastructures, four to Vercel, two to istio-envoy and one to Cloudflare,
 all of which rate limit by IP across every site they serve. So a 429 can mean the
 site's policy or it can mean our own address. Re-checked hours after the run,
 individually rather than in parallel, all seven still returned 429, which rules
@@ -141,7 +141,7 @@ hand to the `robots.txt` group that produced it. Two shapes from the original
 list are absent, and both absences are findings rather than gaps in the search;
 the file says which and why.
 
-`pytest` runs the whole suite offline in about fifteen seconds and never touches
+`pytest` runs the whole suite offline in about twenty five seconds and never touches
 the network.
 
 ## What this does not prove
@@ -153,7 +153,7 @@ weight is in [RUBRIC.md](RUBRIC.md), including two weaknesses it still has.
 
 **That a site is or is not blocked at the edge.** The tool reads `robots.txt` and
 markup. A site can pass every check and still return 403 to AI crawlers in
-practice, and 64 sites in this run refused this one outright.
+practice, and 100 sites in this run refused this one outright with a 403.
 
 **That the heuristics are right about any individual site.** The JavaScript check
 measures text volume and script weight rather than rendering, with thresholds
@@ -183,7 +183,7 @@ pip install -e ".[dev]"
 pytest
 ```
 
-The offline suite, including the golden set. 164 tests, about fifteen seconds,
+The offline suite, including the golden set. 178 tests, about twenty five seconds,
 no network.
 
 ```bash
@@ -213,7 +213,7 @@ The 342 MB of recordings stay out of the repository, so the figures above rest o
 files one machine holds. [data/corpus_manifest.csv](../data/corpus_manifest.csv)
 is the part that fits: 906 rows, one per domain, each naming when it was read,
 what the run did with it, and the SHA-256 of the `robots.txt` body. 710 domains
-carry a hash; the other 106 either aborted before that point or answered
+carry a hash; the other 196 either aborted before that point or answered
 `/robots.txt` with a non-200. A hash records what came back rather than what it
 should have been, so the pages that were not `robots.txt` are fingerprinted too.
 

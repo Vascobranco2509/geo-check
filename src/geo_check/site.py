@@ -61,7 +61,7 @@ def build_site(domain: str, pages: int = 5, fetcher=None) -> SiteContext:
 
     fetcher takes a URL and returns a FetchResult. It exists so the test suite
     can replay saved responses instead of touching the network, which is the
-    only way a 500 site robustness run can live inside pytest.
+    only way a 906 site robustness run can live inside pytest.
     """
     base = normalise_base(domain)
     errors: list[str] = []

@@ -11,8 +11,8 @@ build/
 reports/
 .claude-flow/
 
-# Robustness fixtures for the 500 site corpus. Recorded locally with
-# scripts/refresh_fixtures.py, never committed: 500 sites of real HTML is 208 MB.
+# Robustness fixtures for the 906 site corpus. Recorded locally with
+# scripts/refresh_fixtures.py, never committed: 906 sites of real HTML is 342 MB.
 # The golden set under tests/fixtures/golden is committed and is 8 MB.
 tests/fixtures/corpus/
 

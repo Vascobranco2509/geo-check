@@ -1,10 +1,10 @@
-"""The 500 site robustness run, replayed offline.
+"""The 906 site robustness run, replayed offline.
 
 CLAUDE.md asks for above 95 percent completing, with the rest failing for a
 logged reason. Failing with a reason counts as the tool working: a site behind a
 bot manager cannot be audited by anyone, and saying so is the honest result.
 
-These fixtures are not in the repository. 500 sites of real HTML is 208 MB, and
+These fixtures are not in the repository. 906 sites of real HTML is 342 MB, and
 truncating the pages was measured and rejected, because at a 300 KB cap 6 of 12
 domains changed their Readability score. So the corpus fixtures are recorded
 locally and this file skips when they are absent. The golden set, which is
@@ -45,7 +45,7 @@ def _corpus() -> list[str]:
 # domains an earlier version of the corpus carried, and measuring completion
 # against whatever is on disk would quietly change the denominator.
 RECORDED = [d for d in _corpus() if d in set(available(FIXTURES))]
-# Replaying 500 sites takes minutes, so it is opt in even when the
+# Replaying 906 sites takes minutes, so it is opt in even when the
 # fixtures are on disk. CLAUDE.md asks for a suite that runs in seconds, and a
 # slow default is a suite people stop running.
 needs_fixtures = pytest.mark.skipif(
@@ -66,7 +66,7 @@ def read_corpus() -> list[str]:
 def audit(domain: str) -> tuple[str, str]:
     """Returns (outcome, detail). Never raises, which is the whole point.
 
-    Cached because three tests walk the same 500 sites, and replaying a site
+    Cached because three tests walk the same 906 sites, and replaying a site
     means parsing five real pages.
     """
     try:

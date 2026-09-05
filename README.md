@@ -220,7 +220,7 @@ registry.
 pip install -e ".[dev]" && pytest
 ```
 
-164 tests, offline, about fifteen seconds. The suite never touches the network.
+178 tests, offline, about twenty five seconds. The suite never touches the network.
 [CONTRIBUTING.md](https://github.com/vasco-branco06/geo-check/blob/main/CONTRIBUTING.md)
 has the rest: how a check is written, how the golden set works, how to record
 fixtures, and why the recorder is deliberately slow.

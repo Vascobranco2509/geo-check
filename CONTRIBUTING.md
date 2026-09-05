@@ -48,7 +48,7 @@ pip install -e ".[dev]"
 pytest
 ```
 
-About fifteen seconds, offline, no network. It includes the golden set of thirty hard
+About twenty five seconds, offline, no network. It includes the golden set of thirty hard
 sites replayed from committed fixtures, and those require 100 percent: if one
 fails, read the `robots.txt` in the fixture before touching the expectation. The
 point of that file is that it is harder to change than the code.
@@ -85,10 +85,15 @@ the outcome and the SHA-256 of the `robots.txt` body.
 
 ## Site type
 
-`data/corpus_categories.csv` maps each of the 906 domains to one of ten types:
-ecommerce, storefront, news, saas, blog, platform, reference, education,
-government. `scripts/run_study.py` reads it, and adding a domain to the corpus
-means adding a row here too, or the script fails loudly.
+`data/corpus_categories.csv` maps each of the 906 domains to one of eleven types:
+b2b, blog, ecommerce, education, government, news, parked, platform, reference,
+saas, storefront. `scripts/run_study.py` reads it, and adding a domain to the
+corpus means adding a row here too, or the script fails loudly.
+
+That vocabulary is closed, and `tests/test_corpus_shape.py` fails on a type it
+does not name. It was not checked before, which is how `b2b` and `parked` came
+to sit in the data while this paragraph listed nine types and claimed ten. A
+category should be decided on rather than arrive.
 
 It lives apart from `data/corpus.txt` because that file is one flat block
 with no sections. A section boundary orders the domains, and an ordering states

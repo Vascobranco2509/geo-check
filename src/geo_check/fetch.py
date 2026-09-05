@@ -5,7 +5,7 @@ Rules, from the scaffold and kept:
     tool reads robots.txt for a living, it does not get to pretend to be a
     browser.
   - Never raise on a network problem. Return a typed failure with a reason, so
-    the 500 site robustness run can log it instead of crashing.
+    the 906 site robustness run can log it instead of crashing.
   - Timeouts on every request. One slow site must not hang the run.
   - Follow redirects, but record the final URL.
 
